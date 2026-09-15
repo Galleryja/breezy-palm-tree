@@ -1,5 +1,21 @@
 import type { Metadata } from "next";
+import { UnifrakturMaguntia } from "next/font/google";
 import "./globals.css";
+
+/**
+ * Stand-in for Cloister Black, the brand's real wordmark face.
+ *
+ * Cloister Black is a licensed typeface and is not redistributed here. When
+ * you have a webfont licence, delete this import and replace it with an
+ * @font-face rule in globals.css pointing at the .woff2, keeping the same
+ * --font-blackletter variable name. Nothing else needs to change.
+ */
+const blackletter = UnifrakturMaguntia({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-blackletter",
+  display: "swap",
+});
 import { CartProvider } from "@/components/cart-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -9,14 +25,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SIX Skincare — six products, one routine",
-    template: "%s — SIX Skincare",
+    default: "Six Skincare Products — six products, one routine",
+    template: "%s — Six",
   },
   description:
     "A six-step skincare routine with nothing spare in it: cleanser, essence, vitamin C, niacinamide, barrier cream and SPF 50.",
   openGraph: {
     type: "website",
-    siteName: "SIX Skincare",
+    siteName: "Six Skincare Products",
     url: siteUrl,
   },
 };
@@ -27,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={blackletter.variable}>
       <body className="flex min-h-screen flex-col">
         <CartProvider>
           <a

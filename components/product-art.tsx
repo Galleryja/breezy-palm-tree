@@ -99,9 +99,9 @@ export function ProductArt({
           x="160"
           y={tall ? 232 : 224}
           textAnchor="middle"
-          fontFamily="ui-serif, Georgia, serif"
-          fontSize="15"
-          letterSpacing="3"
+          fontFamily="var(--font-blackletter), UnifrakturMaguntia, serif"
+          fontSize="19"
+          letterSpacing="1"
           fill={deep}
         >
           SIX

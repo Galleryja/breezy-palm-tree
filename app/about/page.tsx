@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "Why SIX makes six products and no more: evidence-led actives, honest concentrations and a routine you can finish.",
+    "Why Six makes six products and no more: evidence-led actives, honest concentrations and a routine you can finish.",
 };
 
 export default function AboutPage() {

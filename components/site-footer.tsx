@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { Wordmark } from "@/components/wordmark";
 
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-line bg-paper-deep">
       <div className="wrap grid gap-10 py-14 sm:grid-cols-3">
         <div>
-          <p className="font-serif text-lg tracking-[0.35em] text-ink">SIX</p>
+          <Wordmark className="h-10 w-auto text-ink" title="Six" />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-soft">
             Six products. One routine. Nothing you have to think about twice.
           </p>
@@ -40,7 +41,7 @@ export function SiteFooter() {
       </div>
 
       <div className="wrap rule flex flex-col gap-2 py-6 text-xs text-ink-faint sm:flex-row sm:justify-between">
-        <p>© {new Date().getFullYear()} SIX Skincare.</p>
+        <p>© {new Date().getFullYear()} Six Skincare Products LLC.</p>
         <p>Cosmetic products. Not intended to diagnose or treat any condition.</p>
       </div>
     </footer>

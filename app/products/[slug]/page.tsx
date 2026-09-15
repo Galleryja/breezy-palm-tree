@@ -24,7 +24,7 @@ export async function generateMetadata({
     title: product.name,
     description: product.tagline,
     openGraph: {
-      title: `${product.name} — SIX Skincare`,
+      title: `${product.name} — Six`,
       description: product.tagline,
       type: "website",
     },
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: PageProps) {
     name: product.name,
     description: product.description,
     sku: product.slug,
-    brand: { "@type": "Brand", name: "SIX" },
+    brand: { "@type": "Brand", name: "Six" },
     offers: {
       "@type": "Offer",
       price: (product.priceCents / 100).toFixed(2),

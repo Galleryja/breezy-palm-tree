@@ -5,7 +5,7 @@ import { PRODUCTS } from "@/data/products";
 export const metadata: Metadata = {
   title: "The Six",
   description:
-    "All six SIX products, in the order they are meant to be used: cleanser, essence, vitamin C, niacinamide, barrier cream and mineral SPF 50.",
+    "All six Six Skincare Products, in the order they are meant to be used: cleanser, essence, vitamin C, niacinamide, barrier cream and mineral SPF 50.",
 };
 
 export default function ProductsPage() {
