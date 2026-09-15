@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStripe, isStripeConfigured } from "@/lib/stripe";
-import { CURRENCY, getProduct } from "@/data/products";
+import { CURRENCY, formatLabel, getProduct } from "@/data/products";
 
 /**
  * Creates a Stripe Checkout Session and hands back its URL.
@@ -87,7 +87,7 @@ export async function POST(request: Request) {
         unit_amount: product.priceCents,
         product_data: {
           name: product.name,
-          description: `Step ${product.step} · ${product.size} · ${product.tagline}`,
+          description: `${formatLabel(product.format)} · ${product.size} · ${product.tagline}`,
         },
       },
     });

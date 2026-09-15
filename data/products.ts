@@ -1,18 +1,24 @@
 /**
- * The SIX catalogue.
+ * The Six catalogue.
  *
  * This file is the single source of truth for what is for sale and at what
  * price. The checkout route reads prices from here on the server, so a browser
- * can never talk SIX into charging less than the listed amount.
+ * can never talk Six into charging less than the listed amount.
  *
- * To change the range: edit this array. Nothing else needs to know.
+ * Six products: four whipped tallow balms and two perfume rollers, sharing
+ * two of their blends. To change the range, edit this array — the homepage,
+ * listing, product pages and cart all follow.
  */
+
+export type Format = "balm" | "roller";
 
 export type Product = {
   /** URL segment. Must be unique and stable — it is the permalink. */
   slug: string;
-  /** Position in the routine, 1-6. Also drives the "Step n" label. */
-  step: number;
+  /** Sort order across the whole range. Balms first, then rollers. */
+  order: number;
+  format: Format;
+  /** The blend name, e.g. "Floral Jasmine". Unscented has no blend. */
   name: string;
   /** Shown under the name in listings. One line, no full stop. */
   tagline: string;
@@ -21,152 +27,180 @@ export type Product = {
   size: string;
   /** Two or three sentences for the product page. */
   description: string;
-  /** The actives worth putting on the label, with why they are there. */
-  keyIngredients: { name: string; note: string }[];
-  /** Full INCI list, as it would appear on the carton. */
-  inci: string;
+  /** How the blend reads on skin. Empty for the unscented balm. */
+  notes: { name: string; note: string }[];
+  /** Full ingredient list, as it would appear on the label. */
+  ingredients: string;
+  /**
+   * Fragrance allergens that occur naturally in the essential oils. Not
+   * required in the US, but it is the honest thing to publish and it is
+   * required if these are ever sold into the EU or UK. Empty when unscented.
+   */
+  allergens: string;
   howToUse: string;
-  /** Drives the generated artwork. Two hex colours, light then deep.
-   *  Keep these cool and desaturated; the palette carries the brand, not
-   *  the product art. Two warm notes are deliberate, for the vitamin C and
-   *  the sunscreen, which are warm-toned products. */
+  /**
+   * Drives the generated artwork. Two hex colours, light then deep.
+   *
+   * These run warm while the site's palette runs cool, and that is
+   * deliberate: tallow is cream and jojoba is gold, so the products should
+   * look like what is actually in the jar. Keep them muted — the contrast
+   * with the blue chrome is doing the work, not saturation.
+   */
   swatch: [string, string];
-  skinTypes: string;
+  bestFor: string;
 };
 
 export const CURRENCY = "usd";
 
+/** Shared across all four balms. */
+const TALLOW_BASE =
+  "Grass-fed beef tallow, organic shea butter (Butyrospermum Parkii), organic jojoba oil (Simmondsia Chinensis)";
+
+/** Shared by both rollers. */
+const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
+
 export const PRODUCTS: Product[] = [
   {
-    slug: "clarifying-gel-cleanser",
-    step: 1,
-    name: "Clarifying Gel Cleanser",
-    tagline: "A low-foam gel that leaves the barrier intact",
-    priceCents: 2800,
-    size: "150ml",
+    slug: "floral-jasmine-balm",
+    order: 1,
+    format: "balm",
+    name: "Floral Jasmine",
+    tagline: "Jasmine and ylang ylang over vanilla",
+    priceCents: 3000,
+    size: "6 oz",
     description:
-      "A pH-balanced gel that lifts sunscreen, sebum and the day without stripping. It foams just enough to feel like it is working, then rinses clean and leaves nothing behind. No squeak, no tightness, no need to rush to moisturiser.",
-    keyIngredients: [
-      { name: "Coco-Betaine", note: "A gentle surfactant that cleans without the harshness of sulfates" },
-      { name: "Glycerin 5%", note: "Draws water into the skin so cleansing does not cost you hydration" },
-      { name: "Panthenol", note: "Provitamin B5, calms the low-grade irritation that washing can cause" },
+      "The richest thing we make. Jasmine and ylang ylang sit over vanilla and stay warm and sweet on skin for most of the day — a tallow base holds fragrance far longer than a lotion does. People tend to love this one immediately or find it too much; there is not much middle ground.",
+    notes: [
+      { name: "Jasmine", note: "Heady and honeyed, the centre of the blend" },
+      { name: "Ylang Ylang", note: "Creamy and slightly banana-sweet, softens the jasmine's edge" },
+      { name: "Vanilla", note: "The warm base everything else settles onto" },
     ],
-    inci:
-      "Aqua, Coco-Betaine, Glycerin, Sodium Cocoyl Isethionate, Panthenol, Sodium Chloride, Citric Acid, Sodium Benzoate, Potassium Sorbate.",
+    ingredients: `${TALLOW_BASE}, organic jasmine absolute (Jasminum Grandiflorum), organic ylang ylang oil (Cananga Odorata), organic vanilla extract (Vanilla Planifolia).`,
+    allergens:
+      "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
-      "Morning and evening. Massage half a pump into damp skin for thirty seconds, rinse with lukewarm water, pat dry. In the evening, use after an oil cleanser if you wear heavy sunscreen or makeup.",
-    swatch: ["#eef3f6", "#5c7d92"],
-    skinTypes: "All skin types, including sensitive",
+      "A little goes a long way. Warm a pea-sized amount between your fingers until it melts, then press into damp skin — straight out of the shower is best, while there is still water to seal in. Face, hands, elbows, anywhere dry.",
+    swatch: ["#f7f3ec", "#b9a07f"],
+    bestFor: "Dry skin. Rich, so patch test if you are acne-prone",
   },
   {
-    slug: "hydrating-essence",
-    step: 2,
-    name: "Hydrating Essence",
-    tagline: "Watery hydration that makes everything after it work harder",
-    priceCents: 3400,
-    size: "120ml",
+    slug: "frankincense-myrrh-balm",
+    order: 2,
+    format: "balm",
+    name: "Frankincense & Myrrh",
+    tagline: "Two resins, traded for four thousand years",
+    priceCents: 3000,
+    size: "6 oz",
     description:
-      "A thin, fast-sinking layer of humectants applied to damp skin. It is the least glamorous step in the routine and the one people notice most when they stop. Think of it as priming the skin so your serums are not landing on a dry surface.",
-    keyIngredients: [
-      { name: "Hyaluronic Acid, three weights", note: "Hydrates at different depths rather than sitting on top" },
-      { name: "Beta-Glucan", note: "Holds water and calms reactive skin at the same time" },
-      { name: "Trehalose", note: "A sugar that helps skin hold moisture when the air is dry" },
+      "Dry, warm and faintly smoky — closer to incense than to perfume. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
+    notes: [
+      { name: "Frankincense", note: "Clean and resinous, with a cool citrus edge" },
+      { name: "Myrrh", note: "Darker and balsamic, gives the blend its weight" },
     ],
-    inci:
-      "Aqua, Glycerin, Butylene Glycol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Hyaluronate Crosspolymer, Beta-Glucan, Trehalose, Panthenol, Allantoin, Sodium Benzoate, Potassium Sorbate, Citric Acid.",
+    ingredients: `${TALLOW_BASE}, organic frankincense oil (Boswellia Carterii), organic myrrh oil (Commiphora Myrrha).`,
+    allergens:
+      "Contains limonene, occurring naturally in the essential oils.",
     howToUse:
-      "After cleansing, while skin is still damp. Press two to three pushes into the face with your palms rather than wiping. Follow within a minute so the water has something to sit under.",
-    swatch: ["#eaf1f8", "#47698c"],
-    skinTypes: "All skin types, especially dehydrated",
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. The scent settles and deepens over the first half hour rather than announcing itself.",
+    swatch: ["#f2eee7", "#8a7358"],
+    bestFor: "Dry skin, and anyone who finds floral scents too sweet",
   },
   {
-    slug: "vitamin-c-serum-12",
-    step: 3,
-    name: "Vitamin C Serum 12%",
-    tagline: "Morning antioxidant for tone and dullness",
-    priceCents: 5800,
-    size: "30ml",
+    slug: "unscented-balm",
+    order: 3,
+    format: "balm",
+    name: "Unscented",
+    tagline: "Three ingredients, nothing added",
+    priceCents: 3000,
+    size: "6 oz",
     description:
-      "Twelve percent L-ascorbic acid stabilised with ferulic acid and vitamin E — the combination with the most evidence behind it. It brightens unevenness over weeks, not days, and meaningfully reduces the daily oxidative load that ages skin. Twelve percent is the point where results plateau but irritation does not.",
-    keyIngredients: [
-      { name: "L-Ascorbic Acid 12%", note: "The most studied form of vitamin C for tone and photoprotection" },
-      { name: "Ferulic Acid 0.5%", note: "Stabilises the formula and extends its antioxidant life" },
-      { name: "Tocopherol 1%", note: "Vitamin E, works with C to cover a wider range of free radicals" },
-    ],
-    inci:
-      "Aqua, Ascorbic Acid, Propylene Glycol, Ethoxydiglycol, Glycerin, Ferulic Acid, Tocopherol, Panthenol, Sodium Hyaluronate, Triethanolamine, Sodium Metabisulfite.",
+      "Grass-fed tallow, organic shea and organic jojoba. That is the entire formula. For sensitive skin, for anyone whose fragrance is already spoken for, and for the people who came to tallow in the first place because they wanted a list they could read in one breath.",
+    notes: [],
+    ingredients: `${TALLOW_BASE}.`,
+    allergens: "",
     howToUse:
-      "Mornings only, after essence and before moisturiser. Four to five drops over face and neck. Always follow with sunscreen. New to vitamin C? Use every other morning for two weeks first.",
-    swatch: ["#f6f1e8", "#9a7f4f"],
-    skinTypes: "Normal, combination and oily. Introduce slowly if sensitive",
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Layer a perfume roller over the top if you want scent — the balm will hold it longer than bare skin does.",
+    swatch: ["#f5f4f1", "#9a978f"],
+    bestFor: "Sensitive skin, fragrance-free routines, and layering",
   },
   {
-    slug: "niacinamide-serum-10",
-    step: 4,
-    name: "Niacinamide Serum 10%",
-    tagline: "For pores, oil balance and a calmer barrier",
-    priceCents: 4200,
-    size: "30ml",
+    slug: "orange-blossom-petitgrain-balm",
+    order: 4,
+    format: "balm",
+    name: "Orange Blossom & Petitgrain",
+    tagline: "One bitter orange tree, two harvests",
+    priceCents: 3000,
+    size: "6 oz",
     description:
-      "Ten percent niacinamide with zinc PCA, aimed at visible pores, shine and the redness that comes with a stressed barrier. It is one of the few actives that works for oily and sensitive skin at once. Results on texture show up around week four.",
-    keyIngredients: [
-      { name: "Niacinamide 10%", note: "Regulates oil, supports ceramide production, evens tone" },
-      { name: "Zinc PCA 1%", note: "Helps control shine through the day" },
-      { name: "Allantoin", note: "Soothes, and takes the edge off niacinamide for reactive skin" },
+      "Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the morning option in a range that otherwise leans rich.",
+    notes: [
+      { name: "Neroli", note: "Honeyed orange blossom, used sparingly because it is precious" },
+      { name: "Petitgrain", note: "Green and faintly bitter, carries the blend" },
     ],
-    inci:
-      "Aqua, Niacinamide, Pentylene Glycol, Zinc PCA, Glycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum, Sodium Benzoate, Potassium Sorbate, Citric Acid.",
+    ingredients: `${TALLOW_BASE}, organic neroli oil (Citrus Aurantium Amara flower), organic petitgrain oil (Citrus Aurantium Amara leaf).`,
+    allergens:
+      "Contains linalool, limonene, geraniol and citral, occurring naturally in the essential oils.",
     howToUse:
-      "Evenings, after essence. Three to four drops on face and neck. Can be used mornings too — if you also use the vitamin C serum, put niacinamide in the evening to keep each step simple.",
-    swatch: ["#eeeef7", "#5d6188"],
-    skinTypes: "Oily, combination and blemish-prone",
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Neither oil in this blend is phototoxic, so unlike lemon or bergamot it is fine to wear in daylight.",
+    swatch: ["#f6f4e9", "#a8a56d"],
+    bestFor: "Dry skin, daytime wear, and anyone who wants scent kept light",
   },
   {
-    slug: "barrier-repair-moisturiser",
-    step: 5,
-    name: "Barrier Repair Moisturiser",
-    tagline: "Ceramides in the ratio skin actually uses",
-    priceCents: 4600,
-    size: "50ml",
+    slug: "floral-jasmine-roller",
+    order: 5,
+    format: "roller",
+    name: "Floral Jasmine",
+    tagline: "The balm's blend, in an oil you can carry",
+    priceCents: 2200,
+    size: "10 ml",
     description:
-      "A cream built around the 3:1:1 ceramide-to-cholesterol-to-fatty-acid ratio that research links to barrier recovery. It is rich enough to seal in the steps beneath it but finishes matte enough to wear under sunscreen. This is the step that stops actives from turning into irritation.",
-    keyIngredients: [
-      { name: "Ceramides NP, AP, EOP", note: "Replaces the lipids that cleansing and actives deplete" },
-      { name: "Cholesterol + Fatty Acids", note: "The other two thirds of a barrier that repairs properly" },
-      { name: "Squalane", note: "A light emollient that softens without a greasy film" },
+      "Jasmine, ylang ylang and vanilla in organic jojoba. Oil-based fragrance sits closer to the skin than an alcohol perfume and unfolds over the first twenty minutes instead of arriving all at once. Jojoba is the carrier because it is closest to what skin makes itself, so it sinks in rather than sitting on top.",
+    notes: [
+      { name: "Jasmine", note: "Heady and honeyed, the centre of the blend" },
+      { name: "Ylang Ylang", note: "Creamy and slightly banana-sweet" },
+      { name: "Vanilla", note: "The warm base everything settles onto" },
     ],
-    inci:
-      "Aqua, Glycerin, Squalane, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Phytosphingosine, Sodium Lauroyl Lactylate, Panthenol, Tocopherol, Xanthan Gum, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.",
+    ingredients: `${ROLLER_BASE}, organic jasmine absolute (Jasminum Grandiflorum), organic ylang ylang oil (Cananga Odorata), organic vanilla extract (Vanilla Planifolia).`,
+    allergens:
+      "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
-      "Morning and evening, as the last step before sunscreen. A pea-sized amount for the face. Use more at night or in winter if skin feels tight by morning.",
-    swatch: ["#f0f2f4", "#6f7880"],
-    skinTypes: "All skin types, especially dry or compromised",
+      "Roll onto pulse points — wrists, throat, behind the ears. Over the unscented balm it lasts noticeably longer than on bare skin. Reapply through the day as you like.",
+    swatch: ["#f8f2e4", "#c2a361"],
+    bestFor: "Evening wear, and layering over the unscented balm",
   },
   {
-    slug: "mineral-sunscreen-spf50",
-    step: 6,
-    name: "Mineral Sunscreen SPF 50",
-    tagline: "Zinc oxide that does not leave you grey",
-    priceCents: 3800,
-    size: "50ml",
+    slug: "frankincense-myrrh-roller",
+    order: 6,
+    format: "roller",
+    name: "Frankincense & Myrrh",
+    tagline: "Incense you can wear",
+    priceCents: 2200,
+    size: "10 ml",
     description:
-      "Broad-spectrum SPF 50 from non-nano zinc oxide, in a base tinted just enough to cancel the white cast mineral filters are known for. It sits under makeup without pilling and does not sting the eyes. The single highest-value step in this routine, and the one most often skipped.",
-    keyIngredients: [
-      { name: "Zinc Oxide 20%, non-nano", note: "Broad-spectrum UVA and UVB cover in one mineral filter" },
-      { name: "Iron Oxides", note: "A universal tint that offsets white cast and screens visible light" },
-      { name: "Niacinamide", note: "Keeps the base from feeling tight through the day" },
+      "The same two resins as the balm, in organic jojoba. Dry, warm and quiet — it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
+    notes: [
+      { name: "Frankincense", note: "Clean and resinous, with a cool citrus edge" },
+      { name: "Myrrh", note: "Darker and balsamic, gives the blend its weight" },
     ],
-    inci:
-      "Aqua, Zinc Oxide, Caprylic/Capric Triglyceride, Glycerin, Niacinamide, Dimethicone, Silica, Iron Oxides (CI 77491, CI 77492, CI 77499), Polyglyceryl-3 Polyricinoleate, Tocopherol, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin.",
+    ingredients: `${ROLLER_BASE}, organic frankincense oil (Boswellia Carterii), organic myrrh oil (Commiphora Myrrha).`,
+    allergens: "Contains limonene, occurring naturally in the essential oils.",
     howToUse:
-      "Every morning as the final step, rain or shine. Two fingers' length for face and neck. Reapply every two hours in direct sun.",
-    swatch: ["#f7f3e9", "#a08a58"],
-    skinTypes: "All skin types, including sensitive and post-procedure",
+      "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; the resins open up with skin heat. Unisex, and it wears well in cold weather.",
+    swatch: ["#f3ece1", "#96784f"],
+    bestFor: "Anyone who prefers resin and wood to florals",
   },
 ];
 
 export function getProduct(slug: string): Product | undefined {
   return PRODUCTS.find((p) => p.slug === slug);
+}
+
+export function productsByFormat(format: Format): Product[] {
+  return PRODUCTS.filter((p) => p.format === format);
+}
+
+export function formatLabel(format: Format): string {
+  return format === "balm" ? "Whipped tallow balm" : "Perfume roller";
 }
 
 export function formatPrice(cents: number): string {

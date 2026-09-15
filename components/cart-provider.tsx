@@ -138,7 +138,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       });
     }
 
-    resolved.sort((a, b) => a.product.step - b.product.step);
+    resolved.sort((a, b) => a.product.order - b.product.order);
 
     return {
       lines: resolved,

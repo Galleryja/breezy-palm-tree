@@ -3,7 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/add-to-cart";
 import { ProductArt } from "@/components/product-art";
-import { PRODUCTS, getProduct, formatPrice, CURRENCY } from "@/data/products";
+import {
+  PRODUCTS,
+  getProduct,
+  formatLabel,
+  formatPrice,
+  CURRENCY,
+} from "@/data/products";
 
 // Six products, all known at build time — prerender every one.
 export function generateStaticParams() {
@@ -20,11 +26,13 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (!product) return { title: "Not found" };
 
+  const title = `${product.name} ${formatLabel(product.format).toLowerCase()}`;
+
   return {
-    title: product.name,
+    title,
     description: product.tagline,
     openGraph: {
-      title: `${product.name} — Six`,
+      title: `${title} — Six`,
       description: product.tagline,
       type: "website",
     },
@@ -36,13 +44,20 @@ export default async function ProductPage({ params }: PageProps) {
   const product = getProduct(slug);
   if (!product) notFound();
 
-  const next = PRODUCTS.find((p) => p.step === product.step + 1);
-  const previous = PRODUCTS.find((p) => p.step === product.step - 1);
+  const ordered = [...PRODUCTS].sort((a, b) => a.order - b.order);
+  const index = ordered.findIndex((p) => p.slug === product.slug);
+  const previous = ordered[index - 1];
+  const next = ordered[index + 1];
+
+  // The matching product in the other format, when there is one.
+  const sibling = PRODUCTS.find(
+    (p) => p.name === product.name && p.format !== product.format,
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: product.name,
+    name: `${product.name} ${formatLabel(product.format).toLowerCase()}`,
     description: product.description,
     sku: product.slug,
     brand: { "@type": "Brand", name: "Six" },
@@ -71,13 +86,13 @@ export default async function ProductPage({ params }: PageProps) {
       </nav>
 
       <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-        <div className="overflow-hidden rounded-xl border border-line bg-paper-deep md:sticky md:top-24 md:self-start">
+        <div className="overflow-hidden rounded-xl border border-line bg-paper-deep md:sticky md:top-28 md:self-start">
           <ProductArt product={product} className="h-auto w-full" priority />
         </div>
 
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-ink-faint">
-            Step {product.step} of 6 · {product.size}
+            {formatLabel(product.format)} · {product.size}
           </p>
           <h1 className="mt-3 font-serif text-3xl leading-tight text-ink sm:text-4xl">
             {product.name}
@@ -90,29 +105,40 @@ export default async function ProductPage({ params }: PageProps) {
 
           <AddToCart slug={product.slug} className="mt-6 w-full sm:w-auto" />
 
-          <p className="mt-4 text-sm text-ink-faint">
-            Suits: {product.skinTypes}
-          </p>
+          <p className="mt-4 text-sm text-ink-faint">Best for: {product.bestFor}</p>
+
+          {sibling ? (
+            <p className="mt-2 text-sm text-ink-faint">
+              Also as a{" "}
+              <Link
+                href={`/products/${sibling.slug}`}
+                className="text-ink-soft underline underline-offset-4 hover:text-ink"
+              >
+                {formatLabel(sibling.format).toLowerCase()}
+              </Link>
+              .
+            </p>
+          ) : null}
 
           <p className="mt-8 text-base leading-relaxed text-ink-soft">
             {product.description}
           </p>
 
-          <section className="mt-10">
-            <h2 className="font-serif text-xl text-ink">What is in it</h2>
-            <dl className="mt-4 space-y-4">
-              {product.keyIngredients.map((ingredient) => (
-                <div key={ingredient.name} className="rule pt-4">
-                  <dt className="text-sm font-medium text-ink">
-                    {ingredient.name}
-                  </dt>
-                  <dd className="mt-1 text-sm leading-relaxed text-ink-soft">
-                    {ingredient.note}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          {product.notes.length > 0 ? (
+            <section className="mt-10">
+              <h2 className="font-serif text-xl text-ink">How it reads</h2>
+              <dl className="mt-4 space-y-4">
+                {product.notes.map((n) => (
+                  <div key={n.name} className="rule pt-4">
+                    <dt className="text-sm font-medium text-ink">{n.name}</dt>
+                    <dd className="mt-1 text-sm leading-relaxed text-ink-soft">
+                      {n.note}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ) : null}
 
           <section className="mt-10">
             <h2 className="font-serif text-xl text-ink">How to use</h2>
@@ -122,25 +148,36 @@ export default async function ProductPage({ params }: PageProps) {
           </section>
 
           <section className="mt-10">
-            <h2 className="font-serif text-xl text-ink">Full ingredients</h2>
-            <p className="mt-3 text-xs leading-relaxed text-ink-faint">
-              {product.inci}
+            <h2 className="font-serif text-xl text-ink">Ingredients</h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              {product.ingredients}
             </p>
+            {product.allergens ? (
+              <p className="mt-3 text-xs leading-relaxed text-ink-faint">
+                {product.allergens}
+              </p>
+            ) : null}
           </section>
         </div>
       </div>
 
       <nav className="rule mt-20 flex flex-wrap justify-between gap-4 pt-8 text-sm">
         {previous ? (
-          <Link href={`/products/${previous.slug}`} className="text-ink-soft hover:text-ink">
-            ← Step {previous.step}: {previous.name}
+          <Link
+            href={`/products/${previous.slug}`}
+            className="text-ink-soft hover:text-ink"
+          >
+            ← {previous.name} {formatLabel(previous.format).toLowerCase()}
           </Link>
         ) : (
           <span />
         )}
         {next ? (
-          <Link href={`/products/${next.slug}`} className="text-ink-soft hover:text-ink">
-            Step {next.step}: {next.name} →
+          <Link
+            href={`/products/${next.slug}`}
+            className="text-ink-soft hover:text-ink"
+          >
+            {next.name} {formatLabel(next.format).toLowerCase()} →
           </Link>
         ) : (
           <span />

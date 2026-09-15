@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/components/cart-provider";
 import { ProductArt } from "@/components/product-art";
-import { formatPrice } from "@/data/products";
+import { formatLabel, formatPrice } from "@/data/products";
 
 export function CartView() {
   const { lines, subtotalCents, setQuantity, remove, ready } = useCart();
@@ -80,7 +80,7 @@ export function CartView() {
                 {line.product.name}
               </Link>
               <p className="mt-1 text-sm text-ink-faint">
-                Step {line.product.step} · {line.product.size}
+                {formatLabel(line.product.format)} · {line.product.size}
               </p>
 
               <div className="mt-3 flex flex-wrap items-center gap-4">

@@ -1,28 +1,29 @@
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
 import { ProductArt } from "@/components/product-art";
-import { PRODUCTS, formatPrice } from "@/data/products";
+import { PRODUCTS, productsByFormat } from "@/data/products";
 
 export default function HomePage() {
-  const hero = PRODUCTS[2]; // the vitamin C serum photographs best
-  const routineTotal = PRODUCTS.reduce((n, p) => n + p.priceCents, 0);
+  const hero = PRODUCTS[0];
+  const balms = productsByFormat("balm");
+  const rollers = productsByFormat("roller");
 
   return (
     <>
       <section className="wrap grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-ink-faint">
-            The complete routine
+            Whipped tallow &amp; perfume oil
           </p>
           <h1 className="mt-4 font-serif text-4xl leading-[1.12] text-ink sm:text-5xl">
-            Six products.
+            Six things.
             <br />
-            Nothing spare.
+            Made properly.
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Most shelves hold twenty things and three that work. We make the six
-            steps with evidence behind them, at concentrations that do something,
-            and stop there.
+            Grass-fed tallow whipped with organic shea and jojoba, in four
+            blends. Two of those blends again as perfume rollers. That is the
+            whole range, and it is meant to stay small.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -36,13 +37,9 @@ export default function HomePage() {
               href="/about"
               className="text-sm text-ink-soft underline underline-offset-4 transition-colors hover:text-ink"
             >
-              Why only six?
+              Why tallow?
             </Link>
           </div>
-
-          <p className="mt-6 text-sm text-ink-faint">
-            The full routine comes to {formatPrice(routineTotal)}.
-          </p>
         </div>
 
         <div className="overflow-hidden rounded-xl border border-line bg-paper-deep">
@@ -52,17 +49,34 @@ export default function HomePage() {
 
       <section className="wrap rule py-16">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <h2 className="font-serif text-2xl text-ink">The routine, in order</h2>
-          <Link
-            href="/products"
-            className="text-sm text-ink-soft underline underline-offset-4 hover:text-ink"
-          >
-            All six products
-          </Link>
+          <div>
+            <h2 className="font-serif text-2xl text-ink">The balms</h2>
+            <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
+              Same base every time — grass-fed tallow, organic shea butter,
+              organic jojoba. Four blends on top of it, one of them nothing at
+              all.
+            </p>
+          </div>
         </div>
 
-        <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {PRODUCTS.map((product) => (
+        <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {balms.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </div>
+      </section>
+
+      <section className="wrap rule py-16">
+        <div className="mb-10">
+          <h2 className="font-serif text-2xl text-ink">The rollers</h2>
+          <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
+            Two of the blends in organic jojoba, to carry. They wear longest
+            over the unscented balm.
+          </p>
+        </div>
+
+        <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {rollers.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
         </div>
@@ -72,16 +86,16 @@ export default function HomePage() {
         <div className="grid gap-10 sm:grid-cols-3">
           {[
             {
-              title: "Concentrations on the front",
-              body: "If it says 12% vitamin C, it is 12%. The percentage is part of the name because it is the part that matters.",
+              title: "Grass-fed, always",
+              body: "Tallow from grass-fed cattle, rendered clean. It is the whole reason the balm works the way it does, so it is not something we would quietly downgrade.",
             },
             {
-              title: "Full INCI, every product",
-              body: "The complete ingredient list is on every product page before you buy, not folded into a carton you get later.",
+              title: "Organic through the list",
+              body: "Shea, jojoba and every essential oil are certified organic. The full ingredient list is on each product page before you buy, not folded inside the carton.",
             },
             {
-              title: "No routine creep",
-              body: "We will not launch a seventh product to fix a problem the first six created. The range is the range.",
+              title: "Scent you can avoid",
+              body: "One balm has no fragrance in it at all. If you came to tallow because everything else irritated your skin, start there.",
             },
           ].map((item) => (
             <div key={item.title}>

@@ -25,11 +25,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Six Skincare Products — six products, one routine",
+    default: "Six — whipped tallow balm & perfume oil",
     template: "%s — Six",
   },
   description:
-    "A six-step skincare routine with nothing spare in it: cleanser, essence, vitamin C, niacinamide, barrier cream and SPF 50.",
+    "Whipped grass-fed tallow with organic shea and jojoba, in four blends, plus two perfume rollers. Six products, made in small batches.",
   openGraph: {
     type: "website",
     siteName: "Six Skincare Products",

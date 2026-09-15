@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ProductArt } from "@/components/product-art";
-import { formatPrice, type Product } from "@/data/products";
+import { formatLabel, formatPrice, type Product } from "@/data/products";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -14,7 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="mt-4">
         <p className="text-xs uppercase tracking-[0.18em] text-ink-faint">
-          Step {product.step}
+          {formatLabel(product.format)}
         </p>
         <h3 className="mt-1 font-serif text-lg leading-snug text-ink">
           {product.name}

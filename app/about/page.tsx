@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "Why Six makes six products and no more: evidence-led actives, honest concentrations and a routine you can finish.",
+    "Why Six makes whipped tallow balm with grass-fed tallow, organic shea and organic jojoba — and why the range stays at six.",
 };
 
 export default function AboutPage() {
@@ -14,46 +14,66 @@ export default function AboutPage() {
         Approach
       </p>
       <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
-        Why only six?
+        Why tallow, and why only six
       </h1>
 
       <div className="mt-8 space-y-6 text-base leading-relaxed text-ink-soft">
         <p>
-          Skincare has an abundance problem. The average bathroom shelf holds
-          more than a dozen products, most bought to solve a problem another
-          product on the same shelf created. Complexity gets sold as
-          thoroughness, and the routine becomes something to manage rather than
-          something that works.
+          Tallow is an old ingredient that fell out of fashion and is coming
+          back, mostly because people tried it. It is rich, it melts at body
+          temperature, and its fatty acid profile is unusually close to what
+          skin produces itself — which is why it sinks in rather than sitting
+          on top the way a water-and-emulsifier lotion often does.
         </p>
         <p>
-          There are six things that consistently hold up: cleanse without
-          stripping, hydrate, use a morning antioxidant, use something for tone
-          and oil balance, repair the barrier, and wear sunscreen every day.
-          Everything beyond that is refinement, and most of it is marketing.
+          We whip it with organic shea butter and organic jojoba. The shea
+          gives it body, the jojoba keeps it from feeling heavy, and the
+          whipping turns something firm into something you can scoop with a
+          fingertip. The base is the same in every jar. Only the blend on top
+          changes.
         </p>
         <p>
-          So we make those six. Each at a concentration with evidence behind it,
-          each with its full ingredient list published before you buy, and each
-          designed to work alongside the other five rather than compete for a
-          place in your morning.
+          That base is three ingredients. You can read the whole list in one
+          breath, and one of the four balms has nothing added to it at all.
+          If you came to tallow because everything on the shelf irritated your
+          skin, that jar is the one to start with.
         </p>
         <p>
-          We are not planning a seventh. If we ever do add one, it will be
-          because something in the six became obsolete — not because we needed
-          a launch.
+          Six is the range, not a milestone on the way to twenty. Small means
+          every batch gets attention and nothing sits in a warehouse losing its
+          scent. If the range ever grows, it will be because something is
+          genuinely missing from it — not because we needed a launch.
+        </p>
+      </div>
+
+      <h2 className="mt-14 font-serif text-2xl text-ink">
+        On essential oils
+      </h2>
+      <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
+        <p>
+          The blends are chosen for how they smell and how they wear, and every
+          oil in them is certified organic. Several have long traditions behind
+          them — frankincense and myrrh have been traded for four thousand
+          years — and we will tell you about that history. We will not tell you
+          a moisturiser treats a medical condition, because it does not.
+        </p>
+        <p>
+          We also publish the fragrance allergens that occur naturally in each
+          blend, on the product page, before you buy. No regulator makes us do
+          that here. It seemed like the obvious thing to do.
         </p>
       </div>
 
       <h2 className="mt-14 font-serif text-2xl text-ink">What we will not do</h2>
       <ul className="mt-5 space-y-3 text-base leading-relaxed text-ink-soft">
         <li className="rule pt-3">
-          Claim a cosmetic product treats a medical condition.
+          Claim a cosmetic product treats or cures anything.
         </li>
         <li className="rule pt-3">
-          Hide a concentration because it is lower than you would expect.
+          Use phototoxic citrus oils in a balm you wear outdoors.
         </li>
         <li className="rule pt-3">
-          Sell a &ldquo;booster&rdquo; that fixes a problem our own routine caused.
+          Hide an ingredient list until after you have paid for it.
         </li>
       </ul>
 

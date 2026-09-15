@@ -8,7 +8,8 @@ export function SiteFooter() {
         <div>
           <Wordmark className="h-12 w-auto text-ink" title="Six" />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-soft">
-            Six products. One routine. Nothing you have to think about twice.
+            Whipped grass-fed tallow and perfume oil. Six things, made in
+            small batches, and the range stays that way.
           </p>
         </div>
 
@@ -17,7 +18,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-ink-soft">
             <li>
               <Link href="/products" className="hover:text-ink">
-                The full routine
+                The full range
               </Link>
             </li>
             <li>
