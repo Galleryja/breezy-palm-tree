@@ -7,10 +7,26 @@ Checkout. No database, no CMS, no Shopify subscription.
 
 ## Getting started
 
+### In a Codespace
+
+Open the repo in a Codespace. `.devcontainer/devcontainer.json` runs
+`npm install` on create, so all you type is:
+
+```bash
+npm run dev
+```
+
+Port 3000 is forwarded automatically and VS Code opens it. If you miss the
+prompt, use the **PORTS** tab.
+
+Forwarded ports are private by default. To show someone, right-click the port
+→ Port Visibility → Public.
+
+### Locally
+
 ```bash
 npm install
-cp .env.example .env.local   # then add your Stripe test key
-npm run dev                  # http://localhost:3000
+npm run dev   # http://localhost:3000
 ```
 
 The site runs without a Stripe key — browse, add to bag, everything works.
@@ -19,10 +35,18 @@ add it.
 
 ## Environment
 
+Copy `.env.example` to `.env.local` when you are ready to test payments.
+
 | Variable | Required | Notes |
 | --- | --- | --- |
 | `STRIPE_SECRET_KEY` | for checkout | Test keys start `sk_test_`. [Dashboard →](https://dashboard.stripe.com/test/apikeys) |
-| `NEXT_PUBLIC_SITE_URL` | in production | Used to build Stripe's success/cancel URLs |
+| `NEXT_PUBLIC_SITE_URL` | production only | Leave unset in development — see below |
+
+**Leave `NEXT_PUBLIC_SITE_URL` unset while developing.** The checkout route
+falls back to the request's own origin, which is right on localhost and right
+behind a Codespaces forwarded URL. Hard-coding `http://localhost:3000` is the
+usual way to break checkout in a Codespace: Stripe sends shoppers back to an
+address their browser cannot reach.
 
 `.env.local` is gitignored. Never commit a live key.
 
@@ -73,12 +97,10 @@ npm run typecheck  # tsc --noEmit
 
 ## Notes on the setup
 
-- **Turbopack is deliberately off.** `dev` and `build` use webpack, which is
-  the stable path on low-RAM machines. Do not add `--turbopack`.
+- **Turbopack is deliberately off.** `dev` and `build` use webpack. Do not add
+  `--turbopack`.
 - Next is pinned to `15.5.x`. Next 16 makes Turbopack the default; upgrading
   means opting back out every release.
-- `NODE_OPTIONS=--max-old-space-size=3072` is set in the npm scripts. On an
-  8GB machine, raising it further pushes the OS into swap and gets slower.
 - `postcss` and `sharp` are pinned via `overrides` in `package.json` to clear
   advisories that would otherwise only be fixable by moving to Next 16. Check
   `npm audit` before removing them.
