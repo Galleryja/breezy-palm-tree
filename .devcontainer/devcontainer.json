@@ -1,9 +1,16 @@
 {
   "name": "SIX Skincare",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
 
-  // Dependencies are installed once when the Codespace is created, so the
-  // first thing you type is `npm run dev`.
+  // The image Codespaces uses by default. Deliberately not a slimmer
+  // Node-specific image: those define their own user (usually `node`), which
+  // collides with the `codespace` user Codespaces expects and fails container
+  // creation with "cannot create directory '/home/codespace'".
+  //
+  // For the same reason there is no "remoteUser" key here. Do not add one.
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+
+  // Runs once when the Codespace is created, so the first thing you type is
+  // `npm run dev`.
   "postCreateCommand": "npm install",
 
   "forwardPorts": [3000],
@@ -16,13 +23,7 @@
 
   "customizations": {
     "vscode": {
-      "extensions": ["bradlc.vscode-tailwindcss"],
-      "settings": {
-        "editor.formatOnSave": false,
-        "typescript.tsdk": "node_modules/typescript/lib"
-      }
+      "extensions": ["bradlc.vscode-tailwindcss"]
     }
-  },
-
-  "remoteUser": "node"
+  }
 }
