@@ -16,14 +16,19 @@
 }
 
 @theme {
-  --color-paper: #faf8f5;
-  --color-paper-deep: #f2eee8;
-  --color-ink: #1c1a17;
-  --color-ink-soft: #57524a;
-  --color-ink-faint: #8a8279;
-  --color-line: #e3ddd4;
-  --color-accent: #3f5d52;
-  --color-accent-soft: #eaf0ed;
+  /* Nordic blue. Cool, desaturated, high-contrast — Scandinavian minimal
+     depends on restraint in the hues and rigour in the contrast, not on
+     colour doing the work. Every pairing below clears WCAG AA (4.5:1). */
+  --color-paper: #f6f8fa;
+  --color-paper-deep: #eaeef3;
+  --color-ink: #15181c;
+  --color-ink-soft: #48515c;
+  /* Do not lighten: this is the darkest value that still passes AA on
+     paper-deep, which is the tightest pairing in the system. */
+  --color-ink-faint: #636c77;
+  --color-line: #dbe1e8;
+  --color-accent: #35597a;
+  --color-accent-soft: #e6edf4;
 
   --font-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;

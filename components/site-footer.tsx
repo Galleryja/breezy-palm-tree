@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-line bg-paper-deep">
       <div className="wrap grid gap-10 py-14 sm:grid-cols-3">
         <div>
-          <Wordmark className="h-10 w-auto text-ink" title="Six" />
+          <Wordmark className="h-12 w-auto text-ink" title="Six" />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-soft">
             Six products. One routine. Nothing you have to think about twice.
           </p>
