@@ -16,9 +16,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur">
-      <div className="wrap flex h-16 items-center justify-between gap-6">
+      <div className="wrap flex h-20 items-center justify-between gap-6">
         <Link href="/" aria-label="Six, home" className="text-ink">
-          <Wordmark className="h-11 w-auto" title="Six" />
+          <Wordmark className="h-14 w-auto" title="Six" />
         </Link>
 
         <nav className="flex items-center gap-6 text-sm">
