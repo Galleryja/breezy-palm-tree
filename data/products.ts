@@ -26,7 +26,10 @@ export type Product = {
   /** Full INCI list, as it would appear on the carton. */
   inci: string;
   howToUse: string;
-  /** Drives the generated artwork. Two hex colours, light then deep. */
+  /** Drives the generated artwork. Two hex colours, light then deep.
+   *  Keep these cool and desaturated; the palette carries the brand, not
+   *  the product art. Two warm notes are deliberate, for the vitamin C and
+   *  the sunscreen, which are warm-toned products. */
   swatch: [string, string];
   skinTypes: string;
 };
@@ -52,7 +55,7 @@ export const PRODUCTS: Product[] = [
       "Aqua, Coco-Betaine, Glycerin, Sodium Cocoyl Isethionate, Panthenol, Sodium Chloride, Citric Acid, Sodium Benzoate, Potassium Sorbate.",
     howToUse:
       "Morning and evening. Massage half a pump into damp skin for thirty seconds, rinse with lukewarm water, pat dry. In the evening, use after an oil cleanser if you wear heavy sunscreen or makeup.",
-    swatch: ["#e8f1ee", "#5f8d7e"],
+    swatch: ["#eef3f6", "#5c7d92"],
     skinTypes: "All skin types, including sensitive",
   },
   {
@@ -73,7 +76,7 @@ export const PRODUCTS: Product[] = [
       "Aqua, Glycerin, Butylene Glycol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Hyaluronate Crosspolymer, Beta-Glucan, Trehalose, Panthenol, Allantoin, Sodium Benzoate, Potassium Sorbate, Citric Acid.",
     howToUse:
       "After cleansing, while skin is still damp. Press two to three pushes into the face with your palms rather than wiping. Follow within a minute so the water has something to sit under.",
-    swatch: ["#eef2f8", "#6b84ab"],
+    swatch: ["#eaf1f8", "#47698c"],
     skinTypes: "All skin types, especially dehydrated",
   },
   {
@@ -94,7 +97,7 @@ export const PRODUCTS: Product[] = [
       "Aqua, Ascorbic Acid, Propylene Glycol, Ethoxydiglycol, Glycerin, Ferulic Acid, Tocopherol, Panthenol, Sodium Hyaluronate, Triethanolamine, Sodium Metabisulfite.",
     howToUse:
       "Mornings only, after essence and before moisturiser. Four to five drops over face and neck. Always follow with sunscreen. New to vitamin C? Use every other morning for two weeks first.",
-    swatch: ["#fdf0df", "#c9822f"],
+    swatch: ["#f6f1e8", "#9a7f4f"],
     skinTypes: "Normal, combination and oily. Introduce slowly if sensitive",
   },
   {
@@ -115,7 +118,7 @@ export const PRODUCTS: Product[] = [
       "Aqua, Niacinamide, Pentylene Glycol, Zinc PCA, Glycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum, Sodium Benzoate, Potassium Sorbate, Citric Acid.",
     howToUse:
       "Evenings, after essence. Three to four drops on face and neck. Can be used mornings too — if you also use the vitamin C serum, put niacinamide in the evening to keep each step simple.",
-    swatch: ["#f3eff9", "#7a68a6"],
+    swatch: ["#eeeef7", "#5d6188"],
     skinTypes: "Oily, combination and blemish-prone",
   },
   {
@@ -136,7 +139,7 @@ export const PRODUCTS: Product[] = [
       "Aqua, Glycerin, Squalane, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Phytosphingosine, Sodium Lauroyl Lactylate, Panthenol, Tocopherol, Xanthan Gum, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.",
     howToUse:
       "Morning and evening, as the last step before sunscreen. A pea-sized amount for the face. Use more at night or in winter if skin feels tight by morning.",
-    swatch: ["#f7f1ea", "#a8815f"],
+    swatch: ["#f0f2f4", "#6f7880"],
     skinTypes: "All skin types, especially dry or compromised",
   },
   {
@@ -157,7 +160,7 @@ export const PRODUCTS: Product[] = [
       "Aqua, Zinc Oxide, Caprylic/Capric Triglyceride, Glycerin, Niacinamide, Dimethicone, Silica, Iron Oxides (CI 77491, CI 77492, CI 77499), Polyglyceryl-3 Polyricinoleate, Tocopherol, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin.",
     howToUse:
       "Every morning as the final step, rain or shine. Two fingers' length for face and neck. Reapply every two hours in direct sun.",
-    swatch: ["#fdf6ec", "#d0a15c"],
+    swatch: ["#f7f3e9", "#a08a58"],
     skinTypes: "All skin types, including sensitive and post-procedure",
   },
 ];
