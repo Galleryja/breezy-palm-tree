@@ -3,12 +3,12 @@ import { UnifrakturMaguntia } from "next/font/google";
 import "./globals.css";
 
 /**
- * Stand-in for Cloister Black, the brand's real wordmark face.
+ * Fallback for the brand wordmark face.
  *
- * Cloister Black is a licensed typeface and is not redistributed here. When
- * you have a webfont licence, delete this import and replace it with an
- * @font-face rule in globals.css pointing at the .woff2, keeping the same
- * --font-blackletter variable name. Nothing else needs to change.
+ * Cloister Black is declared as an @font-face in globals.css and loaded from
+ * public/fonts. This open-licence blackletter sits behind it in the stack and
+ * renders only while that file is missing, so the mark degrades to something
+ * of the right character rather than to a plain serif.
  */
 const blackletter = UnifrakturMaguntia({
   weight: "400",

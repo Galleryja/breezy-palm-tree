@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/**
+ * The brand wordmark face.
+ *
+ * The file is not in the repo yet — see public/fonts/README.md. Until it is,
+ * this rule simply fails to load and the font stack falls through to
+ * UnifrakturMaguntia, so nothing breaks.
+ */
+@font-face {
+  font-family: "Cloister Black";
+  src: url("/fonts/CloisterBlack.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-paper: #faf8f5;
   --color-paper-deep: #f2eee8;

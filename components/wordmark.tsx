@@ -4,10 +4,9 @@
  * Text is curved with an SVG <textPath>, because CSS cannot bend a baseline.
  * The arc is deliberately gentle — "slightly curved", not a semicircle.
  *
- * FONT: the real mark is Cloister Black, which is a licensed typeface and is
- * not bundled here. What renders today is UnifrakturMaguntia, an open-licence
- * blackletter standing in for it. To swap in the real thing, see the note in
- * app/layout.tsx — it is a one-line change and nothing else needs to move.
+ * FONT: renders in Cloister Black when public/fonts/CloisterBlack.ttf is
+ * present, and in UnifrakturMaguntia — an open-licence blackletter — when it
+ * is not. Adding the file is the whole switch; no code change is needed.
  */
 export function Wordmark({
   className = "",
@@ -33,8 +32,10 @@ export function Wordmark({
         style={{
           // Falls back through other blackletters before hitting a serif, so
           // the mark never renders in a plain sans if the font fails to load.
+          // Cloister Black first; falls through to the open-licence
+          // stand-in if the file has not been added yet.
           fontFamily:
-            "var(--font-blackletter), 'Cloister Black', UnifrakturMaguntia, serif",
+            "'Cloister Black', var(--font-blackletter), UnifrakturMaguntia, serif",
           fontSize: "34px",
           letterSpacing: "1px",
         }}
