@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "The richest thing we make. Jasmine and ylang ylang sit over vanilla and stay warm and sweet on skin for most of the day — a tallow base holds fragrance far longer than a lotion does. People tend to love this one immediately or find it too much; there is not much middle ground.",
+      "Lighter whipped tallow balm with jasmine, ylang ylang and natural vanilla. This is a beautiful floral blend with natural elevation from natural elements.",
     notes: [
       {
         name: "Organic jasmine absolute",
