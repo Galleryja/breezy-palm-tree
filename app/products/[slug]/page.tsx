@@ -125,22 +125,6 @@ export default async function ProductPage({ params }: PageProps) {
             {product.description}
           </p>
 
-          {product.notes.length > 0 ? (
-            <section className="mt-10">
-              <h2 className="font-serif text-xl text-ink">The blend</h2>
-              <dl className="mt-4 space-y-4">
-                {product.notes.map((n) => (
-                  <div key={n.name} className="rule pt-4">
-                    <dt className="text-sm font-medium text-ink">{n.name}</dt>
-                    <dd className="mt-1 text-sm leading-relaxed text-ink-soft">
-                      {n.note}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
-          ) : null}
-
           <section className="mt-10">
             <h2 className="font-serif text-xl text-ink">
               {product.format === "balm" ? "The base" : "The carrier"}
@@ -156,6 +140,22 @@ export default async function ProductPage({ params }: PageProps) {
               ))}
             </dl>
           </section>
+
+          {product.notes.length > 0 ? (
+            <section className="mt-10">
+              <h2 className="font-serif text-xl text-ink">The blend</h2>
+              <dl className="mt-4 space-y-4">
+                {product.notes.map((n) => (
+                  <div key={n.name} className="rule pt-4">
+                    <dt className="text-sm font-medium text-ink">{n.name}</dt>
+                    <dd className="mt-1 text-sm leading-relaxed text-ink-soft">
+                      {n.note}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ) : null}
 
           <section className="mt-10">
             <h2 className="font-serif text-xl text-ink">How to use</h2>

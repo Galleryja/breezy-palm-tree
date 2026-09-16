@@ -20,7 +20,12 @@ export type Product = {
   format: Format;
   /** The blend name, e.g. "Floral Jasmine". Unscented has no blend. */
   name: string;
-  /** Shown under the name in listings. One line, no full stop. */
+  /**
+   * Shown directly under the name, on cards and on the product page.
+   * Where the name is evocative rather than descriptive — Sheer Suede — this
+   * is what tells a shopper what is actually in the jar, so it carries the
+   * blend, not atmosphere.
+   */
   tagline: string;
   /** Price in minor units (cents). Integer only — never a float. */
   priceCents: number;
@@ -124,15 +129,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin. Rich, so patch test if you are acne-prone",
   },
   {
-    slug: "frankincense-myrrh-balm",
+    slug: "sheer-suede-balm",
     order: 2,
     format: "balm",
-    name: "Frankincense & Myrrh",
-    tagline: "Two resins, traded for four thousand years",
+    name: "Sheer Suede",
+    tagline: "Frankincense and Myrrh",
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Dry, warm and faintly smoky — closer to incense than to perfume. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
+      "Frankincense and myrrh, dry and warm and faintly smoky — closer to incense than to perfume. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
       {
         name: "Organic frankincense oil",
@@ -224,15 +229,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "Evening wear, and layering over the unscented balm",
   },
   {
-    slug: "frankincense-myrrh-roller",
+    slug: "sheer-suede-roller",
     order: 6,
     format: "roller",
-    name: "Frankincense & Myrrh",
-    tagline: "Incense you can wear",
+    name: "Sheer Suede",
+    tagline: "Frankincense and Myrrh",
     priceCents: 2200,
     size: "10 ml",
     description:
-      "The same two resins as the balm, in organic jojoba. Dry, warm and quiet — it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
+      "The same two resins as the balm — frankincense and myrrh — in organic jojoba. Dry, warm and quiet, it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
     notes: [
       {
         name: "Organic frankincense oil",
