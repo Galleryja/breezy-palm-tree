@@ -137,7 +137,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Frankincense and myrrh, dry and warm and faintly smoky — closer to incense than to perfume. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
+      "Frankincense and myrrh, dry and faint wisps of smoke — close to the feeling of ease. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
       {
         name: "Organic frankincense oil",
