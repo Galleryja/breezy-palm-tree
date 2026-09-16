@@ -175,11 +175,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Sensitive skin, fragrance-free routines, and layering",
   },
   {
-    slug: "orange-blossom-petitgrain-balm",
+    slug: "balanced-light-balm",
     order: 4,
     format: "balm",
-    name: "Orange Blossom & Petitgrain",
-    tagline: "One bitter orange tree, two harvests",
+    name: "Balanced Light",
+    tagline: "Neroli and Petitgrain",
     priceCents: 3000,
     size: "6 oz",
     description:
