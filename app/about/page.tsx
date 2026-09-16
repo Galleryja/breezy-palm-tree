@@ -58,9 +58,10 @@ export default function AboutPage() {
           into something you can lift with a fingertip.
         </p>
         <p>
-          That is three ingredients. One of the four balms stops there, with no
-          fragrance at all — and if you came to tallow because everything else
-          left your skin unhappy, that is the jar to start with.
+          That is three ingredients before anything is added. The blend on top
+          is the only thing that changes between jars, and each of the three
+          comes again as a perfume roller in organic jojoba — so you can wear a
+          scent lightly, or layer it over the balm and have it last.
         </p>
       </div>
 

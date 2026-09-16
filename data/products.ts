@@ -5,9 +5,9 @@
  * price. The checkout route reads prices from here on the server, so a browser
  * can never talk Six into charging less than the listed amount.
  *
- * Six products: four whipped tallow balms and two perfume rollers, sharing
- * two of their blends. To change the range, edit this array — the homepage,
- * listing, product pages and cart all follow.
+ * Six products: three blends, each as a whipped tallow balm and as a perfume
+ * roller. To change the range, edit this array — the homepage, listing,
+ * product pages and cart all follow.
  */
 
 export type Format = "balm" | "roller";
@@ -18,7 +18,7 @@ export type Product = {
   /** Sort order across the whole range. Balms first, then rollers. */
   order: number;
   format: Format;
-  /** The blend name, e.g. "Floral Jasmine". Unscented has no blend. */
+  /** The blend name, e.g. "Sheer Suede". */
   name: string;
   /**
    * Shown directly under the name, on cards and on the product page.
@@ -32,14 +32,14 @@ export type Product = {
   size: string;
   /** Two or three sentences for the product page. */
   description: string;
-  /** How the blend reads on skin. Empty for the unscented balm. */
+  /** The oils in the blend, and what each one does. */
   notes: { name: string; note: string }[];
   /** Full ingredient list, as it would appear on the label. */
   ingredients: string;
   /**
    * Fragrance allergens that occur naturally in the essential oils. Not
    * required in the US, but it is the honest thing to publish and it is
-   * required if these are ever sold into the EU or UK. Empty when unscented.
+   * required if these are ever sold into the EU or UK.
    */
   allergens: string;
   howToUse: string;
@@ -57,7 +57,7 @@ export type Product = {
 
 export const CURRENCY = "usd";
 
-/** Shared across all four balms. */
+/** Shared across all three balms. */
 const TALLOW_BASE =
   "Grass-fed beef tallow, organic shea butter (Butyrospermum Parkii), organic jojoba oil (Simmondsia Chinensis)";
 
@@ -157,26 +157,8 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin, and anyone who finds floral scents too sweet",
   },
   {
-    slug: "unscented-balm",
-    order: 3,
-    format: "balm",
-    name: "Unscented",
-    tagline: "Three ingredients, nothing added",
-    priceCents: 3000,
-    size: "6 oz",
-    description:
-      "Grass-fed tallow, organic shea and organic jojoba. That is the entire formula. For sensitive skin, for anyone whose fragrance is already spoken for, and for the people who came to tallow in the first place because they wanted a list they could read in one breath.",
-    notes: [],
-    ingredients: `${TALLOW_BASE}.`,
-    allergens: "",
-    howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Layer a perfume roller over the top if you want scent — the balm will hold it longer than bare skin does.",
-    swatch: ["#f5f4f1", "#9a978f"],
-    bestFor: "Sensitive skin, fragrance-free routines, and layering",
-  },
-  {
     slug: "balanced-light-balm",
-    order: 4,
+    order: 3,
     format: "balm",
     name: "Balanced Light",
     tagline: "Neroli and Petitgrain",
@@ -204,7 +186,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "floral-jasmine-roller",
-    order: 5,
+    order: 4,
     format: "roller",
     name: "Floral Jasmine",
     tagline: "Jasmine, Vanilla, and Ylang Ylang",
@@ -230,13 +212,13 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
-      "Roll onto pulse points — wrists, throat, behind the ears. Over the unscented balm it lasts noticeably longer than on bare skin. Reapply through the day as you like.",
+      "Roll onto pulse points — wrists, throat, behind the ears. Over a balm it lasts noticeably longer than on bare skin. Reapply through the day as you like.",
     swatch: ["#f8f2e4", "#c2a361"],
-    bestFor: "Evening wear, and layering over the unscented balm",
+    bestFor: "Evening wear, and layering over the matching balm",
   },
   {
     slug: "sheer-suede-roller",
-    order: 6,
+    order: 5,
     format: "roller",
     name: "Sheer Suede",
     tagline: "Frankincense and Myrrh",
@@ -260,6 +242,34 @@ export const PRODUCTS: Product[] = [
       "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; the resins open up with skin heat. Unisex, and it wears well in cold weather.",
     swatch: ["#f3ece1", "#96784f"],
     bestFor: "Anyone who prefers resin and wood to florals",
+  },
+  {
+    slug: "balanced-light-roller",
+    order: 6,
+    format: "roller",
+    name: "Balanced Light",
+    tagline: "Neroli and Petitgrain",
+    priceCents: 2200,
+    size: "10 ml",
+    description:
+      "Neroli and petitgrain in organic jojoba — blossom and leaf from the same bitter orange tree. The lightest thing we make, and the one that wears best in warm weather. Neither oil is phototoxic, unlike the peel oils a citrus scent usually reaches for, so it is safe to wear in daylight.",
+    notes: [
+      {
+        name: "Organic neroli oil",
+        note: "Steam-distilled from Citrus aurantium blossoms and long favored for mature skin. Naturally rich in antioxidant compounds, neroli adds a bright floral note and leaves skin looking fresh and radiant.",
+      },
+      {
+        name: "Organic petitgrain oil",
+        note: "From the leaves of the same bitter orange tree. Traditionally used for clear, balanced-looking skin, petitgrain adds a crisp, green edge that keeps the blend clean.",
+      },
+    ],
+    ingredients: `${ROLLER_BASE}, organic neroli oil (Citrus Aurantium Amara flower), organic petitgrain oil (Citrus Aurantium Amara leaf).`,
+    allergens:
+      "Contains linalool, limonene, geraniol and citral, occurring naturally in the essential oils.",
+    howToUse:
+      "Roll onto pulse points — wrists, throat, behind the ears. Lighter than the other two, so it suits daytime and reapplying without it building up. Safe to wear in sun.",
+    swatch: ["#f7f4e6", "#a89a5e"],
+    bestFor: "Daytime wear, warm weather, and anyone who wants scent kept light",
   },
 ];
 
@@ -313,3 +323,4 @@ export function formatPrice(cents: number): string {
     currency: CURRENCY.toUpperCase(),
   }).format(cents / 100);
 }
+

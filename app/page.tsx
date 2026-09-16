@@ -62,8 +62,7 @@ export default function HomePage() {
             <h2 className="font-serif text-2xl text-ink">The balms</h2>
             <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
               Same base every time — grass-fed tallow, organic shea butter,
-              organic jojoba. Four blends on top of it, one of them nothing at
-              all.
+              organic jojoba. Three blends on top of it.
             </p>
           </div>
         </div>
@@ -79,8 +78,8 @@ export default function HomePage() {
         <div className="mb-10">
           <h2 className="font-serif text-2xl text-ink">The rollers</h2>
           <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
-            Two of the blends in organic jojoba, to carry. They wear longest
-            over the unscented balm.
+            The same three blends in organic jojoba, to carry. They wear
+            longest layered over their matching balm.
           </p>
         </div>
 
@@ -103,8 +102,8 @@ export default function HomePage() {
               body: "Shea, jojoba and every essential oil are certified organic. The full ingredient list is on each product page before you buy, not folded inside the carton.",
             },
             {
-              title: "Scent you can avoid",
-              body: "One balm has no fragrance in it at all. If you came to tallow because everything else irritated your skin, start there.",
+              title: "Two ways to wear it",
+              body: "Every blend comes as a balm and as a roller. Wear either on its own, or layer the roller over the balm, which holds the scent longer than bare skin does.",
             },
           ].map((item) => (
             <div key={item.title}>
