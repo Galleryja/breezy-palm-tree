@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Lighter whipped tallow balm with jasmine, ylang ylang and natural vanilla. This is a beautiful floral blend and a feeling of elevation from the natural elements.",
+      "Whipped tallow balm with jasmine, ylang ylang and natural vanilla. This is a beautiful floral blend and a feeling of elevation from the natural elements.",
     notes: [
       {
         name: "Organic jasmine absolute",
