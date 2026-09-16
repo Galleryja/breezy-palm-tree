@@ -106,10 +106,10 @@ export default async function ProductPage({ params }: PageProps) {
 
           <AddToCart slug={product.slug} className="mt-6 w-full sm:w-auto" />
 
-          <p className="mt-4 text-sm text-ink-faint">Best for: {product.bestFor}</p>
+          <p className="mt-5 text-sm text-ink-faint">Best for: {product.bestFor}</p>
 
           {sibling ? (
-            <p className="mt-2 text-sm text-ink-faint">
+            <p className="mt-1.5 text-sm text-ink-faint">
               Also as a{" "}
               <Link
                 href={`/products/${sibling.slug}`}

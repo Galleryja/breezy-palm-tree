@@ -55,14 +55,12 @@ export default function HomePage() {
       </section>
 
       <section className="wrap rule py-16">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h2 className="font-serif text-2xl text-ink">The balms</h2>
-            <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
-              Same base every time — grass-fed tallow, organic shea butter,
-              organic jojoba. Four blends on top of it.
-            </p>
-          </div>
+        <div className="mb-10">
+          <h2 className="font-serif text-2xl text-ink">The balms</h2>
+          <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
+            Same base every time — grass-fed tallow, organic shea butter,
+            organic jojoba. Four blends on top of it.
+          </p>
         </div>
 
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -75,9 +73,9 @@ export default function HomePage() {
       <section className="wrap rule py-16">
         <div className="mb-10">
           <h2 className="font-serif text-2xl text-ink">The rollers</h2>
-          <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
-            The same four blends in organic jojoba, to carry. They wear
-            longest layered over their matching balm.
+          <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
+            The same four blends in organic jojoba, to carry. They wear longest
+            layered over their matching balm.
           </p>
         </div>
 
@@ -96,12 +94,12 @@ export default function HomePage() {
               body: "Tallow from grass-fed cattle, rendered clean. It is the whole reason the balm works the way it does, so it is not something we would quietly downgrade.",
             },
             {
-              title: "Organic through the list",
-              body: "Shea, jojoba and every essential oil are certified organic. The full ingredient list is on each product page before you buy, not folded inside the carton.",
+              title: "Organic botanicals",
+              body: "Shea, jojoba and every essential oil are certified organic. The full ingredient list is on every product page — read it before you buy, not after the carton arrives.",
             },
             {
               title: "Two ways to wear it",
-              body: "Every blend comes as a balm and as a roller. Wear either on its own, or layer the roller over the balm, which holds the scent longer than bare skin does.",
+              body: "Every blend comes as a balm and as a roller. Wear either alone, or layer the roller over the balm — tallow holds a scent far longer than bare skin does.",
             },
           ].map((item) => (
             <div key={item.title}>

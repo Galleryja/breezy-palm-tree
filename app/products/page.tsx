@@ -14,7 +14,7 @@ export default function ProductsPage() {
 
   return (
     <section className="wrap py-16">
-      <header className="max-w-xl">
+      <header className="measure">
         <p className="text-xs uppercase tracking-[0.22em] text-ink-faint">
           The range
         </p>
@@ -29,7 +29,7 @@ export default function ProductsPage() {
       </header>
 
       <div className="mt-14">
-        <h2 className="font-serif text-xl text-ink">Whipped tallow balm · 6 oz</h2>
+        <h2 className="font-serif text-2xl text-ink">Whipped tallow balm · 6 oz</h2>
         <div className="mt-8 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {balms.map((product) => (
             <ProductCard key={product.slug} product={product} />
@@ -38,7 +38,7 @@ export default function ProductsPage() {
       </div>
 
       <div className="rule mt-20 pt-12">
-        <h2 className="font-serif text-xl text-ink">Perfume roller · 10 ml</h2>
+        <h2 className="font-serif text-2xl text-ink">Perfume roller · 10 ml</h2>
         <div className="mt-8 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {rollers.map((product) => (
             <ProductCard key={product.slug} product={product} />

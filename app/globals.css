@@ -60,11 +60,19 @@
 }
 
 @layer utilities {
+  /* Page gutter and outer measure. Do not put a max-w-* utility on the same
+     element — both set max-width and which wins depends on stylesheet order,
+     not on which you meant. Nest instead: .wrap outside, measure inside. */
   .wrap {
     width: 100%;
     max-width: 68rem;
     margin-inline: auto;
     padding-inline: 1.25rem;
+  }
+
+  /* Reading measure for prose pages: roughly 70 characters. */
+  .measure {
+    max-width: 42rem;
   }
 
   .rule {
