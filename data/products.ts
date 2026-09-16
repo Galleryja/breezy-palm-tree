@@ -137,7 +137,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Frankincense and myrrh, dry and faintly resinous, with a lift that keeps it from sitting heavy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
+      "Frankincense and myrrh, dry and softly resinous, with just enough lift to stay easy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
       {
         name: "Organic frankincense oil",
