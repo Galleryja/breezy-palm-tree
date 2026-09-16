@@ -165,7 +165,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the morning option in a range that otherwise leans rich.",
+      "Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the bright option in a range that otherwise leans rich.",
     notes: [
       {
         name: "Organic neroli oil",
