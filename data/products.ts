@@ -124,9 +124,9 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
-      "A little goes a long way. Warm a pea-sized amount between your fingers until it melts, then press into damp skin — straight out of the shower is best, while there is still water to seal in. Face, hands, elbows, anywhere dry.",
+      "A little goes a long way. Warm a pea-sized amount between your fingers until it melts, then press into damp skin — straight out of the shower is best, while there is still water to seal in. Face, hands, elbows, anywhere dry. Patch test on a small area before first use.",
     swatch: ["#f7f3ec", "#b9a07f"],
-    bestFor: "Dry skin. Rich, so patch test if you are acne-prone",
+    bestFor: "Dry skin, and anyone drawn to florals",
   },
   {
     slug: "sheer-suede-balm",
@@ -152,7 +152,7 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains limonene, occurring naturally in the essential oils.",
     howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. The scent settles and deepens over the first half hour rather than announcing itself.",
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. The scent settles and deepens over the first half hour rather than announcing itself. Patch test on a small area before first use.",
     swatch: ["#f2eee7", "#8a7358"],
     bestFor: "Dry skin, and anyone who finds floral scents too sweet",
   },
@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains linalool, limonene, geraniol and citral, occurring naturally in the essential oils.",
     howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Neither oil in this blend is phototoxic, so unlike lemon or bergamot it is fine to wear in daylight.",
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Neither oil in this blend is phototoxic, so unlike lemon or bergamot it is fine to wear in daylight. Patch test on a small area before first use.",
     swatch: ["#f6f4e9", "#a8a56d"],
     bestFor: "Dry skin, daytime wear, and anyone who wants scent kept light",
   },
@@ -208,7 +208,7 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains limonene, occurring naturally in the essential oils.",
     howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. Vetiver opens up slowly, so give it half an hour before deciding what you think of it.",
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. Vetiver opens up slowly, so give it half an hour before deciding what you think of it. Patch test on a small area before first use.",
     swatch: ["#f1efe9", "#7a705f"],
     bestFor: "Dry skin, cold weather, and anyone who finds florals too sweet",
   },

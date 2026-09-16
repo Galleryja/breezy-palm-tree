@@ -101,7 +101,7 @@ export default function AboutPage() {
           className="mt-12 inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
         >
           See the Range
-          </Link>
+        </Link>
       </article>
     </div>
   );
