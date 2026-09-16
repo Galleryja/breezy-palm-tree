@@ -190,10 +190,8 @@ export const PRODUCTS: Product[] = [
         note: "Steam-distilled from Citrus aurantium blossoms and long favored for mature skin. Naturally rich in antioxidant compounds, neroli adds a bright floral note and leaves skin looking fresh and radiant.",
       },
       {
-        // DRAFT — written to match the supplied copy, not supplied. Replace
-        // when the real petitgrain text arrives.
         name: "Organic petitgrain oil",
-        note: "Steam-distilled from the leaves and twigs of the same Citrus aurantium tree, petitgrain is neroli's green counterpart. Its softly bitter, woody-citrus scent keeps the blossom from turning sweet, and unlike citrus peel oils it carries no furocoumarins, so it will not leave skin sun-sensitive.",
+        note: "From the leaves of the same bitter orange tree. Traditionally used for clear, balanced-looking skin, petitgrain adds a crisp, green edge that keeps the blend clean.",
       },
     ],
     ingredients: `${TALLOW_BASE}, organic neroli oil (Citrus Aurantium Amara flower), organic petitgrain oil (Citrus Aurantium Amara leaf).`,
