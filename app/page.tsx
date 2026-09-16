@@ -16,9 +16,7 @@ export default function HomePage() {
             Whipped tallow &amp; perfume oil
           </p>
           <h1 className="mt-4 font-serif text-4xl leading-[1.12] text-ink sm:text-5xl">
-            Six things.
-            <br />
-            Made properly.
+            Elevated skincare.
           </h1>
           {/* Client-written, set exactly as written: four lines broken where
               they were broken, no paragraph gaps between them, and no line
