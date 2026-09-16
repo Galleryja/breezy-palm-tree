@@ -90,9 +90,7 @@ export default function AboutPage() {
           We publish the fragrance allergens that occur naturally in each
           blend on the product page, before you buy. The citrus blend uses
           blossom and leaf rather than peel oils, so it will not make skin
-          sun-sensitive. And every essential oil is kept within the usage
-          levels recommended for leave-on skincare, not pushed to whatever
-          smells strongest. No regulator requires any of that here. It seemed
+          sun-sensitive. No regulator requires either of those here. It seemed
           like the obvious thing to do.
         </p>
       </div>
