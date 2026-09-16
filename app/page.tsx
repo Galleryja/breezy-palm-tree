@@ -38,7 +38,7 @@ export default function HomePage() {
               href="/products"
               className="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-accent"
             >
-              Shop the six
+              Shop the range
             </Link>
             <Link
               href="/about"
@@ -60,7 +60,7 @@ export default function HomePage() {
             <h2 className="font-serif text-2xl text-ink">The balms</h2>
             <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
               Same base every time — grass-fed tallow, organic shea butter,
-              organic jojoba. Three blends on top of it.
+              organic jojoba. Four blends on top of it.
             </p>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function HomePage() {
         <div className="mb-10">
           <h2 className="font-serif text-2xl text-ink">The rollers</h2>
           <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
-            The same three blends in organic jojoba, to carry. They wear
+            The same four blends in organic jojoba, to carry. They wear
             longest layered over their matching balm.
           </p>
         </div>

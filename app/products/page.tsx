@@ -3,9 +3,9 @@ import { ProductCard } from "@/components/product-card";
 import { productsByFormat } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "The Six",
+  title: "The range",
   description:
-    "Three organic essential oil blends, each as a whipped tallow balm and as a perfume roller. Grass-fed tallow, organic shea and organic jojoba throughout.",
+    "Four organic essential oil blends, each as a whipped tallow balm and as a perfume roller. Grass-fed tallow, organic shea and organic jojoba throughout.",
 };
 
 export default function ProductsPage() {
@@ -19,12 +19,12 @@ export default function ProductsPage() {
           The range
         </p>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
-          Three blends, two ways
+          Four blends, two ways
         </h1>
         <p className="mt-5 text-base leading-relaxed text-ink-soft">
           Every balm shares the same base — grass-fed tallow, organic shea
           butter, organic jojoba — and differs only in the blend on top. Each
-          of those three blends comes again as a perfume roller.
+          of those four blends comes again as a perfume roller.
         </p>
       </header>
 

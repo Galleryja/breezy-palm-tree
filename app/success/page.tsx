@@ -64,7 +64,7 @@ export default async function SuccessPage({ searchParams }: PageProps) {
         href="/products"
         className="mt-8 inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
       >
-        Back to the six
+        Back to the range
       </Link>
     </section>
   );

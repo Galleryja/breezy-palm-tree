@@ -8,8 +8,8 @@ export function SiteFooter() {
         <div>
           <Wordmark className="h-12 w-auto text-ink" title="Six" />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-soft">
-            Whipped grass-fed tallow and perfume oil. Six things, made in
-            small batches, and the range stays that way.
+            Whipped grass-fed tallow and perfume oil, made in small batches
+            and kept to a short list.
           </p>
         </div>
 

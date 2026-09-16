@@ -5,9 +5,9 @@
  * price. The checkout route reads prices from here on the server, so a browser
  * can never talk Six into charging less than the listed amount.
  *
- * Six products: three blends, each as a whipped tallow balm and as a perfume
- * roller. To change the range, edit this array — the homepage, listing,
- * product pages and cart all follow.
+ * Four blends, each as a whipped tallow balm and as a perfume roller. To
+ * change the range, edit this array — the homepage, listing, product pages
+ * and cart all follow. "Six" is the brand, not a count.
  */
 
 export type Format = "balm" | "roller";
@@ -57,11 +57,11 @@ export type Product = {
 
 export const CURRENCY = "usd";
 
-/** Shared across all three balms. */
+/** Shared across all four balms. */
 const TALLOW_BASE =
   "Grass-fed beef tallow, organic shea butter (Butyrospermum Parkii), organic jojoba oil (Simmondsia Chinensis)";
 
-/** Shared by both rollers. */
+/** Shared by all four rollers. */
 const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
 
 /**
@@ -185,8 +185,36 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin, daytime wear, and anyone who wants scent kept light",
   },
   {
-    slug: "floral-jasmine-roller",
+    slug: "dry-cedar-balm",
     order: 4,
+    format: "balm",
+    name: "Dry Cedar",
+    tagline: "Cedarwood and Vetiver",
+    priceCents: 3000,
+    size: "6 oz",
+    description:
+      "Cedarwood and vetiver — dry wood over damp earth. The most grounded thing in the range and the one that reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and lasts all day on a tallow base.",
+    notes: [
+      {
+        name: "Organic cedarwood oil",
+        note: "Steam-distilled from the wood of Cedrus atlantica, cedarwood has been used in perfumery and preservation since antiquity. Dry and softly resinous, it gives the blend its backbone.",
+      },
+      {
+        name: "Organic vetiver oil",
+        note: "Distilled from the roots of Chrysopogon zizanioides, a grass grown as much for the way its roots hold soil together as for its oil. Deep, earthy and faintly smoky, vetiver grounds the cedar and gives the blend its long finish.",
+      },
+    ],
+    ingredients: `${TALLOW_BASE}, organic cedarwood oil (Cedrus Atlantica), organic vetiver oil (Chrysopogon Zizanioides).`,
+    allergens:
+      "Contains limonene, occurring naturally in the essential oils.",
+    howToUse:
+      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. Vetiver opens up slowly, so give it half an hour before deciding what you think of it.",
+    swatch: ["#f1efe9", "#7a705f"],
+    bestFor: "Dry skin, cold weather, and anyone who finds florals too sweet",
+  },
+  {
+    slug: "floral-jasmine-roller",
+    order: 5,
     format: "roller",
     name: "Floral Jasmine",
     tagline: "Jasmine, Vanilla, and Ylang Ylang",
@@ -218,7 +246,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "sheer-suede-roller",
-    order: 5,
+    order: 6,
     format: "roller",
     name: "Sheer Suede",
     tagline: "Frankincense and Myrrh",
@@ -245,7 +273,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "balanced-light-roller",
-    order: 6,
+    order: 7,
     format: "roller",
     name: "Balanced Light",
     tagline: "Neroli and Petitgrain",
@@ -270,6 +298,34 @@ export const PRODUCTS: Product[] = [
       "Roll onto pulse points — wrists, throat, behind the ears. Lighter than the other two, so it suits daytime and reapplying without it building up. Safe to wear in sun.",
     swatch: ["#f7f4e6", "#a89a5e"],
     bestFor: "Daytime wear, warm weather, and anyone who wants scent kept light",
+  },
+  {
+    slug: "dry-cedar-roller",
+    order: 8,
+    format: "roller",
+    name: "Dry Cedar",
+    tagline: "Cedarwood and Vetiver",
+    priceCents: 2200,
+    size: "10 ml",
+    description:
+      "The same cedar and vetiver in organic jojoba. It sits very close to the skin — this is the one people notice when they are already standing next to you, not across a room. Two oils and nothing to soften them.",
+    notes: [
+      {
+        name: "Organic cedarwood oil",
+        note: "Steam-distilled from the wood of Cedrus atlantica, cedarwood has been used in perfumery and preservation since antiquity. Dry and softly resinous, it gives the blend its backbone.",
+      },
+      {
+        name: "Organic vetiver oil",
+        note: "Distilled from the roots of Chrysopogon zizanioides, a grass grown as much for the way its roots hold soil together as for its oil. Deep, earthy and faintly smoky, vetiver grounds the cedar and gives the blend its long finish.",
+      },
+    ],
+    ingredients: `${ROLLER_BASE}, organic cedarwood oil (Cedrus Atlantica), organic vetiver oil (Chrysopogon Zizanioides).`,
+    allergens:
+      "Contains limonene, occurring naturally in the essential oils.",
+    howToUse:
+      "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; vetiver needs skin heat to open. Wears well in cold weather and layers over any of the balms.",
+    swatch: ["#efece4", "#6f6857"],
+    bestFor: "Anyone who prefers wood and earth to florals",
   },
 ];
 

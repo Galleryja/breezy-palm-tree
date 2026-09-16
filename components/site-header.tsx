@@ -6,7 +6,7 @@ import { useCart } from "@/components/cart-provider";
 import { Wordmark } from "@/components/wordmark";
 
 const NAV = [
-  { href: "/products", label: "The Six" },
+  { href: "/products", label: "Shop" },
   { href: "/about", label: "Approach" },
 ];
 

@@ -5,7 +5,7 @@ import { WHY_TALLOW } from "@/data/products";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "What grass-fed tallow actually does for skin, what goes into every jar, and why the range stays at six.",
+    "What grass-fed tallow actually does for skin, what goes into every jar, and why the range stays small.",
 };
 
 /** Shared marker for the lists on this page. */
@@ -65,13 +65,13 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <h2 className="mt-14 font-serif text-2xl text-ink">Why only six</h2>
+      <h2 className="mt-14 font-serif text-2xl text-ink">Why the range stays small</h2>
       <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
         <p>
-          Six is the range, not a step on the way to twenty. Small batches mean
-          nothing sits in a warehouse losing its scent, and every jar gets made
-          properly. If we ever add to it, it will be because something is
-          genuinely missing — not because we needed a launch.
+          Four blends is the range, not a step on the way to twenty. Small
+          batches mean nothing sits in a warehouse losing its scent, and every
+          jar gets made properly. If we ever add to it, it will be because
+          something is genuinely missing — not because we needed a launch.
         </p>
       </div>
 
@@ -97,7 +97,7 @@ export default function AboutPage() {
         href="/products"
         className="mt-12 inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
       >
-        See the six
+        See the range
       </Link>
     </article>
   );

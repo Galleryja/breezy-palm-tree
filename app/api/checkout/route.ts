@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStripe, isStripeConfigured } from "@/lib/stripe";
-import { CURRENCY, formatLabel, getProduct } from "@/data/products";
+import { CURRENCY, PRODUCTS, formatLabel, getProduct } from "@/data/products";
 
 /**
  * Creates a Stripe Checkout Session and hands back its URL.
@@ -15,7 +15,9 @@ import { CURRENCY, formatLabel, getProduct } from "@/data/products";
 export const runtime = "nodejs";
 
 const MAX_QTY = 10;
-const MAX_LINES = 6; // the catalogue only has six products
+// One line per product in the catalogue, so buying one of everything is
+// allowed and anything beyond it is nonsense.
+const MAX_LINES = PRODUCTS.length;
 
 type IncomingLine = { slug: unknown; quantity: unknown };
 

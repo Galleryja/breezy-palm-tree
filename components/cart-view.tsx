@@ -54,7 +54,7 @@ export function CartView() {
           href="/products"
           className="mt-6 inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
         >
-          Shop the six
+          Shop the range
         </Link>
       </div>
     );

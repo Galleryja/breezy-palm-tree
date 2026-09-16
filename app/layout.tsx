@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s — Six",
   },
   description:
-    "Three organic essential oil blends, each as a whipped grass-fed tallow balm and as a perfume roller. Six products, made in small batches.",
+    "Four organic essential oil blends, each as a whipped grass-fed tallow balm and as a perfume roller. Made in small batches.",
   openGraph: {
     type: "website",
     siteName: "Six Skincare Products",

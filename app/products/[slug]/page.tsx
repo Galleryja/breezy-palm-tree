@@ -12,7 +12,7 @@ import {
   CURRENCY,
 } from "@/data/products";
 
-// Six products, all known at build time — prerender every one.
+// The whole catalogue is known at build time — prerender every product.
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
 }
@@ -80,7 +80,7 @@ export default async function ProductPage({ params }: PageProps) {
 
       <nav className="mb-8 text-sm text-ink-faint">
         <Link href="/products" className="hover:text-ink">
-          The Six
+          The range
         </Link>
         <span aria-hidden="true"> / </span>
         <span className="text-ink-soft">{product.name}</span>
