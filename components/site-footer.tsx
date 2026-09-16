@@ -18,12 +18,12 @@ export function SiteFooter() {
           <ul className="space-y-2 text-ink-soft">
             <li>
               <Link href="/products" className="hover:text-ink">
-                The full range
+                The Full Range
               </Link>
             </li>
             <li>
               <Link href="/cart" className="hover:text-ink">
-                Your bag
+                Your Bag
               </Link>
             </li>
           </ul>
@@ -34,7 +34,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-ink-soft">
             <li>
               <Link href="/about" className="hover:text-ink">
-                Our approach
+                Our Approach
               </Link>
             </li>
           </ul>

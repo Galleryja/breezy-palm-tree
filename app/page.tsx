@@ -16,7 +16,7 @@ export default function HomePage() {
             Whipped tallow &amp; perfume oil
           </p>
           <h1 className="mt-4 font-serif text-4xl leading-[1.12] text-ink sm:text-5xl">
-            Elevated skincare.
+            Elevated Skincare.
           </h1>
           {/* Client-written, set exactly as written: four lines broken where
               they were broken, no paragraph gaps between them, and no line
@@ -38,7 +38,7 @@ export default function HomePage() {
               href="/products"
               className="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-accent"
             >
-              Shop the range
+              Shop the Range
             </Link>
             <Link
               href="/about"
@@ -56,7 +56,7 @@ export default function HomePage() {
 
       <section className="wrap rule py-16">
         <div className="mb-10">
-          <h2 className="font-serif text-2xl text-ink">The balms</h2>
+          <h2 className="font-serif text-2xl text-ink">The Balms</h2>
           <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
             Same base every time — grass-fed tallow, organic shea butter,
             organic jojoba. Four blends on top of it.
@@ -72,7 +72,7 @@ export default function HomePage() {
 
       <section className="wrap rule py-16">
         <div className="mb-10">
-          <h2 className="font-serif text-2xl text-ink">The rollers</h2>
+          <h2 className="font-serif text-2xl text-ink">The Rollers</h2>
           <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
             The same four blends in organic jojoba, to carry. They wear longest
             layered over their matching balm.
@@ -90,15 +90,15 @@ export default function HomePage() {
         <div className="grid gap-10 sm:grid-cols-3">
           {[
             {
-              title: "Grass-fed, always",
+              title: "Grass-Fed, Always",
               body: "Tallow from grass-fed cattle, rendered clean. It is the whole reason the balm works the way it does, so it is not something we would quietly downgrade.",
             },
             {
-              title: "Organic botanicals",
+              title: "Organic Botanicals",
               body: "Shea, jojoba and every essential oil are certified organic. The full ingredient list is on every product page — read it before you buy, not after the carton arrives.",
             },
             {
-              title: "Two ways to wear it",
+              title: "Two Ways to Wear It",
               body: "Every blend comes as a balm and as a roller. Wear either alone, or layer the roller over the balm — tallow holds a scent far longer than bare skin does.",
             },
           ].map((item) => (

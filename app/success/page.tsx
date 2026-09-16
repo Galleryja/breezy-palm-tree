@@ -50,7 +50,7 @@ export default async function SuccessPage({ searchParams }: PageProps) {
       ) : (
         <>
           <h1 className="font-serif text-3xl leading-tight text-ink">
-            We could not confirm this order
+            We Could Not Confirm This Order
           </h1>
           <p className="mt-5 text-base leading-relaxed text-ink-soft">
             If you completed payment, your receipt is still on its way and your
@@ -64,7 +64,7 @@ export default async function SuccessPage({ searchParams }: PageProps) {
         href="/products"
         className="mt-8 inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
       >
-        Back to the range
+        Back to the Range
       </Link>
     </section>
   );

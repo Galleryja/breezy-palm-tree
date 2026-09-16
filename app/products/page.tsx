@@ -3,7 +3,7 @@ import { ProductCard } from "@/components/product-card";
 import { productsByFormat } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "The range",
+  title: "The Range",
   description:
     "Four organic essential oil blends, each as a whipped tallow balm and as a perfume roller. Grass-fed tallow, organic shea and organic jojoba throughout.",
 };
@@ -19,7 +19,7 @@ export default function ProductsPage() {
           The range
         </p>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
-          Four blends, two ways
+          Four Blends, Two Ways
         </h1>
         <p className="mt-5 text-base leading-relaxed text-ink-soft">
           Every balm shares the same base — grass-fed tallow, organic shea
@@ -29,7 +29,7 @@ export default function ProductsPage() {
       </header>
 
       <div className="mt-14">
-        <h2 className="font-serif text-2xl text-ink">Whipped tallow balm · 6 oz</h2>
+        <h2 className="font-serif text-2xl text-ink">Whipped Tallow Balm · 6 oz</h2>
         <div className="mt-8 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {balms.map((product) => (
             <ProductCard key={product.slug} product={product} />
@@ -38,7 +38,7 @@ export default function ProductsPage() {
       </div>
 
       <div className="rule mt-20 pt-12">
-        <h2 className="font-serif text-2xl text-ink">Perfume roller · 10 ml</h2>
+        <h2 className="font-serif text-2xl text-ink">Perfume Roller · 10 ml</h2>
         <div className="mt-8 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {rollers.map((product) => (
             <ProductCard key={product.slug} product={product} />

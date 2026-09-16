@@ -26,9 +26,9 @@ export function AddToCart({
       onClick={handleClick}
       className={`inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-accent ${className}`}
     >
-      {justAdded ? "Added to bag" : "Add to bag"}
+      {justAdded ? "Added to Bag" : "Add to Bag"}
       <span aria-live="polite" className="sr-only">
-        {justAdded ? "Added to bag" : ""}
+        {justAdded ? "Added to Bag" : ""}
       </span>
     </button>
   );

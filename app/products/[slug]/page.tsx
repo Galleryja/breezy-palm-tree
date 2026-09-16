@@ -80,7 +80,7 @@ export default async function ProductPage({ params }: PageProps) {
 
       <nav className="mb-8 text-sm text-ink-faint">
         <Link href="/products" className="hover:text-ink">
-          The range
+          The Range
         </Link>
         <span aria-hidden="true"> / </span>
         <span className="text-ink-soft">{product.name}</span>
@@ -127,7 +127,7 @@ export default async function ProductPage({ params }: PageProps) {
 
           <section className="mt-10">
             <h2 className="font-serif text-xl text-ink">
-              {product.format === "balm" ? "The base" : "The carrier"}
+              {product.format === "balm" ? "The Base" : "The Carrier"}
             </h2>
             <dl className="mt-4 space-y-4">
               {baseNotesFor(product.format).map((n) => (
@@ -143,7 +143,7 @@ export default async function ProductPage({ params }: PageProps) {
 
           {product.notes.length > 0 ? (
             <section className="mt-10">
-              <h2 className="font-serif text-xl text-ink">The blend</h2>
+              <h2 className="font-serif text-xl text-ink">The Blend</h2>
               <dl className="mt-4 space-y-4">
                 {product.notes.map((n) => (
                   <div key={n.name} className="rule pt-4">
@@ -158,7 +158,7 @@ export default async function ProductPage({ params }: PageProps) {
           ) : null}
 
           <section className="mt-10">
-            <h2 className="font-serif text-xl text-ink">How to use</h2>
+            <h2 className="font-serif text-xl text-ink">How to Use</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               {product.howToUse}
             </p>

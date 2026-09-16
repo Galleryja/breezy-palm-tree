@@ -26,7 +26,7 @@ export default function AboutPage() {
           Approach
         </p>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
-          Why tallow
+          Why Tallow
         </h1>
 
         <p className="mt-6 text-base leading-relaxed text-ink-soft">
@@ -49,7 +49,7 @@ export default function AboutPage() {
         </ul>
 
         <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">
-          The same base, every jar
+          The Same Base, Every Jar
         </h2>
         <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
           <p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">Why the range stays small</h2>
+        <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">Why the Range Stays Small</h2>
         <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
           <p>
             Four blends is the range, not a step on the way to twenty. Small
@@ -77,7 +77,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">On essential oils</h2>
+        <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">On Essential Oils</h2>
         <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
           <p>
             Every oil in the blends is certified organic, chosen for how it
@@ -100,7 +100,7 @@ export default function AboutPage() {
           href="/products"
           className="mt-12 inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
         >
-          See the range
+          See the Range
           </Link>
       </article>
     </div>
