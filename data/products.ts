@@ -193,7 +193,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Cedarwood and vetiver — dry wood over earth. It reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and calms skin on a tallow base.",
+      "Cedarwood and vetiver — dry wood over earth. It reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and sits comfortably on a tallow base.",
     notes: [
       {
         name: "Organic cedarwood oil",
