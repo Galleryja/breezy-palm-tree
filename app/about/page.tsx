@@ -71,7 +71,8 @@ export default function AboutPage() {
           Four blends is the range, not a step on the way to twenty. Small
           batches mean nothing sits in a warehouse losing its scent, and every
           jar gets made properly. If we ever add to it, it will be because
-          something is genuinely missing — not because we needed a launch.
+          something is genuinely missing — not because we wanted something new
+          to sell.
         </p>
       </div>
 
@@ -81,15 +82,18 @@ export default function AboutPage() {
           Every oil in the blends is certified organic, chosen for how it
           smells and how it wears. Some carry long histories — frankincense and
           myrrh have been traded for four thousand years — and we will happily
-          tell you about them. What we will not do is tell you a balm treats a
-          medical condition.
+          tell you about them. What we can't do is tell you a balm treats a
+          medical condition. What we do is choose each oil deliberately, for
+          how it behaves on skin as much as how it smells.
         </p>
         <p>
-          We publish the fragrance allergens that occur naturally in each blend
-          on the product page, before you buy, and the citrus blend uses
-          blossom and leaf rather than peel oils so it will not make skin
-          sun-sensitive. No regulator requires either of those here. They
-          seemed like the obvious things to do.
+          We publish the fragrance allergens that occur naturally in each
+          blend on the product page, before you buy. The citrus blend uses
+          blossom and leaf rather than peel oils, so it will not make skin
+          sun-sensitive. And every essential oil is kept within the usage
+          levels recommended for leave-on skincare, not pushed to whatever
+          smells strongest. No regulator requires any of that here. It seemed
+          like the obvious thing to do.
         </p>
       </div>
 
