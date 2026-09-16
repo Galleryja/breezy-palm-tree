@@ -154,7 +154,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. The scent settles and deepens over the first half hour rather than announcing itself. Patch test on a small area before first use.",
     swatch: ["#f2eee7", "#8a7358"],
-    bestFor: "Dry skin, and anyone who finds floral scents too sweet",
+    bestFor: "Dry skin, and anyone who likes incense and resin",
   },
   {
     slug: "balanced-light-balm",
@@ -210,7 +210,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. Vetiver opens up slowly, so give it half an hour before deciding what you think of it. Patch test on a small area before first use.",
     swatch: ["#f1efe9", "#7a705f"],
-    bestFor: "Dry skin, cold weather, and anyone who finds florals too sweet",
+    bestFor: "Dry skin, cold weather, and anyone who likes wood and earth",
   },
   {
     slug: "floral-jasmine-roller",
@@ -269,7 +269,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; the resins open up with skin heat. Unisex, and it wears well in cold weather.",
     swatch: ["#f3ece1", "#96784f"],
-    bestFor: "Anyone who prefers resin and wood to florals",
+    bestFor: "Evenings, and incense worn close to the skin",
   },
   {
     slug: "balanced-light-roller",
@@ -325,7 +325,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; vetiver needs skin heat to open. Wears well in cold weather and layers over any of the balms.",
     swatch: ["#efece4", "#6f6857"],
-    bestFor: "Anyone who prefers wood and earth to florals",
+    bestFor: "Cold weather, and wood and earth worn close",
   },
 ];
 
