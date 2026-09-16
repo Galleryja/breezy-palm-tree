@@ -59,6 +59,37 @@ const TALLOW_BASE =
 /** Shared by both rollers. */
 const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
 
+/**
+ * The base every balm shares, and the jojoba the rollers are built on.
+ *
+ * Client-written copy — keep the wording unless asked to change it. It stays
+ * to composition and feel ("naturally carries vitamins A, D, E and K",
+ * "used as a skin balm for centuries") and never says the product treats
+ * anything, which is the line that separates a cosmetic from a drug claim.
+ */
+const BALM_BASE_NOTES = [
+  {
+    name: "Grass-fed beef tallow",
+    note: "Lipids your skin recognizes. Rich in the same fatty acids found in skin's natural oils, tallow melts in easily and leaves skin soft and supple. It naturally carries vitamins A, D, E, and K, and has been used as a skin balm for centuries.",
+  },
+  {
+    name: "Organic shea butter",
+    note: "Naturally rich in vitamin E, shea is velvety and slow to fade, giving the balm its cushioned texture and leaving a soft layer of moisture that lasts well into the day.",
+  },
+  {
+    name: "Organic jojoba oil",
+    note: "Native to the Sonoran Desert. Jojoba is a liquid wax and the closest match to skin's natural oils found in any plant, so it sinks in easily and feels right at home on skin. Lightweight and naturally rich in vitamin E, it lightens the balm and leaves a silky, glowing finish.",
+  },
+];
+
+/** The rollers are jojoba alone, so the balm-specific clause is dropped. */
+const ROLLER_BASE_NOTES = [
+  {
+    name: "Organic jojoba oil",
+    note: "Native to the Sonoran Desert. Jojoba is a liquid wax and the closest match to skin's natural oils found in any plant, so it sinks in easily and feels right at home on skin. Lightweight and naturally rich in vitamin E, it carries the blend without weighing it down.",
+  },
+];
+
 export const PRODUCTS: Product[] = [
   {
     slug: "floral-jasmine-balm",
@@ -71,11 +102,20 @@ export const PRODUCTS: Product[] = [
     description:
       "The richest thing we make. Jasmine and ylang ylang sit over vanilla and stay warm and sweet on skin for most of the day — a tallow base holds fragrance far longer than a lotion does. People tend to love this one immediately or find it too much; there is not much middle ground.",
     notes: [
-      { name: "Jasmine", note: "Heady and honeyed, the centre of the blend" },
-      { name: "Ylang Ylang", note: "Creamy and slightly banana-sweet, softens the jasmine's edge" },
-      { name: "Vanilla", note: "The warm base everything else settles onto" },
+      {
+        name: "Organic jasmine absolute",
+        note: "Prized in skincare and perfumery for centuries, Jasminum grandiflorum gives the balm its warm floral heart and a scent that lasts for hours.",
+      },
+      {
+        name: "Organic ylang ylang oil",
+        note: "Steam-distilled from the flowers of Cananga odorata, ylang ylang adds a creamy sweetness that balances the jasmine and rounds out the blend.",
+      },
+      {
+        name: "Organic vanilla CO2 extract",
+        note: "Extracted from cured Vanilla planifolia beans using supercritical CO2, a solvent-free method that preserves the bean's full profile. Naturally contains vanillin, an antioxidant that helps keep the balm's oils fresh, and adds a warm base that lingers after the florals fade.",
+      },
     ],
-    ingredients: `${TALLOW_BASE}, organic jasmine absolute (Jasminum Grandiflorum), organic ylang ylang oil (Cananga Odorata), organic vanilla extract (Vanilla Planifolia).`,
+    ingredients: `${TALLOW_BASE}, organic jasmine absolute (Jasminum Grandiflorum), organic ylang ylang oil (Cananga Odorata), organic vanilla CO2 extract (Vanilla Planifolia).`,
     allergens:
       "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
@@ -94,8 +134,14 @@ export const PRODUCTS: Product[] = [
     description:
       "Dry, warm and faintly smoky — closer to incense than to perfume. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
-      { name: "Frankincense", note: "Clean and resinous, with a cool citrus edge" },
-      { name: "Myrrh", note: "Darker and balsamic, gives the blend its weight" },
+      {
+        name: "Organic frankincense oil",
+        note: "Steam-distilled from the resin of Boswellia carterii, frankincense has been prized in skincare and ritual for thousands of years. Its bright, resinous scent adds clarity to the blend, and it has long been used in traditional skincare for smooth, radiant-looking skin.",
+      },
+      {
+        name: "Organic myrrh oil",
+        note: "Steam-distilled from the resin of Commiphora myrrha, myrrh was among the most valued ingredients of ancient Egyptian and Middle Eastern skincare. Warm, earthy, and slightly smoky, it deepens the frankincense and grounds the blend.",
+      },
     ],
     ingredients: `${TALLOW_BASE}, organic frankincense oil (Boswellia Carterii), organic myrrh oil (Commiphora Myrrha).`,
     allergens:
@@ -156,11 +202,20 @@ export const PRODUCTS: Product[] = [
     description:
       "Jasmine, ylang ylang and vanilla in organic jojoba. Oil-based fragrance sits closer to the skin than an alcohol perfume and unfolds over the first twenty minutes instead of arriving all at once. Jojoba is the carrier because it is closest to what skin makes itself, so it sinks in rather than sitting on top.",
     notes: [
-      { name: "Jasmine", note: "Heady and honeyed, the centre of the blend" },
-      { name: "Ylang Ylang", note: "Creamy and slightly banana-sweet" },
-      { name: "Vanilla", note: "The warm base everything settles onto" },
+      {
+        name: "Organic jasmine absolute",
+        note: "Prized in skincare and perfumery for centuries, Jasminum grandiflorum gives the balm its warm floral heart and a scent that lasts for hours.",
+      },
+      {
+        name: "Organic ylang ylang oil",
+        note: "Steam-distilled from the flowers of Cananga odorata, ylang ylang adds a creamy sweetness that balances the jasmine and rounds out the blend.",
+      },
+      {
+        name: "Organic vanilla CO2 extract",
+        note: "Extracted from cured Vanilla planifolia beans using supercritical CO2, a solvent-free method that preserves the bean's full profile. Naturally contains vanillin, an antioxidant that helps keep the balm's oils fresh, and adds a warm base that lingers after the florals fade.",
+      },
     ],
-    ingredients: `${ROLLER_BASE}, organic jasmine absolute (Jasminum Grandiflorum), organic ylang ylang oil (Cananga Odorata), organic vanilla extract (Vanilla Planifolia).`,
+    ingredients: `${ROLLER_BASE}, organic jasmine absolute (Jasminum Grandiflorum), organic ylang ylang oil (Cananga Odorata), organic vanilla CO2 extract (Vanilla Planifolia).`,
     allergens:
       "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
@@ -179,8 +234,14 @@ export const PRODUCTS: Product[] = [
     description:
       "The same two resins as the balm, in organic jojoba. Dry, warm and quiet — it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
     notes: [
-      { name: "Frankincense", note: "Clean and resinous, with a cool citrus edge" },
-      { name: "Myrrh", note: "Darker and balsamic, gives the blend its weight" },
+      {
+        name: "Organic frankincense oil",
+        note: "Steam-distilled from the resin of Boswellia carterii, frankincense has been prized in skincare and ritual for thousands of years. Its bright, resinous scent adds clarity to the blend, and it has long been used in traditional skincare for smooth, radiant-looking skin.",
+      },
+      {
+        name: "Organic myrrh oil",
+        note: "Steam-distilled from the resin of Commiphora myrrha, myrrh was among the most valued ingredients of ancient Egyptian and Middle Eastern skincare. Warm, earthy, and slightly smoky, it deepens the frankincense and grounds the blend.",
+      },
     ],
     ingredients: `${ROLLER_BASE}, organic frankincense oil (Boswellia Carterii), organic myrrh oil (Commiphora Myrrha).`,
     allergens: "Contains limonene, occurring naturally in the essential oils.",
@@ -191,12 +252,44 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
+/**
+ * The case for tallow, shown on the approach page.
+ *
+ * Client-written copy — keep the wording unless asked to change it. Every
+ * line here is composition ("carries vitamins A, D, E and K") or feel
+ * ("helping dry, weathered skin feel comfortable again") rather than a claim
+ * to treat anything.
+ */
+export const WHY_TALLOW: { title: string; body: string }[] = [
+  {
+    title: "Skin-familiar moisture",
+    body: "Tallow's fatty acids resemble those in skin's natural oils, so it melts in easily and softens skin without a heavy, greasy feel.",
+  },
+  {
+    title: "Locks in moisture",
+    body: "Rich in stearic, oleic, and palmitic acids, tallow forms a soft layer that holds moisture in, helping dry, weathered skin feel comfortable again.",
+  },
+  {
+    title: "Naturally contains fat-soluble vitamins",
+    body: "Grass-fed tallow carries vitamins A, D, E, and K, nutrients that come from the fresh grass the cattle eat.",
+  },
+  {
+    title: "Gentle and nourishing",
+    body: "Grass-fed tallow naturally contains conjugated linoleic acid (CLA) and palmitoleic acid, giving it a rich, nourishing feel that suits dry and sensitive skin.",
+  },
+];
+
 export function getProduct(slug: string): Product | undefined {
   return PRODUCTS.find((p) => p.slug === slug);
 }
 
 export function productsByFormat(format: Format): Product[] {
   return PRODUCTS.filter((p) => p.format === format);
+}
+
+/** What the product is built on, before any blend goes in. */
+export function baseNotesFor(format: Format): { name: string; note: string }[] {
+  return format === "balm" ? BALM_BASE_NOTES : ROLLER_BASE_NOTES;
 }
 
 export function formatLabel(format: Format): string {

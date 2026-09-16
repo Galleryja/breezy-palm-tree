@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { WHY_TALLOW } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Approach",
@@ -45,6 +46,26 @@ export default function AboutPage() {
           genuinely missing from it — not because we needed a launch.
         </p>
       </div>
+
+      <h2 className="mt-14 font-serif text-2xl text-ink">Why tallow?</h2>
+      <ul className="mt-6 space-y-5">
+        {WHY_TALLOW.map((item) => (
+          <li key={item.title} className="flex gap-4">
+            {/* Small square marker rather than a disc — reads cleaner at this
+                weight and stays visible against the pale background. */}
+            <span
+              aria-hidden="true"
+              className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent"
+            />
+            <div>
+              <p className="font-medium text-ink">{item.title}</p>
+              <p className="mt-1 text-base leading-relaxed text-ink-soft">
+                {item.body}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
 
       <h2 className="mt-14 font-serif text-2xl text-ink">
         On essential oils
