@@ -30,7 +30,7 @@ export default function HomePage() {
             <br />
             No fillers. No synthetic bulk. No cutting corners.
             <br />
-            Clean. The way skincare should be.
+            Clean. Made properly.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
