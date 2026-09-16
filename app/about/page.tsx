@@ -5,8 +5,18 @@ import { WHY_TALLOW } from "@/data/products";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "Why Six makes whipped tallow balm with grass-fed tallow, organic shea and organic jojoba — and why the range stays at six.",
+    "What grass-fed tallow actually does for skin, what goes into every jar, and why the range stays at six.",
 };
+
+/** Shared marker for the lists on this page. */
+function Marker() {
+  return (
+    <span
+      aria-hidden="true"
+      className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent"
+    />
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -15,48 +25,18 @@ export default function AboutPage() {
         Approach
       </p>
       <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
-        Why tallow, and why only six
+        Why tallow
       </h1>
 
-      <div className="mt-8 space-y-6 text-base leading-relaxed text-ink-soft">
-        <p>
-          Tallow is an old ingredient that fell out of fashion and is coming
-          back, mostly because people tried it. It is rich, it melts at body
-          temperature, and its fatty acid profile is unusually close to what
-          skin produces itself — which is why it sinks in rather than sitting
-          on top the way a water-and-emulsifier lotion often does.
-        </p>
-        <p>
-          We whip it with organic shea butter and organic jojoba. The shea
-          gives it body, the jojoba keeps it from feeling heavy, and the
-          whipping turns something firm into something you can scoop with a
-          fingertip. The base is the same in every jar. Only the blend on top
-          changes.
-        </p>
-        <p>
-          That base is three ingredients. You can read the whole list in one
-          breath, and one of the four balms has nothing added to it at all.
-          If you came to tallow because everything on the shelf irritated your
-          skin, that jar is the one to start with.
-        </p>
-        <p>
-          Six is the range, not a milestone on the way to twenty. Small means
-          every batch gets attention and nothing sits in a warehouse losing its
-          scent. If the range ever grows, it will be because something is
-          genuinely missing from it — not because we needed a launch.
-        </p>
-      </div>
+      <p className="mt-6 text-base leading-relaxed text-ink-soft">
+        Tallow fell out of fashion for a few decades and is coming back, mostly
+        because people tried it. Here is what it actually does.
+      </p>
 
-      <h2 className="mt-14 font-serif text-2xl text-ink">Why tallow?</h2>
-      <ul className="mt-6 space-y-5">
+      <ul className="mt-8 space-y-5">
         {WHY_TALLOW.map((item) => (
           <li key={item.title} className="flex gap-4">
-            {/* Small square marker rather than a disc — reads cleaner at this
-                weight and stays visible against the pale background. */}
-            <span
-              aria-hidden="true"
-              className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent"
-            />
+            <Marker />
             <div>
               <p className="font-medium text-ink">{item.title}</p>
               <p className="mt-1 text-base leading-relaxed text-ink-soft">
@@ -68,35 +48,49 @@ export default function AboutPage() {
       </ul>
 
       <h2 className="mt-14 font-serif text-2xl text-ink">
-        On essential oils
+        The same base, every jar
       </h2>
       <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
         <p>
-          The blends are chosen for how they smell and how they wear, and every
-          oil in them is certified organic. Several have long traditions behind
-          them — frankincense and myrrh have been traded for four thousand
-          years — and we will tell you about that history. We will not tell you
-          a moisturiser treats a medical condition, because it does not.
+          Every balm starts the same way: grass-fed tallow whipped with organic
+          shea butter and organic jojoba. The shea gives it body, the jojoba
+          keeps it from feeling heavy, and the whipping turns something firm
+          into something you can lift with a fingertip.
         </p>
         <p>
-          We also publish the fragrance allergens that occur naturally in each
-          blend, on the product page, before you buy. No regulator makes us do
-          that here. It seemed like the obvious thing to do.
+          That is three ingredients. One of the four balms stops there, with no
+          fragrance at all — and if you came to tallow because everything else
+          left your skin unhappy, that is the jar to start with.
         </p>
       </div>
 
-      <h2 className="mt-14 font-serif text-2xl text-ink">What we will not do</h2>
-      <ul className="mt-5 space-y-3 text-base leading-relaxed text-ink-soft">
-        <li className="rule pt-3">
-          Claim a cosmetic product treats or cures anything.
-        </li>
-        <li className="rule pt-3">
-          Use phototoxic citrus oils in a balm you wear outdoors.
-        </li>
-        <li className="rule pt-3">
-          Hide an ingredient list until after you have paid for it.
-        </li>
-      </ul>
+      <h2 className="mt-14 font-serif text-2xl text-ink">Why only six</h2>
+      <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
+        <p>
+          Six is the range, not a step on the way to twenty. Small batches mean
+          nothing sits in a warehouse losing its scent, and every jar gets made
+          properly. If we ever add to it, it will be because something is
+          genuinely missing — not because we needed a launch.
+        </p>
+      </div>
+
+      <h2 className="mt-14 font-serif text-2xl text-ink">On essential oils</h2>
+      <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
+        <p>
+          Every oil in the blends is certified organic, chosen for how it
+          smells and how it wears. Some carry long histories — frankincense and
+          myrrh have been traded for four thousand years — and we will happily
+          tell you about them. What we will not do is tell you a balm treats a
+          medical condition.
+        </p>
+        <p>
+          We publish the fragrance allergens that occur naturally in each blend
+          on the product page, before you buy, and the citrus blend uses
+          blossom and leaf rather than peel oils so it will not make skin
+          sun-sensitive. No regulator requires either of those here. They
+          seemed like the obvious things to do.
+        </p>
+      </div>
 
       <Link
         href="/products"
