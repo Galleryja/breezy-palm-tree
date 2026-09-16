@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
     order: 1,
     format: "balm",
     name: "Floral Jasmine",
-    tagline: "Jasmine and ylang ylang over vanilla",
+    tagline: "Jasmine, Vanilla, and Ylang Ylang",
     priceCents: 3000,
     size: "6 oz",
     description:
@@ -207,7 +207,7 @@ export const PRODUCTS: Product[] = [
     order: 5,
     format: "roller",
     name: "Floral Jasmine",
-    tagline: "The balm's blend, in an oil you can carry",
+    tagline: "Jasmine, Vanilla, and Ylang Ylang",
     priceCents: 2200,
     size: "10 ml",
     description:
