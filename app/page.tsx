@@ -31,7 +31,7 @@ export default function HomePage() {
             <p>Natural ingredients, chosen for what they do.</p>
             <p>No fillers. No synthetic bulk. No cutting corners.</p>
             <p className="text-ink">
-              Clean. Sustainable. The way skincare should be.
+              Clean. The way skincare should be.
             </p>
           </div>
 
