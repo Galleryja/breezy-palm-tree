@@ -20,20 +20,20 @@ export default function HomePage() {
             <br />
             Made properly.
           </h1>
-          {/* Client-written. Set as separate lines rather than one paragraph:
-              the copy is built as four beats, and running them together loses
-              the rhythm the last line depends on. */}
-          <div className="mt-6 max-w-md space-y-3 text-base leading-relaxed text-ink-soft">
-            <p>
-              Grass-fed tallow, whipped with organic shea and jojoba. Scented
-              with essential oils.
-            </p>
-            <p>Natural ingredients, chosen for what they do.</p>
-            <p>No fillers. No synthetic bulk. No cutting corners.</p>
-            <p className="text-ink">
-              Clean. The way skincare should be.
-            </p>
-          </div>
+          {/* Client-written, set exactly as written: four lines broken where
+              they were broken, no paragraph gaps between them, and no line
+              given more weight than another. The breaks are hard rather than
+              left to wrap, so the rhythm holds at every width. */}
+          <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
+            Grass-fed tallow, whipped with organic shea and jojoba. Scented with
+            essential oils.
+            <br />
+            Natural ingredients, chosen for what they do.
+            <br />
+            No fillers. No synthetic bulk. No cutting corners.
+            <br />
+            Clean. The way skincare should be.
+          </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
