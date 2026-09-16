@@ -20,11 +20,20 @@ export default function HomePage() {
             <br />
             Made properly.
           </h1>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Grass-fed tallow whipped with organic shea and jojoba, in four
-            blends. Two of those blends again as perfume rollers. That is the
-            whole range, and it is meant to stay small.
-          </p>
+          {/* Client-written. Set as separate lines rather than one paragraph:
+              the copy is built as four beats, and running them together loses
+              the rhythm the last line depends on. */}
+          <div className="mt-6 max-w-md space-y-3 text-base leading-relaxed text-ink-soft">
+            <p>
+              Grass-fed tallow, whipped with organic shea and jojoba. Scented
+              with essential oils.
+            </p>
+            <p>Natural ingredients, chosen for what they do.</p>
+            <p>No fillers. No synthetic bulk. No cutting corners.</p>
+            <p className="text-ink">
+              Clean. Sustainable. The way skincare should be.
+            </p>
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
