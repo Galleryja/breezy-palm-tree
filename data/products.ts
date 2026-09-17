@@ -18,13 +18,12 @@ export type Product = {
   /** Sort order across the whole range. Balms first, then rollers. */
   order: number;
   format: Format;
-  /** The blend name, e.g. "Sheer Suede". */
+  /** The blend itself, e.g. "Frankincense and Myrrh". */
   name: string;
   /**
-   * Shown directly under the name, on cards and on the product page.
-   * Where the name is evocative rather than descriptive — Sheer Suede — this
-   * is what tells a shopper what is actually in the jar, so it carries the
-   * blend, not atmosphere.
+   * Shown directly under the name, on cards and on the product page. The name
+   * says what is in the jar, so this says how it reads — a few words, and not
+   * a phrase already used in the description below it.
    */
   tagline: string;
   /** Price in minor units (cents). Integer only — never a float. */
@@ -97,11 +96,11 @@ const ROLLER_BASE_NOTES = [
 
 export const PRODUCTS: Product[] = [
   {
-    slug: "floral-jasmine-balm",
+    slug: "jasmine-vanilla-ylang-balm",
     order: 1,
     format: "balm",
-    name: "Floral Jasmine",
-    tagline: "Jasmine, Vanilla, and Ylang Ylang",
+    name: "Jasmine, Vanilla and Ylang Ylang",
+    tagline: "Warm, sweet and long-lasting",
     priceCents: 3000,
     size: "6 oz",
     description:
@@ -129,11 +128,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin, and anyone drawn to florals",
   },
   {
-    slug: "sheer-suede-balm",
+    slug: "frankincense-myrrh-balm",
     order: 2,
     format: "balm",
-    name: "Sheer Suede",
-    tagline: "Frankincense and Myrrh",
+    name: "Frankincense and Myrrh",
+    tagline: "Quiet, dry and warm",
     priceCents: 3000,
     size: "6 oz",
     description:
@@ -157,11 +156,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin, and anyone who likes incense and resin",
   },
   {
-    slug: "balanced-light-balm",
+    slug: "neroli-petitgrain-balm",
     order: 3,
     format: "balm",
-    name: "Balanced Light",
-    tagline: "Neroli and Petitgrain",
+    name: "Neroli and Petitgrain",
+    tagline: "Bright and clean",
     priceCents: 3000,
     size: "6 oz",
     description:
@@ -185,11 +184,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin, daytime wear, and anyone who wants scent kept light",
   },
   {
-    slug: "dry-cedar-balm",
+    slug: "cedarwood-vetiver-balm",
     order: 4,
     format: "balm",
-    name: "Dry Cedar",
-    tagline: "Cedarwood and Vetiver",
+    name: "Cedarwood and Vetiver",
+    tagline: "Earthy and close to the skin",
     priceCents: 3000,
     size: "6 oz",
     description:
@@ -213,11 +212,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Dry skin, cold weather, and anyone who likes wood and earth",
   },
   {
-    slug: "floral-jasmine-roller",
+    slug: "jasmine-vanilla-ylang-roller",
     order: 5,
     format: "roller",
-    name: "Floral Jasmine",
-    tagline: "Jasmine, Vanilla, and Ylang Ylang",
+    name: "Jasmine, Vanilla and Ylang Ylang",
+    tagline: "Warm, sweet and long-lasting",
     priceCents: 2200,
     size: "10 ml",
     description:
@@ -245,11 +244,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Evening wear, and layering over the matching balm",
   },
   {
-    slug: "sheer-suede-roller",
+    slug: "frankincense-myrrh-roller",
     order: 6,
     format: "roller",
-    name: "Sheer Suede",
-    tagline: "Frankincense and Myrrh",
+    name: "Frankincense and Myrrh",
+    tagline: "Quiet, dry and warm",
     priceCents: 2200,
     size: "10 ml",
     description:
@@ -272,11 +271,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Evenings, and incense worn close to the skin",
   },
   {
-    slug: "balanced-light-roller",
+    slug: "neroli-petitgrain-roller",
     order: 7,
     format: "roller",
-    name: "Balanced Light",
-    tagline: "Neroli and Petitgrain",
+    name: "Neroli and Petitgrain",
+    tagline: "Bright and clean",
     priceCents: 2200,
     size: "10 ml",
     description:
@@ -300,11 +299,11 @@ export const PRODUCTS: Product[] = [
     bestFor: "Daytime wear, warm weather, and anyone who wants scent kept light",
   },
   {
-    slug: "dry-cedar-roller",
+    slug: "cedarwood-vetiver-roller",
     order: 8,
     format: "roller",
-    name: "Dry Cedar",
-    tagline: "Cedarwood and Vetiver",
+    name: "Cedarwood and Vetiver",
+    tagline: "Earthy and close to the skin",
     priceCents: 2200,
     size: "10 ml",
     description:
