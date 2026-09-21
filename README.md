@@ -113,3 +113,52 @@ npm run typecheck  # tsc --noEmit
 Order emails beyond Stripe's receipt, inventory tracking, discount codes,
 customer accounts, and a real shipping-rate table (Stripe currently collects
 addresses for US/CA/GB with no rates attached).
+
+Four blend descriptions and the eight ingredient notes are the owner's copy.
+The four **roller** descriptions are still placeholder text written during the
+build and should be replaced before launch.
+
+## Parked: the six-step routine
+
+An idea worth keeping, not currently built. The range today is four blends in
+two formats; this would be a second line alongside it.
+
+One product per step of a routine, and nothing spare:
+
+| Step | Product | Indicative price |
+| --- | --- | --- |
+| 1 | Clarifying gel cleanser, 150ml | $28 |
+| 2 | Hydrating essence, 120ml | $34 |
+| 3 | Vitamin C serum 12% | $58 |
+| 4 | Niacinamide serum 10% | $42 |
+| 5 | Barrier repair moisturiser, 50ml | $46 |
+| 6 | Mineral sunscreen SPF 50, 50ml | $38 |
+
+The argument: most shelves hold a dozen products and half were bought to fix a
+problem another one caused. Six things consistently hold up — cleanse without
+stripping, hydrate, a morning antioxidant, something for tone and oil balance,
+repair the barrier, wear sunscreen daily. Everything past that is refinement.
+So make those six, at concentrations with evidence behind them, and stop.
+
+Three things to know before picking it up again:
+
+- **It is a different business.** Formulating actives is not whipping tallow.
+  Vitamin C in particular is unstable and needs real shelf-life testing — a
+  contract manufacturer, not a kitchen.
+- **The site would need grouping, not rebuilding.** `Format` in
+  `data/products.ts` is `"balm" | "roller"`; a routine would add its own
+  values and the listing page would group by them the way it groups balms and
+  rollers now. An hour or two, not a rewrite.
+- **"Six" is the brand, not a count.** The copy was deliberately stripped of
+  counting so the range can change without contradicting itself. Do not put it
+  back.
+
+## Parked: essential oil usage levels
+
+A line was drafted for the approach page saying every essential oil is kept
+within the usage levels recommended for leave-on skincare, then removed
+because it had not been checked against the formulas. It is the most specific
+and most persuasive trust claim available here, and almost nobody at this
+scale makes it. IFRA publishes the rates and they are free to look up. Jasmine
+absolute and ylang ylang carry the lowest ceilings in this range, so check
+those first. If the formulas are within them, put the line back.
