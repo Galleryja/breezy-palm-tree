@@ -94,6 +94,17 @@ export default function AboutPage() {
             sun-sensitive. No regulator requires either of those here. It seemed
             like the obvious thing to do.
           </p>
+          <p>
+            If you want the detail, every material we use is set out on the{" "}
+            <Link
+              href="/ingredients"
+              className="text-ink underline underline-offset-4"
+            >
+              ingredients page
+            </Link>{" "}
+            — what it is, what it is made of, and what is actually documented
+            about it, including where the category tends to overstate things.
+          </p>
         </div>
 
         <Link

@@ -37,6 +37,11 @@ export function SiteFooter() {
                 Our Approach
               </Link>
             </li>
+            <li>
+              <Link href="/ingredients" className="hover:text-ink">
+                Ingredients
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
