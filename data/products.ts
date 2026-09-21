@@ -104,7 +104,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Whipped tallow balm with jasmine, ylang ylang and natural vanilla. This is a beautiful floral blend and a feeling of elevation from the natural elements.",
+      "Floral Jasmine. Whipped tallow balm with jasmine, ylang ylang and natural vanilla. This is a beautiful floral blend and a feeling of elevation from the natural elements.",
     notes: [
       {
         name: "Organic jasmine absolute",
@@ -136,7 +136,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Frankincense and myrrh, dry and softly resinous, with just enough lift to stay easy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
+      "Sheer Suede. Frankincense and myrrh, dry and softly resinous, with just enough lift to stay easy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
       {
         name: "Organic frankincense oil",
@@ -164,7 +164,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the bright option in a range that otherwise leans rich.",
+      "Balanced Light. Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the bright option in a range that otherwise leans rich.",
     notes: [
       {
         name: "Organic neroli oil",
@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Cedarwood and vetiver — dry wood over earth. It reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and sits comfortably on a tallow base.",
+      "Dry Cedar. Cedarwood and vetiver — dry wood over earth. It reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and sits comfortably on a tallow base.",
     notes: [
       {
         name: "Organic cedarwood oil",
@@ -220,7 +220,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 2200,
     size: "10 ml",
     description:
-      "Jasmine, ylang ylang and vanilla in organic jojoba. Oil-based fragrance sits closer to the skin than an alcohol perfume and unfolds over the first twenty minutes instead of arriving all at once. Jojoba is the carrier because it is closest to what skin makes itself, so it sinks in rather than sitting on top.",
+      "Floral Jasmine. Jasmine, ylang ylang and vanilla in organic jojoba. Oil-based fragrance sits closer to the skin than an alcohol perfume and unfolds over the first twenty minutes instead of arriving all at once. Jojoba is the carrier because it is closest to what skin makes itself, so it sinks in rather than sitting on top.",
     notes: [
       {
         name: "Organic jasmine absolute",
@@ -252,7 +252,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 2200,
     size: "10 ml",
     description:
-      "The same two resins as the balm — frankincense and myrrh — in organic jojoba. Dry, warm and quiet, it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
+      "Sheer Suede. The same two resins as the balm — frankincense and myrrh — in organic jojoba. Dry, warm and quiet, it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
     notes: [
       {
         name: "Organic frankincense oil",
@@ -279,7 +279,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 2200,
     size: "10 ml",
     description:
-      "Neroli and petitgrain in organic jojoba — blossom and leaf from the same bitter orange tree. The lightest thing we make, and the one that wears best in warm weather. Neither oil is phototoxic, unlike the peel oils a citrus scent usually reaches for, so it is safe to wear in daylight.",
+      "Balanced Light. Neroli and petitgrain in organic jojoba — blossom and leaf from the same bitter orange tree. The lightest thing we make, and the one that wears best in warm weather. Neither oil is phototoxic, unlike the peel oils a citrus scent usually reaches for, so it is safe to wear in daylight.",
     notes: [
       {
         name: "Organic neroli oil",
@@ -307,7 +307,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 2200,
     size: "10 ml",
     description:
-      "The same cedar and vetiver in organic jojoba. It sits very close to the skin — this is the one people notice when they are already standing next to you, not across a room. Two oils and nothing to soften them.",
+      "Dry Cedar. The same cedar and vetiver in organic jojoba. It sits very close to the skin — this is the one people notice when they are already standing next to you, not across a room. Two oils and nothing to soften them.",
     notes: [
       {
         name: "Organic cedarwood oil",
