@@ -86,6 +86,13 @@ There is none yet. `components/product-art.tsx` draws a deterministic bottle
 from each product's swatch colours as a considered placeholder. When real
 photos arrive, replace that one component.
 
+## Jar labels
+
+`design/labels/` holds print artwork for the 120 ml Eris Jar, generated from
+this catalogue by `scripts/make-labels.py`. See the README in that folder —
+three things (lid diameter, net weight, business address) have to be settled
+before anything goes to a printer.
+
 ## Commands
 
 ```bash
