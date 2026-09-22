@@ -76,6 +76,13 @@ CONTACT = ["@yoursocialhandle", "www.websitehere.com"]
 
 TAGLINE = ["Pure and natural.", "Elevated skincare."]
 
+# One set of directions for all four, rather than the per-blend how-to-use
+# copy on the website. Owner's wording — leave it unless asked.
+DIRECTIONS = (
+    "Start with small amount, massage onto clean, slightly damp skin. "
+    "Allow a few minutes for absorption."
+)
+
 # Stands in for the reference label's "BENEFITS" paragraph. What is written
 # here is what the base is and how it feels — not what it does to anybody.
 BENEFITS = (
@@ -127,7 +134,6 @@ def read_products() -> list[dict]:
                 "name": one(r'name: "([^"]+)"'),
                 "size": one(r'size: "([^"]+)"'),
                 "ingredients": ingredients.replace("${TALLOW_BASE}", tallow_base),
-                "howToUse": one(r'howToUse:\s*\n?\s*"((?:[^"\\]|\\.)*)"'),
                 "swatch": re.search(
                     r'swatch: \["(#[0-9a-fA-F]{6})", "(#[0-9a-fA-F]{6})"\]', chunk
                 ).group(2),
@@ -417,7 +423,7 @@ def front_label(p, mark, guides, net) -> str:
 
     def right_column(k: float) -> tuple[list[str], float]:
         parts, y = [], 7.4
-        for heading, copy in (("DIRECTIONS", p["howToUse"]), ("BENEFITS", BENEFITS)):
+        for heading, copy in (("DIRECTIONS", DIRECTIONS), ("BENEFITS", BENEFITS)):
             parts.append(text(right_x, y, heading, 1.9 * k, tracking=0.5 * k))
             y += 2.9 * k
             for line in wrap(copy, 1.75 * k, col):
