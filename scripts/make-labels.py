@@ -127,7 +127,6 @@ def read_products() -> list[dict]:
                 "name": one(r'name: "([^"]+)"'),
                 "size": one(r'size: "([^"]+)"'),
                 "ingredients": ingredients.replace("${TALLOW_BASE}", tallow_base),
-                "allergens": one(r'allergens:\s*\n?\s*"((?:[^"\\]|\\.)*)"'),
                 "howToUse": one(r'howToUse:\s*\n?\s*"((?:[^"\\]|\\.)*)"'),
                 "swatch": re.search(
                     r'swatch: \["(#[0-9a-fA-F]{6})", "(#[0-9a-fA-F]{6})"\]', chunk
@@ -392,11 +391,7 @@ def front_label(p, mark, guides, net) -> str:
         for line in wrap(p["ingredients"], 1.8 * k, col):
             parts.append(text(left_x, y, line, 1.8 * k, fill=INK_SOFT))
             y += 2.35 * k
-        y += 0.5 * k
-        for line in wrap(p["allergens"], 1.7 * k, col):
-            parts.append(text(left_x, y, line, 1.7 * k, fill=INK_FAINT, italic=True))
-            y += 2.2 * k
-        return parts, y - 2.2 * k
+        return parts, y - 2.35 * k
 
     def right_column(k: float) -> tuple[list[str], float]:
         parts, y = [], 7.4

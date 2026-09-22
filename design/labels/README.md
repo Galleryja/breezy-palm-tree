@@ -83,8 +83,10 @@ skin, which is how it is phrased on the website too.
 - The label states what the product is, what is in it, how much of it there is
   and who made it. It makes no claim about what it does, which is what keeps a
   cosmetic a cosmetic.
-- Allergens are carried on the label as well as the website. No US regulator
-  asks for them.
+- The naturally occurring fragrance allergens are published on each product
+  page but are not on the label. No US regulator asks for them here. If these
+  are ever sold into the EU or UK, they have to go back on — the script still
+  reads them out of `data/products.ts` if you re-add the block.
 - There is no lot or best-by field on the face. Small makers usually ink-jet
   or sticker those on the base, which is easier than reprinting labels.
 
