@@ -83,6 +83,13 @@ skin, which is how it is phrased on the website too.
 - The label states what the product is, what is in it, how much of it there is
   and who made it. It makes no claim about what it does, which is what keeps a
   cosmetic a cosmetic.
+- The ingredient declaration is set in common names, with the botanical names
+  stripped. This is worth knowing: 21 CFR 701.3 asks for INCI names, and for a
+  plant material the INCI name is the Latin binomial — "Butyrospermum Parkii
+  (Shea) Butter" rather than "shea butter" — so a common-name declaration is
+  not a compliant one. The full declaration is on every product page either
+  way. `plain()` in the script is the one function to delete to put the
+  binomials back on the jar.
 - The naturally occurring fragrance allergens are published on each product
   page but are not on the label. No US regulator asks for them here. If these
   are ever sold into the EU or UK, they have to go back on — the script still

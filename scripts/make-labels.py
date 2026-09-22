@@ -192,6 +192,22 @@ def width(text: str, size: float, serif: bool = True, tracking: float = 0.0) -> 
     return total + tracking * max(len(text) - 1, 0)
 
 
+def plain(ingredients: str) -> str:
+    """Strip the botanical names out of an ingredient declaration.
+
+    Worth knowing what this costs. 21 CFR 701.3 wants ingredients declared by
+    their INCI names, and for a plant material the INCI name IS the Latin
+    binomial — "Butyrospermum Parkii (Shea) Butter", not "shea butter". A
+    declaration in common names only is not a compliant one.
+
+    The website still carries the full declaration on every product page, so
+    the information is published either way; this only governs what is set on
+    the jar. Delete this function and pass p["ingredients"] straight through
+    to put the binomials back.
+    """
+    return re.sub(r"\s*\([^)]*\)", "", ingredients)
+
+
 def nobreak(name: str) -> str:
     """Keep reduplicated names whole. "Ylang" on its own is not the word."""
     return name.replace("Ylang Ylang", "Ylang\u00a0Ylang")
@@ -388,7 +404,7 @@ def front_label(p, mark, guides, net) -> str:
         y += 2.2 * k
         parts.append(text(left_x, y, "INGREDIENTS", 1.9 * k, tracking=0.5 * k))
         y += 2.9 * k
-        for line in wrap(p["ingredients"], 1.8 * k, col):
+        for line in wrap(plain(p["ingredients"]), 1.8 * k, col):
             parts.append(text(left_x, y, line, 1.8 * k, fill=INK_SOFT))
             y += 2.35 * k
         return parts, y - 2.35 * k
