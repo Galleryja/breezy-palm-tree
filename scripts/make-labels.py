@@ -366,7 +366,9 @@ def front_label(p, mark, guides, net) -> str:
     path, vw, vh = mark
     w, h = FRONT_WIDTH, FRONT_HEIGHT
 
-    left_x, col = 7.0, 55.0
+    # Narrow side columns, held out at the margins, so the gutters either
+    # side of the centre are wide enough to read as deliberate space.
+    left_x, col = 7.0, 47.0
     right_x = w - 7.0 - col
     centre = w / 2
 
@@ -380,14 +382,14 @@ def front_label(p, mark, guides, net) -> str:
 
     # Sans under the blackletter. A second serif competes with it; a plain
     # grotesque lets the mark be the only decorated thing on the label.
-    title = fit("WHIPPED TALLOW", 3.9, 50.0, 0.95, serif=False)
+    title = fit("WHIPPED TALLOW", 3.9, 48.0, 0.95, serif=False)
     out.append(
         text(centre, 25.0, "WHIPPED TALLOW", title, serif=False, anchor="middle",
              tracking=0.95)
     )
 
     blend = nobreak(p["name"]).upper()
-    size = fit(blend, 2.3, 52.0, 0.35, serif=False)
+    size = fit(blend, 2.3, 48.0, 0.35, serif=False)
     out.append(
         text(centre, 29.3, blend, size, serif=False, anchor="middle",
              fill=INK_SOFT, tracking=0.35)
