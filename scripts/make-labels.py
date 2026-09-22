@@ -345,14 +345,13 @@ def lid_label(p, mark, guides, net) -> str:
 #
 # Three columns under a centred wordmark, after the reference label: what the
 # product is in the middle, what is in it on the left, what to do with it on
-# the right. The left column is ranged left and the right column is centred,
-# which is how the reference sets it.
+# the right. Both side columns are ranged left; only the middle is centred.
 # ---------------------------------------------------------------------------
 
-def fit(s: str, start: float, limit: float, tracking: float, floor=1.9) -> float:
+def fit(s, start: float, limit: float, tracking: float, serif=True, floor=1.9) -> float:
     """Largest size at or under `start` that keeps `s` inside `limit`."""
     size = start
-    while size > floor and width(s, size, True, tracking) > limit:
+    while size > floor and width(s, size, serif, tracking) > limit:
         size -= 0.05
     return size
 
@@ -362,32 +361,39 @@ def front_label(p, mark, guides, net) -> str:
     w, h = FRONT_WIDTH, FRONT_HEIGHT
 
     left_x, col = 7.0, 55.0
-    right_cx = w - 7.0 - col / 2
+    right_x = w - 7.0 - col
     centre = w / 2
 
     out = [f'<rect x="0" y="0" width="{w}" height="{h}" fill="{PAPER}" />']
 
     # --- centre -----------------------------------------------------------
-    mark_w = 30.0
-    out.append(wordmark_at(centre, 4.0, mark_w, path, vw, vh))
+    # The mark is set small and high to open up the gap beneath it; that gap
+    # is what makes the blackletter read as a mark rather than as a heading.
+    mark_w = 28.0
+    out.append(wordmark_at(centre, 3.4, mark_w, path, vw, vh))
 
-    title = fit("WHIPPED TALLOW", 3.9, 50.0, 0.8)
+    # Sans under the blackletter. A second serif competes with it; a plain
+    # grotesque lets the mark be the only decorated thing on the label.
+    title = fit("WHIPPED TALLOW", 3.9, 50.0, 0.95, serif=False)
     out.append(
-        text(centre, 23.8, "WHIPPED TALLOW", title, anchor="middle", tracking=0.8)
+        text(centre, 25.0, "WHIPPED TALLOW", title, serif=False, anchor="middle",
+             tracking=0.95)
     )
 
     blend = nobreak(p["name"]).upper()
-    size = fit(blend, 2.4, 52.0, 0.35)
+    size = fit(blend, 2.3, 52.0, 0.35, serif=False)
     out.append(
-        text(centre, 28.4, blend, size, anchor="middle", fill=INK_SOFT, tracking=0.35)
+        text(centre, 29.3, blend, size, serif=False, anchor="middle",
+             fill=INK_SOFT, tracking=0.35)
     )
 
-    out.append(text(centre, 32.4, net, 2.0, anchor="middle", fill=INK_SOFT))
+    out.append(text(centre, 32.8, net, 2.0, serif=False, anchor="middle",
+                    fill=INK_SOFT))
 
     # Name and place of business, which the label is required to carry.
     out.append(
-        text(centre, 35.7, "   ·   ".join([ORIGIN] + CONTACT), 1.75,
-             anchor="middle", fill=INK_FAINT)
+        text(centre, 35.9, "   ·   ".join([ORIGIN] + CONTACT), 1.7,
+             serif=False, anchor="middle", fill=INK_FAINT)
     )
 
     # The two side columns carry different amounts of text per blend, so each
@@ -412,19 +418,15 @@ def front_label(p, mark, guides, net) -> str:
     def right_column(k: float) -> tuple[list[str], float]:
         parts, y = [], 7.4
         for heading, copy in (("DIRECTIONS", p["howToUse"]), ("BENEFITS", BENEFITS)):
-            parts.append(
-                text(right_cx, y, heading, 1.9 * k, anchor="middle", tracking=0.5 * k)
-            )
+            parts.append(text(right_x, y, heading, 1.9 * k, tracking=0.5 * k))
             y += 2.9 * k
             for line in wrap(copy, 1.75 * k, col):
-                parts.append(
-                    text(right_cx, y, line, 1.75 * k, anchor="middle", fill=INK_SOFT)
-                )
+                parts.append(text(right_x, y, line, 1.75 * k, fill=INK_SOFT))
                 y += 2.3 * k
             y += 1.5 * k
         parts.append(
-            text(right_cx, y, "Store in a cool, dry place.", 1.7 * k,
-                 anchor="middle", fill=INK_FAINT, italic=True)
+            text(right_x, y, "Store in a cool, dry place.", 1.7 * k,
+                 fill=INK_FAINT, italic=True)
         )
         return parts, y
 
