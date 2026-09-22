@@ -4,8 +4,8 @@ Print artwork for the Eris Jar (120 ml, 76.5 mm diameter, 51 mm tall).
 
 Draws two pieces per balm, at true millimetre dimensions:
 
-    design/labels/lid-<slug>.svg    circular lid label
-    design/labels/body-<slug>.svg   wrap-around body label
+    design/labels/lid-<slug>.svg      circular lid label
+    design/labels/front-<slug>.svg    rectangular front label
 
 The copy is read out of data/products.ts, so the label and the website
 cannot drift apart. Nothing here is hand-typed except the business block,
@@ -48,11 +48,11 @@ CIRCUMFERENCE = 240.33       # mm, pi * diameter
 # ordering; every other number on the lid label follows from this one.
 LID_DIAMETER = 65.0
 
-# A full wrap plus a little overlap. The last OVERLAP mm are left blank
-# because the leading edge covers them once the label is on.
-BODY_HEIGHT = 32.0
-OVERLAP = 4.0
-BODY_WIDTH = CIRCUMFERENCE + OVERLAP
+# A rectangle applied to the front of the jar rather than a full wrap, so
+# there is bare glass at the back. Wider reads better but wraps further
+# round: at 190 mm the label covers 79% of the way, leaving a 50 mm gap.
+FRONT_WIDTH = 190.0
+FRONT_HEIGHT = 38.0
 
 # ---------------------------------------------------------------------------
 # Palette — the site's, so the jar and the website look related.
@@ -61,6 +61,7 @@ BODY_WIDTH = CIRCUMFERENCE + OVERLAP
 INK = "#15181c"
 INK_SOFT = "#48515c"
 PAPER = "#f6f8fa"
+INK_FAINT = "#636c77"
 LINE = "#dbe1e8"
 ACCENT = "#35597a"
 
@@ -70,11 +71,18 @@ SANS = "Helvetica, Arial, sans-serif"
 # The one block of copy that is not on the website. Fill the address in
 # before printing: US law requires the name and place of business of the
 # manufacturer, packer or distributor on the label.
-BUSINESS = [
-    "SIX SKINCARE PRODUCTS LLC",
-    "[street address]",
-    "[city, state, ZIP]",
-]
+ORIGIN = "Made in Cave Creek, AZ"
+CONTACT = ["@yoursocialhandle", "www.websitehere.com"]
+
+TAGLINE = ["Pure and natural.", "Elevated skincare."]
+
+# Stands in for the reference label's "BENEFITS" paragraph. What is written
+# here is what the base is and how it feels — not what it does to anybody.
+BENEFITS = (
+    "Whipped grass-fed tallow with organic shea butter and organic jojoba. "
+    "It melts on contact and leaves skin soft. Tallow naturally carries "
+    "vitamins A, D, E and K."
+)
 
 NET_PLACEHOLDER = "NET WT ______ OZ (______ g)"
 
@@ -120,6 +128,7 @@ def read_products() -> list[dict]:
                 "size": one(r'size: "([^"]+)"'),
                 "ingredients": ingredients.replace("${TALLOW_BASE}", tallow_base),
                 "allergens": one(r'allergens:\s*\n?\s*"((?:[^"\\]|\\.)*)"'),
+                "howToUse": one(r'howToUse:\s*\n?\s*"((?:[^"\\]|\\.)*)"'),
                 "swatch": re.search(
                     r'swatch: \["(#[0-9a-fA-F]{6})", "(#[0-9a-fA-F]{6})"\]', chunk
                 ).group(2),
@@ -145,9 +154,10 @@ def read_wordmark() -> tuple[str, float, float]:
 # Text measurement
 #
 # Everything is centred or left-aligned by the renderer, so widths are only
-# needed to decide where to break a line. Liberation is metrically compatible
-# with Times and Helvetica, which is close enough to the stacks above for
-# wrapping decisions.
+# needed to decide where to break a line. Measured against DejaVu, which is
+# wider than anything the font stacks above will actually resolve to — so a
+# line that fits here fits in print, and columns cannot run into each other
+# because a printer picked a different face.
 # ---------------------------------------------------------------------------
 
 _metrics: dict[str, tuple] = {}
@@ -174,7 +184,7 @@ def _load(family: str):
 
 def width(text: str, size: float, serif: bool = True, tracking: float = 0.0) -> float:
     """Width in mm of `text` set at `size` mm, plus `tracking` mm per letter."""
-    cmap, hmtx, upem = _load("Liberation Serif" if serif else "Liberation Sans")
+    cmap, hmtx, upem = _load("DejaVu Serif" if serif else "DejaVu Sans")
     total = 0.0
     for ch in text:
         glyph = cmap.get(ord(ch))
@@ -316,93 +326,111 @@ def lid_label(p, mark, guides, net) -> str:
 
 
 # ---------------------------------------------------------------------------
-# The body wrap
+# The front label
 #
-# Horizontal position is angular position once the label is on the jar, so
-# the front panel sits at half the circumference and the seam lands at the
-# back, behind it.
+# Three columns under a centred wordmark, after the reference label: what the
+# product is in the middle, what is in it on the left, what to do with it on
+# the right. The left column is ranged left and the right column is centred,
+# which is how the reference sets it.
 # ---------------------------------------------------------------------------
 
-def body_label(p, mark, guides, net) -> str:
+def fit(s: str, start: float, limit: float, tracking: float, floor=1.9) -> float:
+    """Largest size at or under `start` that keeps `s` inside `limit`."""
+    size = start
+    while size > floor and width(s, size, True, tracking) > limit:
+        size -= 0.05
+    return size
+
+
+def front_label(p, mark, guides, net) -> str:
     path, vw, vh = mark
-    w, h = BODY_WIDTH, BODY_HEIGHT
-    front = CIRCUMFERENCE / 2
+    w, h = FRONT_WIDTH, FRONT_HEIGHT
 
-    body = [f'<rect x="0" y="0" width="{w}" height="{h}" fill="{PAPER}" />']
+    left_x, col = 7.0, 55.0
+    right_cx = w - 7.0 - col / 2
+    centre = w / 2
 
-    # --- front ------------------------------------------------------------
-    mark_w = 24.0
-    block = [wordmark_at(front, 0.0, mark_w, path, vw, vh)]
-    y = mark_w * vh / vw + 4.4
-    block.append(text(front, y, nobreak(p["name"]), 3.7, anchor="middle"))
-    y += 4.7
-    block.append(
-        text(front, y, "WHIPPED TALLOW BALM", 2.0, serif=False, anchor="middle",
-             fill=INK_SOFT, tracking=0.7)
+    out = [f'<rect x="0" y="0" width="{w}" height="{h}" fill="{PAPER}" />']
+
+    # --- centre -----------------------------------------------------------
+    mark_w = 30.0
+    out.append(wordmark_at(centre, 4.0, mark_w, path, vw, vh))
+
+    title = fit("WHIPPED TALLOW", 3.9, 50.0, 0.8)
+    out.append(
+        text(centre, 23.8, "WHIPPED TALLOW", title, anchor="middle", tracking=0.8)
     )
-    y += 3.5
-    block.append(
-        text(front, y, net, 2.0, serif=False, anchor="middle", fill=INK_SOFT,
-             tracking=0.25)
+
+    blend = nobreak(p["name"]).upper()
+    size = fit(blend, 2.4, 52.0, 0.35)
+    out.append(
+        text(centre, 28.4, blend, size, anchor="middle", fill=INK_SOFT, tracking=0.35)
     )
-    body.append(_centred(block, y + 0.6, h))
 
-    # --- ingredients, to the left of the front ----------------------------
-    left, col = 9.0, 72.0
-    block, y = [], 0.0
-    block.append(text(left, y, "INGREDIENTS", 1.9, serif=False, tracking=0.6))
-    y += 3.5
-    for line in wrap(p["ingredients"], 1.95, col, serif=False):
-        block.append(text(left, y, line, 1.95, serif=False, fill=INK_SOFT))
-        y += 2.7
-    y += 1.1
-    for line in wrap(p["allergens"], 1.85, col, serif=False):
-        block.append(text(left, y, line, 1.85, serif=False, fill=INK_SOFT, italic=True))
-        y += 2.5
-    body.append(_centred(block, y - 2.5 + 0.6, h))
+    out.append(text(centre, 32.4, net, 2.0, anchor="middle", fill=INK_SOFT))
 
-    # --- business, to the right of the front ------------------------------
-    # "Made in the USA" unqualified would be an FTC problem: the shea and the
-    # essential oils are imported. The qualified form is the accurate one.
-    right = front + 40.0
-    block, y = [], 0.0
-    block.append(text(right, y, BUSINESS[0], 1.9, serif=False, tracking=0.6))
-    y += 3.5
-    for line in BUSINESS[1:]:
-        block.append(text(right, y, line, 1.95, serif=False, fill=INK_SOFT))
-        y += 2.7
-    y += 1.3
-    for line in (
-        "Made in the USA with domestic and imported ingredients.",
-        "For external use only. Patch test before first use.",
-    ):
-        block.append(text(right, y, line, 1.85, serif=False, fill=INK_SOFT))
-        y += 2.6
-    y += 1.4
-    block.append(
-        text(right, y, "LOT ____________   BEST BY ____________", 1.8,
-             serif=False, fill=INK_SOFT, tracking=0.15)
+    # Name and place of business, which the label is required to carry.
+    out.append(
+        text(centre, 35.7, "   ·   ".join([ORIGIN] + CONTACT), 1.75,
+             anchor="middle", fill=INK_FAINT)
     )
-    body.append(_centred(block, y + 0.6, h))
 
-    # Panel dividers, a third of the way round to each side of the front.
-    for x in (front - 33.0, front + 33.0):
-        body.append(
-            f'<line x1="{x:.2f}" y1="5.5" x2="{x:.2f}" y2="{h - 5.5}" '
-            f'stroke="{LINE}" stroke-width="0.2" />'
+    # The two side columns carry different amounts of text per blend, so each
+    # is set at the largest scale that still clears the bottom edge, rather
+    # than at a size that happens to suit one of the four.
+    floor = h - 3.0
+
+    def left_column(k: float) -> tuple[list[str], float]:
+        parts = [wordmark_at(left_x + 5.5, 4.4, 11.0, path, vw, vh)]
+        y = 11.6
+        for line in TAGLINE:
+            parts.append(text(left_x, y, line, 2.1 * k, fill=INK_SOFT))
+            y += 2.6 * k
+        y += 2.2 * k
+        parts.append(text(left_x, y, "INGREDIENTS", 1.9 * k, tracking=0.5 * k))
+        y += 2.9 * k
+        for line in wrap(p["ingredients"], 1.8 * k, col):
+            parts.append(text(left_x, y, line, 1.8 * k, fill=INK_SOFT))
+            y += 2.35 * k
+        y += 0.5 * k
+        for line in wrap(p["allergens"], 1.7 * k, col):
+            parts.append(text(left_x, y, line, 1.7 * k, fill=INK_FAINT, italic=True))
+            y += 2.2 * k
+        return parts, y - 2.2 * k
+
+    def right_column(k: float) -> tuple[list[str], float]:
+        parts, y = [], 7.4
+        for heading, copy in (("DIRECTIONS", p["howToUse"]), ("BENEFITS", BENEFITS)):
+            parts.append(
+                text(right_cx, y, heading, 1.9 * k, anchor="middle", tracking=0.5 * k)
+            )
+            y += 2.9 * k
+            for line in wrap(copy, 1.75 * k, col):
+                parts.append(
+                    text(right_cx, y, line, 1.75 * k, anchor="middle", fill=INK_SOFT)
+                )
+                y += 2.3 * k
+            y += 1.5 * k
+        parts.append(
+            text(right_cx, y, "Store in a cool, dry place.", 1.7 * k,
+                 anchor="middle", fill=INK_FAINT, italic=True)
         )
+        return parts, y
+
+    for build in (left_column, right_column):
+        for step in range(14):
+            parts, bottom = build(1.0 - step * 0.025)
+            if bottom <= floor:
+                break
+        out.extend(parts)
 
     if guides:
-        body.append(
-            f'<rect x="{CIRCUMFERENCE:.2f}" y="0" width="{OVERLAP}" height="{h}" '
-            f'fill="{ACCENT}" fill-opacity="0.08" />'
-        )
-        body.append(
-            f'<line x1="{CIRCUMFERENCE:.2f}" y1="0" x2="{CIRCUMFERENCE:.2f}" '
-            f'y2="{h}" stroke="{ACCENT}" stroke-width="0.15" '
+        out.append(
+            f'<rect x="0.05" y="0.05" width="{w - 0.1}" height="{h - 0.1}" '
+            f'fill="none" stroke="{ACCENT}" stroke-width="0.1" '
             f'stroke-dasharray="1 1" />'
         )
-    return svg(round(w, 2), h, "\n".join(body))
+    return svg(w, h, "\n".join(out))
 
 
 # ---------------------------------------------------------------------------
@@ -423,7 +451,7 @@ def main() -> None:
         stem = p["slug"].removesuffix("-balm")
         for kind, render, size in (
             ("lid", lid_label, LID_DIAMETER),
-            ("body", body_label, BODY_WIDTH),
+            ("front", front_label, FRONT_WIDTH),
         ):
             path = OUT / f"{kind}-{stem}.svg"
             path.write_text(render(p, mark, False, args.net))
@@ -437,9 +465,10 @@ def main() -> None:
                     scale=1200 / size,
                 )
 
-    print(f"\n  lid   {LID_DIAMETER:g} mm circle   (jar glass is {JAR_DIAMETER:g} mm)")
-    print(f"  body  {BODY_WIDTH:.1f} x {BODY_HEIGHT:g} mm   "
-          f"({CIRCUMFERENCE:.1f} mm around + {OVERLAP:g} mm overlap)")
+    gap = CIRCUMFERENCE - FRONT_WIDTH
+    print(f"\n  lid    {LID_DIAMETER:g} mm circle   (jar glass is {JAR_DIAMETER:g} mm)")
+    print(f"  front  {FRONT_WIDTH:g} x {FRONT_HEIGHT:g} mm   "
+          f"({gap:.0f} mm of bare glass at the back)")
     if args.net == NET_PLACEHOLDER:
         print("\n  net contents left blank — weigh a filled jar, then pass --net")
 

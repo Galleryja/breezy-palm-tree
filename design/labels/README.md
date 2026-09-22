@@ -20,12 +20,18 @@ start disagreeing with each other.
 | File | Size | Goes on |
 | --- | --- | --- |
 | `lid-<blend>.svg` | 65 mm circle | the flat top of the lid |
-| `body-<blend>.svg` | 244.3 × 32 mm | around the glass |
+| `front-<blend>.svg` | 190 × 38 mm | the front of the glass |
 
 The jar is 76.5 mm across and 51 mm tall, so the glass is 240.3 mm around. The
-body label is that plus 4 mm of overlap; the last 4 mm are left blank because
-the leading edge covers them. The `--previews` PNGs shade that strip and draw
-the lid's trim circle — the SVGs themselves carry no guides.
+front label is a rectangle rather than a wrap: at 190 mm it covers about four
+fifths of the way round and leaves 50 mm of bare glass at the back. Wider
+looks better and wraps further; `FRONT_WIDTH` at the top of the script is the
+dial. The `--previews` PNGs draw trim guides that the SVGs do not carry.
+
+Three columns under a centred wordmark, after the reference label: what the
+product is in the middle, what is in it on the left, what to do with it on the
+right. The side columns hold different amounts of text per blend, so each one
+sets itself at the largest size that still clears the bottom edge.
 
 Add bleed to taste when you order. Most printers want 1.5–3 mm on a die-cut
 circle; ask yours before scaling anything.
@@ -45,20 +51,42 @@ then pass `--net`. US law requires the net quantity on the principal display
 panel, so this is not optional, and guessing it is a weights-and-measures
 problem rather than a design one.
 
-**The address is a placeholder.** `BUSINESS` in the script carries
-`[street address]` and `[city, state, ZIP]`. The name and place of business of
-the manufacturer, packer or distributor is required on the label.
+**The contact line is half placeholder.** `ORIGIN` and `CONTACT` at the top of
+the script give "Made in Cave Creek, AZ", `@yoursocialhandle` and
+`www.websitehere.com`. The name and place of business of the manufacturer,
+packer or distributor is required on the label, and a street address is
+required unless the firm is listed in a current telephone or city directory.
+Check that Six Skincare Products LLC is, or add the street.
 
 ## Why the copy reads the way it does
 
-- The origin line is qualified — "Made in the USA with domestic and imported
-  ingredients". An unqualified "Made in the USA" is an FTC claim, and the shea
-  butter and the essential oils are imported.
+Three lines from the reference label are not reproduced here, for the same
+reasons the website copy was written the way it was:
+
+- **"Sustainably sourced"** — an unqualified environmental claim, which the
+  FTC Green Guides treat as a claim about the whole product and its packaging.
+  "Sustainable" came off the homepage for this reason.
+- **"optimized for deep skin repair"** — repairing skin is a structure or
+  function claim. A cosmetic that claims to repair is an unapproved drug in
+  the FDA's reading, and it is the single riskiest sentence on that label.
+- **"replenish skin"** — same family, milder. The BENEFITS block here says
+  what the base is and how it feels instead, using the wording already
+  approved for the site.
+
+What is kept: "rich in vitamins A, D, E and K" survives as *tallow naturally
+carries* those vitamins — a statement about the material, not a promise about
+skin, which is how it is phrased on the website too.
+
+- The origin line is qualified — an unqualified "Made in the USA" is an FTC
+  claim, and the shea butter and the essential oils are imported. The front
+  label says where it is made rather than making the claim.
 - The label states what the product is, what is in it, how much of it there is
   and who made it. It makes no claim about what it does, which is what keeps a
   cosmetic a cosmetic.
 - Allergens are carried on the label as well as the website. No US regulator
   asks for them.
+- There is no lot or best-by field on the face. Small makers usually ink-jet
+  or sticker those on the base, which is easier than reprinting labels.
 
 ## Fonts
 
