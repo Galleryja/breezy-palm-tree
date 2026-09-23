@@ -83,12 +83,12 @@ DIRECTIONS = (
     "Allow a few minutes for absorption."
 )
 
-# Stands in for the reference label's "BENEFITS" paragraph. What is written
-# here is what the base is and how it feels — not what it does to anybody.
+# Owner's wording. "Replenish skin" is the one phrase here that sits near the
+# cosmetic/drug line; "replenish moisture" would be plainly cosmetic. Raised
+# and kept as written.
 BENEFITS = (
-    "Whipped grass-fed tallow with organic shea butter and organic jojoba. "
-    "It melts on contact and leaves skin soft. Tallow naturally carries "
-    "vitamins A, D, E and K."
+    "Clean tallow moisturizer, rich in vitamins A, D, E and K, enhanced with "
+    "natural ingredients to replenish skin, leaving it soft."
 )
 
 NET_PLACEHOLDER = "NET WT ______ OZ (______ g)"
@@ -456,6 +456,14 @@ def front_label(p, mark, guides, net) -> str:
 
 # ---------------------------------------------------------------------------
 
+def logo_file(mark, width_mm: float = 60.0) -> str:
+    """The wordmark on its own, transparent, for stickers and stamps."""
+    path, vw, vh = mark
+    h = width_mm * vh / vw
+    return svg(round(width_mm, 2), round(h, 2),
+               wordmark_at(width_mm / 2, 0.0, width_mm, path, vw, vh))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--previews", action="store_true",
@@ -487,6 +495,16 @@ def main() -> None:
                 )
 
     gap = CIRCUMFERENCE - FRONT_WIDTH
+    logo = OUT.parent / "six-wordmark.svg"
+    logo.write_text(logo_file(mark))
+    print(f"  {logo.relative_to(ROOT)}")
+    if args.previews:
+        import cairosvg
+
+        cairosvg.svg2png(bytestring=logo_file(mark).encode(),
+                         write_to=str(OUT.parent / "preview-six-wordmark.png"),
+                         scale=20)
+
     print(f"\n  lid    {LID_DIAMETER:g} mm circle   (jar glass is {JAR_DIAMETER:g} mm)")
     print(f"  front  {FRONT_WIDTH:g} x {FRONT_HEIGHT:g} mm   "
           f"({gap:.0f} mm of bare glass at the back)")
