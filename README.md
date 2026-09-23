@@ -93,6 +93,11 @@ this catalogue by `scripts/make-labels.py`. See the README in that folder —
 three things (lid diameter, net weight, business address) have to be settled
 before anything goes to a printer.
 
+## Launch timeline
+
+`docs/launch-timeline.md` sets out what has to happen, in what order, to
+get from here to a jar someone has paid for.
+
 ## Commands
 
 ```bash
