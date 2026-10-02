@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 function Entry({ ingredient }: { ingredient: Ingredient }) {
   return (
-    <div className="rule pt-8">
+    <div className="rule pt-6">
       <h3 className="font-serif text-xl text-ink">{ingredient.name}</h3>
       <p className="mt-1 text-sm italic text-ink-faint">{ingredient.source}</p>
 
-      <p className="mt-4 text-base leading-relaxed text-ink-soft">
+      <p className="mt-3 text-base leading-relaxed text-ink-soft">
         {ingredient.composition}
       </p>
 
-      <ul className="mt-4 space-y-3">
+      <ul className="mt-4 space-y-2">
         {ingredient.properties.map((line) => (
-          <li key={line} className="flex gap-4">
+          <li key={line} className="flex gap-3">
             <span
               aria-hidden="true"
               className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent"
@@ -39,7 +39,7 @@ function Entry({ ingredient }: { ingredient: Ingredient }) {
       ) : null}
 
       {ingredient.usedIn.length > 0 ? (
-        <p className="mt-4 text-sm text-ink-faint">
+        <p className="mt-3 text-sm text-ink-faint">
           In: {ingredient.usedIn.join(", ")}
         </p>
       ) : null}
@@ -83,25 +83,25 @@ export default function IngredientsPage() {
           anything.
         </p>
 
-        <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">
+        <h2 className="rule mt-12 pt-10 font-serif text-2xl text-ink">
           The Base
         </h2>
         <p className="mt-3 text-base leading-relaxed text-ink-soft">
           Three materials, in every balm. The rollers are jojoba alone.
         </p>
-        <div className="mt-8 space-y-10">
+        <div className="mt-6 space-y-7">
           {base.map((i) => (
             <Entry key={i.slug} ingredient={i} />
           ))}
         </div>
 
-        <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">
+        <h2 className="rule mt-12 pt-10 font-serif text-2xl text-ink">
           The Essential Oils
         </h2>
         <p className="mt-3 text-base leading-relaxed text-ink-soft">
           Every one certified organic. Listed in the order the blends appear.
         </p>
-        <div className="mt-8 space-y-10">
+        <div className="mt-6 space-y-7">
           {oils.map((i) => (
             <Entry key={i.slug} ingredient={i} />
           ))}
