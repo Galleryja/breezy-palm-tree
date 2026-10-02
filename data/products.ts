@@ -108,11 +108,11 @@ export const PRODUCTS: Product[] = [
     order: 1,
     format: "balm",
     name: "Floral Jasmine",
-    tagline: "Jasmine, Vanilla & Ylang Ylang",
+    tagline: "Jasmine, Ylang Ylang & Vanilla",
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Whipped tallow balm with jasmine, ylang ylang and natural vanilla. This is a beautiful floral blend and a feeling of elevation from the natural elements.",
+      "A beautiful floral blend of jasmine, ylang ylang and natural vanilla, whipped into a light, airy tallow balm. The scent feels uplifting, and the balm melts into skin to moisturize deeply and leave it soft, balanced and nourished.",
     notes: [
       {
         name: "Organic jasmine absolute",
@@ -224,7 +224,7 @@ export const PRODUCTS: Product[] = [
     order: 5,
     format: "roller",
     name: "Floral Jasmine",
-    tagline: "Jasmine, Vanilla & Ylang Ylang",
+    tagline: "Jasmine, Ylang Ylang & Vanilla",
     priceCents: 2200,
     size: "10 ml",
     description:
