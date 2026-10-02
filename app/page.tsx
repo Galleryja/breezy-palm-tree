@@ -23,7 +23,7 @@ export default function HomePage() {
               given more weight than another. The breaks are hard rather than
               left to wrap, so the rhythm holds at every width. */}
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Grass-fed tallow, whipped with organic shea and jojoba. Scented with
+            Grass-fed tallow, whipped with organic shea and jojoba. Blended with
             essential oils.
             <br />
             Natural ingredients, chosen for what they do.
