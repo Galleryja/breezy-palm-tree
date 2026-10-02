@@ -31,13 +31,10 @@ export default function AboutPage() {
 
         <p className="mt-6 text-base leading-relaxed text-ink-soft">
           Tallow fell out of fashion for a few decades and is coming back, mostly
-          because people tried it. Here is what it actually does.
-        </p>
-
-        <p className="mt-5 text-base leading-relaxed text-ink-soft">
-          They were tired of cheap, mass-produced bases and chemically derived
-          fragrance, and went looking for ingredients that do something for skin
-          rather than mask it.
+          because people tried it. They were tired of cheap, mass-produced bases
+          and chemically derived fragrance, and went looking for ingredients that
+          do something for skin rather than mask it. Here is what it actually
+          does.
         </p>
 
         <ul className="mt-8 space-y-5">
