@@ -189,7 +189,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Neither oil in this blend is phototoxic, so unlike lemon or bergamot it is fine to wear in daylight. Patch test on a small area before first use.",
     swatch: ["#f6f4e9", "#a8a56d"],
-    bestFor: "All skin, daytime wear, and anyone who wants scent kept light",
+    bestFor: "All skin, and anyone who wants scent kept light",
   },
   {
     slug: "dry-cedar-balm",
@@ -217,7 +217,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. Vetiver opens up slowly, so give it half an hour before deciding what you think of it. Patch test on a small area before first use.",
     swatch: ["#f1efe9", "#7a705f"],
-    bestFor: "All skin, cold weather, and anyone who likes wood and earth",
+    bestFor: "All skin, and anyone who likes wood and earth",
   },
   {
     slug: "floral-jasmine-roller",
