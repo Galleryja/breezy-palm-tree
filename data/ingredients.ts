@@ -109,6 +109,7 @@ export const INGREDIENTS: Ingredient[] = [
       "It has been valued in perfumery and in traditional preparation for centuries, with a long documented history in Ayurvedic and traditional Chinese use.",
       "It cannot be steam-distilled — heat destroys the scent — so it is solvent-extracted to a concrete and then to an absolute. That is why it is an absolute and why it costs what it does.",
       "The flowers are picked before dawn, when their scent is strongest.",
+      "It has traditionally been used in preparations for dry and mature-looking skin.",
       "Its heavier aromatic molecules evaporate slowly, which is why a jasmine note persists on skin for hours rather than minutes.",
     ],
     caveat:
@@ -124,6 +125,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
     properties: [
       "It has traditionally been used in hair and skin preparations across Southeast Asia — macassar oil, a long-standing hair dressing, was ylang ylang flowers steeped in coconut or palm oil.",
+      "In Indonesia the flowers have traditionally been scattered on the beds of newlyweds.",
       "Small human studies of inhaled ylang ylang have measured lowered blood pressure and heart rate in participants.",
     ],
     caveat:
@@ -156,6 +158,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Steam-distilled from the tree's resin. The distilled oil is mainly monoterpenes — alpha-pinene and limonene among them.",
     properties: [
       "It has been traded, burned and used in preparation for at least four thousand years.",
+      "The resin is still harvested the old way: the bark is scored and the sap left to harden into tears, which are collected by hand.",
       "It has long been used in traditional skincare for smooth, radiant-looking skin.",
       "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
     ],
@@ -171,7 +174,8 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the resin. Rich in sesquiterpenes, chiefly furanoeudesma-1,3-diene and curzerene.",
     properties: [
-      "It was among the most valued materials of ancient Egyptian and Middle Eastern preparation, and was traded alongside frankincense.",
+      "It was among the most valued materials of ancient Egyptian and Middle Eastern preparation, and was traded alongside frankincense, including in embalming.",
+      "It has traditionally been used on rough and weathered skin.",
       "Laboratory studies report antimicrobial activity for its sesquiterpene fraction.",
       "Its heavy sesquiterpenes evaporate slowly, which is why myrrh gives a blend weight and a long finish.",
       "The oil is thick, dark and nearly solid at room temperature. It has to be warmed before it will pour, let alone blend.",
@@ -190,6 +194,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Steam-distilled from bitter orange blossom. Contains linalool, linalyl acetate, limonene and nerolidol.",
     properties: [
       "It has long been favoured in preparation for mature skin.",
+      "It takes its name from Anne Marie Orsini, Princess of Nerola, who used it to scent her gloves and her bathwater in the seventeenth century. It has been a perfumery staple since.",
       "It contains naturally occurring antioxidant compounds.",
       "It carries no furocoumarins, so unlike oils pressed from citrus peel it does not make skin sensitive to sunlight.",
     ],
@@ -204,6 +209,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Steam-distilled from the leaves and twigs of the same tree that gives neroli. Chiefly linalyl acetate and linalool.",
     properties: [
       "It has traditionally been used for clear, balanced-looking skin.",
+      "Its name means little grain: it was first distilled from the small unripe fruit of the bitter orange, and kept the name after distillers moved to the leaves and twigs.",
       "Like neroli, it is free of furocoumarins and is not phototoxic.",
       "It is a fraction of the cost of neroli and shares much of its character, which is why the two are so often distilled and blended together.",
     ],
@@ -217,7 +223,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the wood. Composed largely of sesquiterpenes including himachalenes and atlantones.",
     properties: [
-      "It has been used in perfumery and in the preservation of materials since antiquity.",
+      "It has been used in perfumery and in the preservation of materials since antiquity — the wood has traditionally lined chests and stored textiles, which is where its association with keeping things comes from.",
       "Its sesquiterpenes are heavy and slow to evaporate, which is what makes cedarwood read as dry and persistent rather than bright.",
       "Cedrol, the compound most associated with the smell of cedar, is the one usually named when cedarwood is studied.",
     ],
@@ -233,6 +239,7 @@ export const INGREDIENTS: Ingredient[] = [
     properties: [
       "Its very high sesquiterpene content makes it a fixative: it slows the evaporation of lighter materials blended with it, so the whole blend lasts longer.",
       "It has been used in traditional preparation across India and Southeast Asia for centuries, and is known in aromatherapy as the oil of tranquillity.",
+      "In India the roots have traditionally been woven into screens and mats which are then wetted, so that air passing through arrives cool and scented.",
     ],
   },
 ];
