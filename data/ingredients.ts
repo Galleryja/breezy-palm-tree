@@ -123,7 +123,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
     properties: [
-      "It has traditionally been used in hair and skin preparations across Southeast Asia — macassar oil, a long-standing hair dressing, was ylang ylang flowers steeped in coconut or palm oil.",
+      "It has traditionally been used in skin preparations across Southeast Asia.",
       "Small human studies of inhaled ylang ylang have measured lowered blood pressure and heart rate in participants.",
     ],
     caveat:
