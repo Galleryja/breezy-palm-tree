@@ -64,6 +64,14 @@ const TALLOW_BASE =
 const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
 
 /**
+ * Closes the base section on a balm page, after the three materials have been
+ * listed individually. Balms only — it says "the balm", and the rollers are
+ * jojoba on its own, so there is nothing to balance.
+ */
+export const BASE_TOGETHER =
+  "Tallow is occlusive, shea emollient, jojoba a wax ester rather than a triglyceride. That balancing base is why the balm moisturises for hours without ever feeling like a layer.";
+
+/**
  * The base every balm shares, and the jojoba the rollers are built on.
  *
  * Client-written copy — keep the wording unless asked to change it. It stays
