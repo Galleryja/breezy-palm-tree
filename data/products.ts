@@ -74,7 +74,7 @@ const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
 const BALM_BASE_NOTES = [
   {
     name: "Grass-fed beef tallow",
-    note: "Lipids your skin recognizes. Rich in the same fatty acids found in skin's natural oils, tallow melts in easily and leaves skin soft and supple. It naturally carries vitamins A, D, E, and K, and has been used as a skin balm for centuries.",
+    note: "Lipids your skin recognizes. Mimicking the skin's natural oils, tallow melts in easily and leaves skin soft and supple. It naturally carries vitamins A, D, E, and K, and has been used as a skin balm for centuries.",
   },
   {
     name: "Organic shea butter",
