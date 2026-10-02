@@ -249,7 +249,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Roll onto pulse points — wrists, throat, behind the ears. Over a balm it lasts noticeably longer than on bare skin. Reapply through the day as you like.",
     swatch: ["#f8f2e4", "#c2a361"],
-    bestFor: "Evening wear, and layering over the matching balm",
+    bestFor: "Lush, warm and unhurried",
   },
   {
     slug: "sheer-suede-roller",
@@ -276,7 +276,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; the resins open up with skin heat. Unisex, and it wears well in cold weather.",
     swatch: ["#f3ece1", "#96784f"],
-    bestFor: "Evenings, and incense worn close to the skin",
+    bestFor: "Quiet, grounded and worn close",
   },
   {
     slug: "balanced-light-roller",
@@ -304,7 +304,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Roll onto pulse points — wrists, throat, behind the ears. Lighter than the other two, so it suits daytime and reapplying without it building up. Safe to wear in sun.",
     swatch: ["#f7f4e6", "#a89a5e"],
-    bestFor: "Daytime wear, warm weather, and anyone who wants scent kept light",
+    bestFor: "Clear-headed and uncomplicated",
   },
   {
     slug: "dry-cedar-roller",
@@ -332,7 +332,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; vetiver needs skin heat to open. Wears well in cold weather and layers over any of the balms.",
     swatch: ["#efece4", "#6f6857"],
-    bestFor: "Cold weather, and wood and earth worn close",
+    bestFor: "Steady, composed and dry",
   },
 ];
 
