@@ -106,7 +106,9 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "An absolute rather than a distilled oil, rich in benzyl acetate, benzyl benzoate, linalool and indole.",
     properties: [
-      "It has been valued in perfumery and in traditional preparation for centuries.",
+      "It has been valued in perfumery and in traditional preparation for centuries, with a long documented history in Ayurvedic and traditional Chinese use.",
+      "It cannot be steam-distilled — heat destroys the scent — so it is solvent-extracted to a concrete and then to an absolute. That is why it is an absolute and why it costs what it does.",
+      "The flowers are picked before dawn, when their scent is strongest.",
       "Its heavier aromatic molecules evaporate slowly, which is why a jasmine note persists on skin for hours rather than minutes.",
     ],
     caveat:
@@ -121,7 +123,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
     properties: [
-      "It has traditionally been used in hair and skin preparations across Southeast Asia.",
+      "It has traditionally been used in hair and skin preparations across Southeast Asia — macassar oil, a long-standing hair dressing, was ylang ylang flowers steeped in coconut or palm oil.",
       "Small human studies of inhaled ylang ylang have measured lowered blood pressure and heart rate in participants.",
     ],
     caveat:
@@ -136,9 +138,12 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Extracted from cured beans with supercritical carbon dioxide, a solvent-free method that leaves no residue. Its principal aromatic compound is vanillin.",
     properties: [
+      "It was first cultivated by the Totonac people of what is now Veracruz, and later taken up by the Aztecs.",
       "Vanillin exhibits antioxidant activity in laboratory testing.",
       "That activity is most usefully understood as a formulation property: antioxidants slow the oxidation of the oils around them, which is how an oil-based product stays fresh.",
     ],
+    caveat:
+      "Vanilla's long history is as a flavouring and a fragrance. Unlike shea or jojoba it carries no substantial tradition of topical use, and it is in the blend because of how it smells and what it does to the other oils.",
   },
   {
     slug: "frankincense",
