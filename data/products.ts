@@ -108,7 +108,7 @@ export const PRODUCTS: Product[] = [
     notes: [
       {
         name: "Organic jasmine absolute",
-        note: "Prized in skincare and perfumery for centuries, Jasminum grandiflorum gives the balm its warm floral heart and a scent that lasts for hours.",
+        note: "Prized in skincare and perfumery for centuries, Jasminum grandiflorum gives the balm its warm floral heart and a scent that lasts for hours. Jasmine can't be steam-distilled — the heat destroys it — so an absolute is the only honest way to get it, and it costs accordingly. What you're paying for is why this reads as a flower and not as candy.",
       },
       {
         name: "Organic ylang ylang oil",
@@ -224,7 +224,7 @@ export const PRODUCTS: Product[] = [
     notes: [
       {
         name: "Organic jasmine absolute",
-        note: "Prized in skincare and perfumery for centuries, Jasminum grandiflorum gives the balm its warm floral heart and a scent that lasts for hours.",
+        note: "Prized in skincare and perfumery for centuries, Jasminum grandiflorum gives the roller its warm floral heart and a scent that lasts for hours. Jasmine can't be steam-distilled — the heat destroys it — so an absolute is the only honest way to get it, and it costs accordingly. What you're paying for is why this reads as a flower and not as candy.",
       },
       {
         name: "Organic ylang ylang oil",
