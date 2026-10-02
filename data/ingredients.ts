@@ -155,7 +155,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the tree's resin. The distilled oil is mainly monoterpenes — alpha-pinene and limonene among them.",
     properties: [
-      "It has been traded, burned and used in preparation for at least four thousand years.",
+      "It has been used on skin for at least four thousand years, ground into the perfumed unguents and salves that Egyptian and Arabian cosmetic practice was built on.",
       "It has long been used in traditional skincare for smooth, radiant-looking skin.",
       "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
     ],
@@ -171,7 +171,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the resin. Rich in sesquiterpenes, chiefly furanoeudesma-1,3-diene and curzerene.",
     properties: [
-      "It was among the most valued materials of ancient Egyptian and Middle Eastern preparation, and was traded alongside frankincense.",
+      "It was among the most valued materials of ancient Egyptian and Middle Eastern skin preparation, and was blended into salves and perfumed oils alongside frankincense.",
       "Laboratory studies report antimicrobial activity for its sesquiterpene fraction.",
       "Its heavy sesquiterpenes evaporate slowly, which is why myrrh gives a blend weight and a long finish.",
       "The oil is thick, dark and nearly solid at room temperature. It has to be warmed before it will pour, let alone blend.",
@@ -217,7 +217,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the wood. Composed largely of sesquiterpenes including himachalenes and atlantones.",
     properties: [
-      "It has been used in perfumery and in the preservation of materials since antiquity.",
+      "It has been used in perfumery since antiquity.",
       "Its sesquiterpenes are heavy and slow to evaporate, which is what makes cedarwood read as dry and persistent rather than bright.",
       "Cedrol, the compound most associated with the smell of cedar, is the one usually named when cedarwood is studied.",
     ],
