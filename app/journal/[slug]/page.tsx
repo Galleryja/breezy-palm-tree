@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, getPost, formatPostDate, type Block } from "@/data/journal";
+import {
+  POSTS,
+  getPost,
+  formatPostDate,
+  PUBLISHED,
+  type Block,
+} from "@/data/journal";
 
 type Params = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
+  if (!PUBLISHED) return [];
   return POSTS.map((p) => ({ slug: p.slug }));
 }
 
@@ -37,7 +44,7 @@ function Body({ block }: { block: Block }) {
 
 export default async function PostPage({ params }: Params) {
   const post = getPost((await params).slug);
-  if (!post) notFound();
+  if (!post || !PUBLISHED) notFound();
 
   return (
     <div className="wrap py-16">

@@ -23,6 +23,13 @@
  * comes from, and where the category is wrong about it.
  */
 
+/**
+ * Off for now. While false the journal routes 404 and the nav link is hidden,
+ * so nothing is reachable and nothing can be indexed. The posts below stay
+ * where they are. Flip this to publish.
+ */
+export const PUBLISHED = false;
+
 export type Post = {
   /** URL segment. Permalink — do not change once published. */
   slug: string;

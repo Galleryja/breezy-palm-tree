@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { postsByDate, formatPostDate } from "@/data/journal";
+import { notFound } from "next/navigation";
+import { postsByDate, formatPostDate, PUBLISHED } from "@/data/journal";
 
 export const metadata: Metadata = {
   title: "Journal",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function JournalPage() {
+  if (!PUBLISHED) notFound();
   const posts = postsByDate();
 
   return (
