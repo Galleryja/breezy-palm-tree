@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
     priceCents: 3000,
     size: "6 oz",
     description:
-      "A beautiful floral blend of jasmine, ylang ylang and natural vanilla, whipped into a light, airy tallow balm. The scent feels uplifting, and the balm melts into skin to moisturize deeply and leave it soft, balanced and nourished.",
+      "A beautiful floral blend of jasmine, natural vanilla and ylang ylang, whipped into a light, airy tallow balm. The scent feels uplifting, and the balm melts into skin to moisturize deeply and leave it soft, balanced and nourished.",
     notes: [
       {
         name: "Organic jasmine absolute",
