@@ -231,7 +231,7 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Distilled from the roots of a grass grown as much for the way its roots bind soil as for its oil. One of the most sesquiterpene-rich essential oils there is.",
     properties: [
-      "Its very high sesquiterpene content makes it a fixative: it slows the evaporation of lighter materials blended with it, so the whole blend lasts longer.",
+      "Its very high sesquiterpene content slows the evaporation of the lighter materials blended with it, so the whole blend lasts longer.",
       "It has been used in traditional preparation across India and Southeast Asia for centuries, and is known in aromatherapy as the oil of tranquillity.",
     ],
   },
