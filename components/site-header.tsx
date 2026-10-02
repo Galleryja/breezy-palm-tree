@@ -8,6 +8,7 @@ import { Wordmark } from "@/components/wordmark";
 const NAV = [
   { href: "/products", label: "Shop" },
   { href: "/about", label: "Approach" },
+  { href: "/journal", label: "Journal" },
 ];
 
 export function SiteHeader() {
