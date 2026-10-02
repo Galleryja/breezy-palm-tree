@@ -102,7 +102,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic jasmine absolute",
     source: "Jasminum grandiflorum",
     kind: "oil",
-    usedIn: ["Jasmine, Vanilla & Ylang Ylang"],
+    usedIn: ["Floral Jasmine"],
     composition:
       "An absolute rather than a distilled oil, rich in benzyl acetate, benzyl benzoate, linalool and indole.",
     properties: [
@@ -117,7 +117,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic ylang ylang oil",
     source: "Cananga odorata",
     kind: "oil",
-    usedIn: ["Jasmine, Vanilla & Ylang Ylang"],
+    usedIn: ["Floral Jasmine"],
     composition:
       "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
     properties: [
@@ -132,7 +132,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic vanilla CO2 extract",
     source: "Vanilla planifolia",
     kind: "oil",
-    usedIn: ["Jasmine, Vanilla & Ylang Ylang"],
+    usedIn: ["Floral Jasmine"],
     composition:
       "Extracted from cured beans with supercritical carbon dioxide, a solvent-free method that leaves no residue. Its principal aromatic compound is vanillin.",
     properties: [
@@ -145,7 +145,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic frankincense oil",
     source: "Boswellia carterii",
     kind: "oil",
-    usedIn: ["Frankincense & Myrrh"],
+    usedIn: ["Sheer Suede"],
     composition:
       "Steam-distilled from the tree's resin. The distilled oil is mainly monoterpenes — alpha-pinene and limonene among them.",
     properties: [
@@ -160,7 +160,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic myrrh oil",
     source: "Commiphora myrrha",
     kind: "oil",
-    usedIn: ["Frankincense & Myrrh"],
+    usedIn: ["Sheer Suede"],
     composition:
       "Steam-distilled from the resin. Rich in sesquiterpenes, chiefly furanoeudesma-1,3-diene and curzerene.",
     properties: [
@@ -176,7 +176,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic neroli oil",
     source: "Citrus aurantium amara, flower",
     kind: "oil",
-    usedIn: ["Neroli & Petitgrain"],
+    usedIn: ["Balanced Light"],
     composition:
       "Steam-distilled from bitter orange blossom. Contains linalool, linalyl acetate, limonene and nerolidol.",
     properties: [
@@ -190,7 +190,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic petitgrain oil",
     source: "Citrus aurantium amara, leaf",
     kind: "oil",
-    usedIn: ["Neroli & Petitgrain"],
+    usedIn: ["Balanced Light"],
     composition:
       "Steam-distilled from the leaves and twigs of the same tree that gives neroli. Chiefly linalyl acetate and linalool.",
     properties: [
@@ -204,7 +204,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic cedarwood oil",
     source: "Cedrus atlantica",
     kind: "oil",
-    usedIn: ["Cedarwood & Vetiver"],
+    usedIn: ["Dry Cedar"],
     composition:
       "Steam-distilled from the wood. Composed largely of sesquiterpenes including himachalenes and atlantones.",
     properties: [
@@ -217,7 +217,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic vetiver oil",
     source: "Chrysopogon zizanioides",
     kind: "oil",
-    usedIn: ["Cedarwood & Vetiver"],
+    usedIn: ["Dry Cedar"],
     composition:
       "Distilled from the roots of a grass grown as much for the way its roots bind soil as for its oil. One of the most sesquiterpene-rich essential oils there is.",
     properties: [
