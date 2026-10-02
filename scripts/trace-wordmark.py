@@ -33,7 +33,7 @@ from fontTools.ttLib import TTFont
 TEXT = "SIX"
 
 CAP_HEIGHT = 34.0   # rendered height of the capitals
-SAGITTA = 4.5       # how far the middle rides above the ends. 0 = flat.
+SAGITTA = 0.0       # how far the middle rides above the ends. 0 = flat.
 TRACKING = 1.06     # >1 opens the letterspacing slightly
 PAD = 2.0           # breathing room around the traced bounds
 
@@ -66,10 +66,23 @@ def place(glyphs, names, widths, radius, cx, cy, scale):
         angle += width / radius
 
 
+def place_flat(glyphs, names, widths, scale):
+    """Lay the glyphs on a straight baseline, same letterspacing as the arc."""
+    x = 0.0
+    for name, width in zip(names, widths):
+        yield name, (
+            Transform()
+            .translate(x + width / 2.0, 0.0)
+            .scale(scale, -scale)
+            .translate(-(width / scale) / 2.0, 0)
+        )
+        x += width
+
+
 COMPONENT = pathlib.Path(__file__).resolve().parent.parent / "components" / "wordmark.tsx"
 
 TEMPLATE = """/**
- * The Six wordmark: "SIX" set on a shallow arc, as frozen vector artwork.
+ * The Six wordmark: "SIX" as frozen vector artwork.
  *
  * GENERATED FILE — do not hand-edit the path below.
  * Regenerate with:
@@ -77,7 +90,7 @@ TEMPLATE = """/**
  *     python3 scripts/trace-wordmark.py <font file> --write
  *
  * Traced from: {source}
- * Cap height {cap:g}, sagitta {sagitta:g}, {sweep:.1f} degree sweep.
+ * Cap height {cap:g}. {geometry}
  *
  * Because the letters are outlines rather than live text, no font is
  * downloaded to render the logo and it cannot fall back to the wrong face.
@@ -126,18 +139,25 @@ def main():
     # Radius that produces the requested sagitta over this chord. A shallow
     # curve needs a radius many times the word's width, which is exactly the
     # value that is easy to guess wrong.
-    if SAGITTA <= 0:
-        sys.exit("error: SAGITTA must be positive; use a tiny value for near-flat")
-    radius = (chord**2 / 4.0 + SAGITTA**2) / (2.0 * SAGITTA)
+    if SAGITTA < 0:
+        sys.exit("error: SAGITTA cannot be negative")
 
-    sweep = math.degrees(chord / radius)
-    if sweep > 45:
-        sys.exit(f"error: {sweep:.0f} degree sweep is a rainbow, not a curve")
+    if SAGITTA == 0:
+        radius, sweep = 0.0, 0.0
+        layout = place_flat(glyphs, names, widths, scale)
+        geometry = "Set flat."
+    else:
+        radius = (chord**2 / 4.0 + SAGITTA**2) / (2.0 * SAGITTA)
+        sweep = math.degrees(chord / radius)
+        if sweep > 45:
+            sys.exit(f"error: {sweep:.0f} degree sweep is a rainbow, not a curve")
+        layout = place(glyphs, names, widths, radius, 0.0, radius, scale)
+        geometry = f"Sagitta {SAGITTA:g}, {sweep:.1f} degree sweep."
 
     # Draw once at a nominal origin to measure, then shift into a tight box.
     recorded = []
     bounds = BoundsPen(glyphs)
-    for name, t in place(glyphs, names, widths, radius, 0.0, radius, scale):
+    for name, t in layout:
         rec = RecordingPen()
         glyphs[name].draw(rec)
         rec.replay(TransformPen(bounds, t))
@@ -165,7 +185,7 @@ def main():
     if write:
         COMPONENT.write_text(
             TEMPLATE.format(
-                source=path, cap=CAP_HEIGHT, sagitta=SAGITTA, sweep=sweep,
+                source=path, cap=CAP_HEIGHT, geometry=geometry,
                 viewbox=viewbox, d=d,
             )
         )
@@ -177,8 +197,7 @@ def main():
         print(d)
     print()
     print(
-        f"# cap {CAP_HEIGHT:g}, sagitta {SAGITTA:g}, sweep {sweep:.1f} deg, "
-        f"radius {radius:.0f}",
+        f"# cap {CAP_HEIGHT:g}, {geometry.lower()}",
         file=sys.stderr,
     )
 
