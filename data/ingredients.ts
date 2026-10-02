@@ -112,7 +112,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Its heavier aromatic molecules evaporate slowly, which is why a jasmine note persists on skin for hours rather than minutes.",
     ],
     caveat:
-      "Jasmine is a fragrance material first. Its documented work is aromatic rather than topical, and it is listed here for what it does to a blend rather than for anything it does to skin.",
+      "Jasmine is a fragrance material first. Its documented work is aromatic rather than topical, and it is listed here for what it does to a blend rather than for anything it does to skin. It is also a recognised fragrance sensitiser, which is why its allergen components are published on every product containing it and why we say to patch test.",
   },
   {
     slug: "ylang-ylang",
@@ -139,6 +139,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Extracted from cured beans with supercritical carbon dioxide, a solvent-free method that leaves no residue. Its principal aromatic compound is vanillin.",
     properties: [
       "It was first cultivated by the Totonac people of what is now Veracruz, and later taken up by the Aztecs.",
+      "The CO2 extract is thick and close to solid at room temperature, and has to be warmed before it will blend.",
       "Vanillin exhibits antioxidant activity in laboratory testing.",
       "That activity is most usefully understood as a formulation property: antioxidants slow the oxidation of the oils around them, which is how an oil-based product stays fresh.",
     ],
@@ -156,6 +157,7 @@ export const INGREDIENTS: Ingredient[] = [
     properties: [
       "It has been traded, burned and used in preparation for at least four thousand years.",
       "It has long been used in traditional skincare for smooth, radiant-looking skin.",
+      "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
     ],
     caveat:
       "Worth knowing, because the category gets this wrong constantly: boswellic acids, the compounds behind almost all published frankincense research, are non-volatile. They stay in the resin and do not carry over into the steam-distilled essential oil in meaningful amounts. Any claim that rests on boswellic acids does not apply to frankincense oil.",
@@ -172,6 +174,8 @@ export const INGREDIENTS: Ingredient[] = [
       "It was among the most valued materials of ancient Egyptian and Middle Eastern preparation, and was traded alongside frankincense.",
       "Laboratory studies report antimicrobial activity for its sesquiterpene fraction.",
       "Its heavy sesquiterpenes evaporate slowly, which is why myrrh gives a blend weight and a long finish.",
+      "The oil is thick, dark and nearly solid at room temperature. It has to be warmed before it will pour, let alone blend.",
+      "It is conventionally classed as an emmenagogue, and aromatherapy practice is to avoid it during pregnancy and breastfeeding. We pass that on rather than leave anyone to find it elsewhere.",
     ],
     caveat:
       "Antimicrobial activity measured in a dish is not a preservative system, and it is not a claim about skin. It is reported here as a property of the material.",
@@ -215,6 +219,7 @@ export const INGREDIENTS: Ingredient[] = [
     properties: [
       "It has been used in perfumery and in the preservation of materials since antiquity.",
       "Its sesquiterpenes are heavy and slow to evaporate, which is what makes cedarwood read as dry and persistent rather than bright.",
+      "Cedrol, the compound most associated with the smell of cedar, is the one usually named when cedarwood is studied.",
     ],
   },
   {
@@ -227,7 +232,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Distilled from the roots of a grass grown as much for the way its roots bind soil as for its oil. One of the most sesquiterpene-rich essential oils there is.",
     properties: [
       "Its very high sesquiterpene content makes it a fixative: it slows the evaporation of lighter materials blended with it, so the whole blend lasts longer.",
-      "It has been used in traditional preparation across India and Southeast Asia for centuries.",
+      "It has been used in traditional preparation across India and Southeast Asia for centuries, and is known in aromatherapy as the oil of tranquillity.",
     ],
   },
 ];
