@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "A little goes a long way. Warm a pea-sized amount between your fingers until it melts, then press into damp skin — straight out of the shower is best, while there is still water to seal in. Face, hands, elbows, anywhere dry. Patch test on a small area before first use.",
     swatch: ["#f7f3ec", "#b9a07f"],
-    bestFor: "Dry skin, and anyone drawn to florals",
+    bestFor: "All skin and anyone drawn to florals",
   },
   {
     slug: "sheer-suede-balm",
