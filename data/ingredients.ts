@@ -153,11 +153,13 @@ export const INGREDIENTS: Ingredient[] = [
     kind: "oil",
     usedIn: ["Sheer Suede"],
     composition:
-      "Steam-distilled from the tree's resin. The distilled oil is mainly monoterpenes — alpha-pinene and limonene among them.",
+      "Steam-distilled from the gum resin of Boswellia trees, which grow in Oman, Yemen and Somalia. Also sold as olibanum. The distilled oil is mainly monoterpenes — alpha-pinene and limonene among them.",
     properties: [
       "It has been used on skin for at least four thousand years, ground into the perfumed unguents and salves that Egyptian and Arabian cosmetic practice was built on.",
+      "It smells rich, warm and woody, with citrus at the top and something faintly spicy under it.",
       "It has long been used in traditional skincare for smooth, radiant-looking skin.",
       "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
+      "Like any essential oil it can disagree with some people. Patch test first, and stop using anything that leaves skin uncomfortable.",
     ],
     caveat:
       "Worth knowing, because the category gets this wrong constantly: boswellic acids, the compounds behind almost all published frankincense research, are non-volatile. They stay in the resin and do not carry over into the steam-distilled essential oil in meaningful amounts. Any claim that rests on boswellic acids does not apply to frankincense oil.",
