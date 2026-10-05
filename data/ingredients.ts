@@ -136,15 +136,18 @@ export const INGREDIENTS: Ingredient[] = [
     kind: "oil",
     usedIn: ["Floral Jasmine"],
     composition:
-      "Extracted from cured beans with supercritical carbon dioxide, a solvent-free method that leaves no residue. Its principal aromatic compound is vanillin.",
+      "Vanilla is an orchid, native to Mexico and Central America. Extracted from cured beans with supercritical carbon dioxide, a solvent-free method that leaves no residue. Its principal aromatic compound is vanillin, with eugenol and piperonal underneath it.",
     properties: [
       "It was first cultivated by the Totonac people of what is now Veracruz, and later taken up by the Aztecs.",
+      "The flower opens for about a day and is pollinated in the wild by a single kind of bee that lives only in Mexico. Everywhere else, every flower is pollinated by hand — a technique worked out in 1841 by Edmond Albius, a twelve-year-old boy enslaved on Réunion, and still the method used today. It is the reason vanilla can be grown at all outside Mexico.",
+      "It is the second most expensive spice in the world, after saffron, and the hand-pollination is most of why.",
+      "Vanilla will not steam-distil — the beans do not give up their aromatics to steam — so it has to be extracted another way.",
       "The CO2 extract is thick and close to solid at room temperature, and has to be warmed before it will blend.",
       "Vanillin exhibits antioxidant activity in laboratory testing.",
       "That activity is most usefully understood as a formulation property: antioxidants slow the oxidation of the oils around them, which is how an oil-based product stays fresh.",
     ],
     caveat:
-      "Vanilla's long history is as a flavouring and a fragrance. Unlike shea or jojoba it carries no substantial tradition of topical use, and it is in the blend because of how it smells and what it does to the other oils.",
+      "Vanilla's long history is as a flavouring and a fragrance. Unlike shea or jojoba it carries no substantial tradition of topical use, and it is in the blend because of how it smells and what it does to the other oils. Worth knowing when comparing suppliers: most vanilla sold for perfumery is an oleoresin, pulled out of the bean with ethanol. This is the CO2 extract, which uses no solvent at all. They are different materials at different prices, and most of what is written about vanilla describes the oleoresin.",
   },
   {
     slug: "frankincense",
