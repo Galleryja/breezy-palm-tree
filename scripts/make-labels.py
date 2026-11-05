@@ -72,7 +72,7 @@ SANS = "Helvetica, Arial, sans-serif"
 # before printing: US law requires the name and place of business of the
 # manufacturer, packer or distributor on the label.
 ORIGIN = "Made in Cave Creek, AZ"
-CONTACT = ["@yoursocialhandle", "www.websitehere.com"]
+CONTACT = ["@yoursocialhandle", "sixskincareproducts.com"]
 
 TAGLINE = ["Pure and natural.", "Elevated skincare."]
 

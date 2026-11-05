@@ -53,7 +53,7 @@ problem rather than a design one.
 
 **The contact line is half placeholder.** `ORIGIN` and `CONTACT` at the top of
 the script give "Made in Cave Creek, AZ", `@yoursocialhandle` and
-`www.websitehere.com`. The name and place of business of the manufacturer,
+`sixskincareproducts.com`. The name and place of business of the manufacturer,
 packer or distributor is required on the label, and a street address is
 required unless the firm is listed in a current telephone or city directory.
 Check that Six Skincare Products LLC is, or add the street.
