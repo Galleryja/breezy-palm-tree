@@ -75,15 +75,17 @@ export const INGREDIENTS: Ingredient[] = [
     kind: "base",
     usedIn: [],
     composition:
-      "Fat pressed from the kernel inside the mango stone — the part nobody eats. Chiefly oleic and stearic acids, with naturally occurring tocopherols.",
+      "Fat pressed from the kernel inside the mango stone — the part nobody eats. Chiefly oleic, stearic and linoleic acids, with naturally occurring tocopherols.",
     properties: [
       "It is solid at room temperature and softens at skin temperature, which is what gives a whipped balm its body.",
       "It contains naturally occurring tocopherols, the vitamin E family.",
+      "Published work puts it forward as a substitute for cocoa butter in cosmetic formulation, on the strength of that fatty acid profile.",
       "It carries almost no smell of its own. Unrefined shea has a distinct nutty, faintly smoky scent that competes with a delicate blend; mango butter leaves the essential oils to do the talking.",
       "It is less waxy on the skin than shea, and it absorbs without the drag that heavier butters can leave.",
+      "Mango belongs to the Anacardiaceae family, alongside cashew and pistachio. The butter comes from the kernel rather than the skin and reactions are rare, but patch test first if you have a known cashew or pistachio allergy.",
     ],
     caveat:
-      "Mango belongs to the Anacardiaceae family, alongside cashew and pistachio. The butter is pressed from the kernel rather than the skin and reactions to it are rare, but anyone with a known cashew or pistachio allergy should patch test before using it widely.",
+      "Most of what is written about mango butter is really about the mango. Articles list vitamin C, fibre, beta carotene and potassium, all of which are in the fruit — and none of which survive into a fat pressed from the stone. The butter is a fat: oleic, stearic and linoleic acids, plus tocopherols. That is the honest list. You will also see mango butter credited with sun protection, on the strength of a study that treated wool, not skin. Nothing here is a sunscreen.",
   },
   {
     slug: "jojoba",
