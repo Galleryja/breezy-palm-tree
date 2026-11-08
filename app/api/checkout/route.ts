@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 import { getStripe, isStripeConfigured } from "@/lib/stripe";
 import { CURRENCY, PRODUCTS, formatLabel, getProduct } from "@/data/products";
+import {
+  DELIVERY_MAX_DAYS,
+  DELIVERY_MIN_DAYS,
+  SHIPS_TO,
+  shippingForSubtotal,
+} from "@/data/policies";
 
 /**
  * Creates a Stripe Checkout Session and hands back its URL.
@@ -49,6 +55,9 @@ export async function POST(request: Request) {
 
   const lineItems = [];
   const seen = new Set<string>();
+  // Totalled here so the free-shipping threshold is applied to prices from
+  // the catalogue, like everything else about money on this route.
+  let subtotalCents = 0;
 
   for (const raw of rawLines as IncomingLine[]) {
     if (typeof raw?.slug !== "string") {
@@ -81,6 +90,8 @@ export async function POST(request: Request) {
       );
     }
 
+    subtotalCents += product.priceCents * quantity;
+
     lineItems.push({
       quantity,
       price_data: {
@@ -107,8 +118,29 @@ export async function POST(request: Request) {
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/cart`,
       billing_address_collection: "required",
-      shipping_address_collection: { allowed_countries: ["US", "CA", "GB"] },
+      shipping_address_collection: {
+        allowed_countries: [...SHIPS_TO],
+      },
       phone_number_collection: { enabled: false },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: {
+              amount: shippingForSubtotal(subtotalCents),
+              currency: CURRENCY,
+            },
+            display_name:
+              shippingForSubtotal(subtotalCents) === 0
+                ? "Free shipping"
+                : "Standard shipping",
+            delivery_estimate: {
+              minimum: { unit: "business_day", value: DELIVERY_MIN_DAYS },
+              maximum: { unit: "business_day", value: DELIVERY_MAX_DAYS },
+            },
+          },
+        },
+      ],
     });
 
     if (!session.url) {

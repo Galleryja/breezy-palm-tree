@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/wordmark";
+import { POLICIES } from "@/data/policies";
 
 export function SiteFooter() {
   return (
@@ -46,7 +47,19 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="wrap rule flex flex-col gap-2 py-6 text-xs text-ink-faint sm:flex-row sm:justify-between">
+      <div className="wrap rule flex flex-wrap gap-x-5 gap-y-2 pt-6 text-xs text-ink-faint">
+        {POLICIES.map((policy) => (
+          <Link
+            key={policy.slug}
+            href={`/policies/${policy.slug}`}
+            className="transition-colors hover:text-ink"
+          >
+            {policy.title}
+          </Link>
+        ))}
+      </div>
+
+      <div className="wrap flex flex-col gap-2 py-6 text-xs text-ink-faint sm:flex-row sm:justify-between">
         <p>© {new Date().getFullYear()} Six Skincare Products LLC.</p>
         <p>Cosmetic products. Not intended to diagnose or treat any condition.</p>
       </div>
