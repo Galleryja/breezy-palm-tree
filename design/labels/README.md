@@ -110,3 +110,40 @@ outline the rest too.
 `data/products.ts` lists every balm as `6 oz`. This jar holds 120 ml — about
 4 fl oz of volume, and less than that by weight once it is whipped. One of the
 two has to change before launch.
+
+## The printed batch, and what the next one needs
+
+The first run of labels was printed before this artwork existed: white type
+on the dark amber jar, SIX in Cloister Black, the blend name in a script,
+`Net Wt. 25g ℮` at the foot of the front panel. It looks considerably better
+than anything generated here, and the artwork in this folder is sized for a
+different jar entirely. Treat these files as superseded until they are
+rebuilt to match.
+
+Two things to correct on the next print:
+
+- **The net quantity needs both units.** US cosmetic labelling requires the
+  declaration in US customary *and* metric. `Net Wt. 25g` carries only
+  metric. It should read `NET WT 0.88 OZ (25 g)`.
+- **Drop the ℮.** That is the European estimated-quantity mark. It has no
+  standing in the US and means nothing to a US inspector or customer.
+
+Two rules worth checking while the artwork is open: the net quantity has to
+sit within the bottom 30% of the front panel, and the type has to be at least
+1/16 inch tall. The placement is right on the printed batch; the type size is
+close enough to the limit to be worth measuring.
+
+Nothing here is urgent for a first small run. Net quantity is enforced by
+state weights-and-measures officials working retail shelves, not by anyone
+looking at a maker's first few dozen jars, and the two things that would
+have been expensive — a drug claim on the label, an incomplete ingredient
+declaration — are both correct. Fix it on the reprint.
+
+## Pending: rebuild these to match the real jar
+
+The generator still draws a pale label for a 76.5 mm Eris jar. The actual
+product is a 50 ml amber jar with a black lid, white type, warmer and more
+apothecary than Scandinavian. Rebuilding `scripts/make-labels.py` to that —
+white on dark, the real layout, sized to the 50 ml jar, with the net
+statement correct — would give all four blends a print-ready compliant file
+instead of one hand-made one. Needs the jar's diameter and height first.

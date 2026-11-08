@@ -88,10 +88,12 @@ photos arrive, replace that one component.
 
 ## Jar labels
 
-`design/labels/` holds print artwork for the 120 ml Eris Jar, generated from
-this catalogue by `scripts/make-labels.py`. See the README in that folder —
-three things (lid diameter, net weight, business address) have to be settled
-before anything goes to a printer.
+`design/labels/` holds print artwork generated from this catalogue by
+`scripts/make-labels.py`. **It is superseded** — it is drawn for a 120 ml
+Eris jar and the real product is a 50 ml amber jar with a black lid and white
+type. The README in that folder records what the printed batch gets wrong
+(the net quantity needs both units, and the ℮ should go) and what rebuilding
+the generator would involve.
 
 ## Launch timeline
 
