@@ -32,12 +32,6 @@ function Entry({ ingredient }: { ingredient: Ingredient }) {
         ))}
       </ul>
 
-      {ingredient.disclaimer ? (
-        <p className="mt-3 text-sm italic leading-relaxed text-ink-faint">
-          {ingredient.disclaimer}
-        </p>
-      ) : null}
-
       {ingredient.caveat ? (
         <p className="mt-4 border-l-2 border-line pl-4 text-sm leading-relaxed text-ink-faint">
           {ingredient.caveat}
@@ -71,20 +65,6 @@ export default function IngredientsPage() {
           Every material we use, what it is made of, and what is documented
           about it. Some of these have centuries of traditional use behind
           them; many have been studied in laboratories.
-        </p>
-
-        {/* The single most important paragraph on the page. It is what makes
-            the rest of it a reference rather than a set of product claims. */}
-        <p className="mt-6 rounded-lg bg-paper-deep p-5 text-sm leading-relaxed text-ink-soft">
-          <span className="font-medium text-ink">
-            This page describes ingredients, not products.
-          </span>{" "}
-          Everything below is about the raw material — what it is, how it has
-          been used, what published work reports about it. None of it is a
-          claim about what a Six balm or roller will do for your skin. Our
-          products are cosmetics: they moisturize, they soften, and they smell
-          good. They are not intended to diagnose, treat, cure or prevent
-          anything.
         </p>
 
         <h2 className="rule mt-12 pt-10 font-serif text-2xl text-ink">
@@ -123,6 +103,21 @@ export default function IngredientsPage() {
         >
           See the Range
         </Link>
+
+        {/* The one disclaimer on the page, and the last thing on it. It is
+            what makes everything above a reference rather than a set of
+            product claims. */}
+        <p className="mt-14 rounded-lg bg-paper-deep p-5 text-sm leading-relaxed text-ink-soft">
+          <span className="font-medium text-ink">
+            This page describes ingredients, not products.
+          </span>{" "}
+          Everything above is about the raw material — what it is, how it has
+          been used, what published work and traditional practice report about
+          it. None of it is a claim about what a Six balm or roller will do for
+          your skin. Our products are cosmetics: they moisturize, they soften,
+          and they smell good. They are not intended to diagnose, treat, cure
+          or prevent anything.
+        </p>
       </article>
     </div>
   );

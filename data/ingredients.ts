@@ -44,15 +44,6 @@ export type Ingredient = {
    */
   properties: string[];
   /**
-   * The owner's disclaimer, where an entry reports traditional or laboratory
-   * activity. Set in small italic under the properties.
-   *
-   * Read the header note before adding one: this is the owner's wording and
-   * their decision, not a safe harbour. Cosmetics have no equivalent of the
-   * supplement disclaimer, and FDA reads intended use from the whole page.
-   */
-  disclaimer?: string;
-  /**
    * An honest correction where the category routinely overstates something.
    * Optional, and more valuable than another bullet when it applies.
    */
@@ -94,8 +85,6 @@ export const INGREDIENTS: Ingredient[] = [
       "It is silky, and absorbs without the drag that heavier butters can leave, while still providing rich nourishment.",
       "Mango belongs to the Anacardiaceae family, alongside cashew and pistachio. The butter comes from the kernel rather than the skin and reactions are rare, but patch test first if you have a known cashew or pistachio allergy.",
     ],
-    disclaimer:
-      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Vitamin C, fibre and beta carotene belong to the mango, not to a fat pressed from its stone, so treat any list of those as being about the fruit. You will also see mango butter credited with sun protection, on the strength of a study that treated wool rather than skin. Nothing here is a sunscreen.",
   },
@@ -113,8 +102,6 @@ export const INGREDIENTS: Ingredient[] = [
       "It is silky and light, absorbing easily and maintaining hydration, and is widely used to lighten heavier butters and fats without diluting their occlusive effect.",
       "Traditional use has been to provide moisture. It carries antioxidants and has been used in preparations for supple, comfortable-looking skin, and it contains vitamin E, which helps skin maintain moisture and leaves it feeling softer.",
     ],
-    disclaimer:
-      "These benefits, and others not listed, are not related to our product. They are taken from general studies or the historical use of jojoba oil.",
   },
   {
     slug: "squalane",
@@ -130,8 +117,6 @@ export const INGREDIENTS: Ingredient[] = [
       "It is remarkably light and dry to the touch, which is what lets it take the weight out of butters without diluting what they do.",
       "Traditionally used for deep hydration and for protection against environmental stressors, and it is non-comedogenic. It has also been used on skin that felt uncomfortable, and in preparations for smooth, unlined-looking skin.",
     ],
-    disclaimer:
-      "Our product makes none of these claims. Nothing here says it will heal or help anything that traditional use or laboratory testing has reported for the raw material.",
     caveat:
       "Worth saying plainly, because the industry spent decades not saying it: squalane was historically rendered from shark liver, and some still is. Ours is from olives. If a brand does not tell you which, it is worth asking.",
   },
@@ -149,8 +134,6 @@ export const INGREDIENTS: Ingredient[] = [
       "The flowers are picked before dawn, when their scent is strongest.",
       "Its heavier aromatic molecules evaporate slowly, which is why a jasmine note persists on skin for hours rather than minutes.",
     ],
-    disclaimer:
-      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Jasmine is a fragrance material first. Its documented work is aromatic rather than topical, and it is listed here for what it does to a blend rather than for anything it does to skin. It is also a recognised fragrance sensitiser, which is why its allergen components are published on every product containing it and why we say to patch test.",
   },
@@ -172,8 +155,6 @@ export const INGREDIENTS: Ingredient[] = [
       "That activity is most usefully understood as a formulation property: antioxidants slow the oxidation of the oils around them, which is how an oil-based product stays fresh.",
       "Traditionally used for its antioxidant and stress-soothing character, and for supporting skin against free radicals.",
     ],
-    disclaimer:
-      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Vanilla's long history is as a fragrance. Worth knowing when comparing suppliers: most vanilla sold for perfumery is an oleoresin, pulled out of the bean with ethanol. This is the CO2 extract, which uses no solvent at all. They are different materials at different prices, and most of what is written about vanilla describes the oleoresin.",
   },
@@ -189,8 +170,6 @@ export const INGREDIENTS: Ingredient[] = [
       "It has traditionally been used in skin preparations across Southeast Asia.",
       "Small human studies of inhaled ylang ylang have measured lowered blood pressure and heart rate in participants.",
     ],
-    disclaimer:
-      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Those measurements come from inhalation studies of the isolated oil, not from wearing a balm that contains it. Ylang ylang is also a recognised fragrance sensitiser, which is why its allergen components are published on every product that contains it.",
   },
@@ -209,8 +188,6 @@ export const INGREDIENTS: Ingredient[] = [
       "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
       "Like any essential oil it can disagree with some people. Patch test first, and stop using anything that leaves skin uncomfortable.",
     ],
-    disclaimer:
-      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Worth knowing, because the category gets this wrong constantly: boswellic acids, the compounds behind almost all published frankincense research, are non-volatile. They stay in the resin and do not carry over into the steam-distilled essential oil in meaningful amounts. Any claim that rests on boswellic acids does not apply to frankincense oil.",
   },
@@ -230,8 +207,6 @@ export const INGREDIENTS: Ingredient[] = [
       "The oil is thick, dark and nearly solid at room temperature. It has to be warmed before it will pour, let alone blend.",
       "It is conventionally classed as an emmenagogue, and aromatherapy practice is to avoid it during pregnancy and breastfeeding. We pass that on rather than leave anyone to find it elsewhere.",
     ],
-    disclaimer:
-      "Any traditional use or laboratory study is not a claim about our product or its use. It is reported here as a property of the material, not of the product.",
     caveat:
       "Antimicrobial activity measured in a dish is not a preservative system, and it is not a claim about skin. It is reported here as a property of the material.",
   },
