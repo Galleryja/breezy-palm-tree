@@ -140,15 +140,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "All skin and anyone drawn to florals",
   },
   {
-    slug: "sheer-suede-balm",
+    slug: "suede-balm",
     order: 2,
     format: "balm",
-    name: "Sheer Suede",
+    name: "Suede",
     tagline: "Frankincense & Myrrh",
     priceCents: 3000,
     size: "6 oz",
     description:
-      "Sheer Suede. Frankincense and myrrh, dry and softly resinous, with just enough lift to stay easy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
+      "Suede. Frankincense and myrrh, dry and softly resinous, with just enough lift to stay easy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
       {
         name: "Organic frankincense oil",
@@ -256,15 +256,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "Lush, warm and unhurried",
   },
   {
-    slug: "sheer-suede-roller",
+    slug: "suede-roller",
     order: 6,
     format: "roller",
-    name: "Sheer Suede",
+    name: "Suede",
     tagline: "Frankincense & Myrrh",
     priceCents: 2200,
     size: "10 ml",
     description:
-      "Sheer Suede. The same two resins as the balm — frankincense and myrrh — in organic jojoba. Dry, warm and quiet, it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
+      "Suede. The same two resins as the balm — frankincense and myrrh — in organic jojoba. Dry, warm and quiet, it stays close to the skin rather than filling a room, which is the point. Deliberately kept to two oils; the blend is stronger for not being softened.",
     notes: [
       {
         name: "Organic frankincense oil",

@@ -172,7 +172,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic frankincense oil",
     source: "Boswellia carterii",
     kind: "oil",
-    usedIn: ["Sheer Suede"],
+    usedIn: ["Suede"],
     composition:
       "Steam-distilled from the gum resin of Boswellia trees, which grow in Oman, Yemen and Somalia. Also sold as olibanum. The distilled oil is mainly monoterpenes — alpha-pinene and limonene among them.",
     properties: [
@@ -190,7 +190,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic myrrh oil",
     source: "Commiphora myrrha",
     kind: "oil",
-    usedIn: ["Sheer Suede"],
+    usedIn: ["Suede"],
     composition:
       "Steam-distilled from the resin. Rich in sesquiterpenes, chiefly furanoeudesma-1,3-diene and curzerene.",
     properties: [
