@@ -38,6 +38,11 @@ OUT = ROOT / "design" / "labels"
 # Jar. Measurements from the Eris Jar spec sheet.
 # ---------------------------------------------------------------------------
 
+# Measured: a 50 ml jar filled with whipped balm weighs 25 g net, so the
+# whipped density is 0.5 g/ml. Multiply any jar's millilitres by 0.5 for a
+# first estimate of its net weight, then weigh one to confirm.
+WHIPPED_DENSITY = 0.5        # g per ml
+
 JAR_DIAMETER = 76.5          # mm, outside of the glass
 JAR_HEIGHT = 51.0            # mm
 CIRCUMFERENCE = 240.33       # mm, pi * diameter
