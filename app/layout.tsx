@@ -19,6 +19,7 @@ const blackletter = UnifrakturMaguntia({
 import { CartProvider } from "@/components/cart-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -58,6 +59,10 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </CartProvider>
+        {/* Vercel Web Analytics. Page counts only — no cookies, no cross-site
+            tracking, no visitor identified. Described on the privacy page,
+            which would otherwise be wrong. */}
+        <Analytics />
       </body>
     </html>
   );

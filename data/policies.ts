@@ -147,7 +147,7 @@ export const POLICIES: Policy[] = [
       },
       {
         kind: "p",
-        text: "There are no advertising cookies, no analytics, no tracking pixels and no third-party scripts on these pages.",
+        text: "We use Vercel Web Analytics, which counts how many people open each page so we know which ones are actually read. It sets no cookies, it does not follow you to other sites, and it does not identify you — it is a tally, not a profile. Beyond that there are no advertising cookies, no tracking pixels and no third-party ad scripts on these pages.",
       },
       { kind: "h2", text: "What we collect when you buy something" },
       {
@@ -168,6 +168,7 @@ export const POLICIES: Policy[] = [
         items: [
           "Stripe, who process the payment and hold the order record.",
           "The shipping carrier, who need the address to deliver the parcel.",
+          "Vercel, who run the servers this site is served from, and who count the page views described above.",
         ],
       },
       {
