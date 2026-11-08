@@ -89,7 +89,7 @@ export const INGREDIENTS: Ingredient[] = [
       "It is solid at room temperature and softens at skin temperature, which is what gives a whipped balm its body.",
       "It contains naturally occurring tocopherols, the vitamin E family.",
       "Published work puts it forward as a substitute for cocoa butter in cosmetic formulation, on the strength of that fatty acid profile.",
-      "It has traditionally been used for its polyphenol and catechin properties, to help neutralise free radicals, support collagen production and diminish fine lines, and it carries compounds reported as anti-inflammatory for irritated skin.",
+      "It carries polyphenols and catechins, and has traditionally been used in preparations for firm, smooth-looking skin and where skin felt uncomfortable.",
       "It carries almost no smell of its own. Unrefined shea has a distinct nutty, faintly smoky scent that competes with a delicate blend; mango butter leaves the essential oils to do the talking.",
       "It is silky, and absorbs without the drag that heavier butters can leave, while still providing rich nourishment.",
       "Mango belongs to the Anacardiaceae family, alongside cashew and pistachio. The butter comes from the kernel rather than the skin and reactions are rare, but patch test first if you have a known cashew or pistachio allergy.",
@@ -111,7 +111,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Its wax esters resemble those in human sebum more closely than any other plant material in common use.",
       "Being a wax rather than an oil, it is markedly resistant to oxidation, so it keeps far longer than most plant oils before turning.",
       "It is silky and light, absorbing easily and maintaining hydration, and is widely used to lighten heavier butters and fats without diluting their occlusive effect.",
-      "Traditional use has been to provide moisture. It has been reported to carry antioxidants that calm skin and improve skin elasticity, and it contains vitamin E, which helps skin maintain moisture, protects it from damage and softens it.",
+      "Traditional use has been to provide moisture. It carries antioxidants and has been used in preparations for supple, comfortable-looking skin, and it contains vitamin E, which helps skin maintain moisture and leaves it feeling softer.",
     ],
     disclaimer:
       "These benefits, and others not listed, are not related to our product. They are taken from general studies or the historical use of jojoba oil.",
@@ -128,7 +128,7 @@ export const INGREDIENTS: Ingredient[] = [
       "Squalene — the unsaturated version — is already present in human sebum, where it makes up roughly a tenth of what skin puts out on its own.",
       "Saturating it removes the double bonds that make squalene go off. Squalane is among the most oxidation-resistant materials in cosmetics and will outlast everything else in the jar.",
       "It is remarkably light and dry to the touch, which is what lets it take the weight out of butters without diluting what they do.",
-      "Traditionally used for deep hydration, for supporting the skin barrier and for protection against environmental stressors, and it is non-comedogenic. It has also been used to moisturise irritated skin, fight free radicals and improve the look of wrinkles.",
+      "Traditionally used for deep hydration and for protection against environmental stressors, and it is non-comedogenic. It has also been used on skin that felt uncomfortable, and in preparations for smooth, unlined-looking skin.",
     ],
     disclaimer:
       "Our product makes none of these claims. Nothing here says it will heal or help anything that traditional use or laboratory testing has reported for the raw material.",
@@ -205,7 +205,7 @@ export const INGREDIENTS: Ingredient[] = [
     properties: [
       "It has been used on skin for at least four thousand years, ground into the perfumed unguents and salves that Egyptian and Arabian cosmetic practice was built on.",
       "It smells rich, warm and woody, with citrus at the top and something faintly spicy under it.",
-      "It has long been used in traditional skincare for smooth, radiant-looking skin. Traditional use and modern study have both reported potential skin benefits: improved collagen production, improved elasticity and reduced fine lines, along with anti-inflammatory character and, in aromatherapy, stress support and grounding.",
+      "It has long been used in traditional skincare for smooth, radiant-looking skin, and in preparations for firm, supple-looking skin and where skin felt uncomfortable. In aromatherapy it is associated with grounding and with easing a busy mind.",
       "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
       "Like any essential oil it can disagree with some people. Patch test first, and stop using anything that leaves skin uncomfortable.",
     ],
@@ -226,6 +226,7 @@ export const INGREDIENTS: Ingredient[] = [
       "It was among the most valued materials of ancient Egyptian and Middle Eastern skincare, and was blended into salves and perfumed oils alongside frankincense.",
       "Laboratory studies report antimicrobial activity for its sesquiterpene fraction.",
       "Its heavy sesquiterpenes evaporate slowly, which is why myrrh gives a blend weight and a long finish.",
+      "It has traditionally been used as an astringent, on dry and weathered skin, and where skin looked uneven in tone. It is also noted for grounding character in aromatherapy.",
       "The oil is thick, dark and nearly solid at room temperature. It has to be warmed before it will pour, let alone blend.",
       "It is conventionally classed as an emmenagogue, and aromatherapy practice is to avoid it during pregnancy and breastfeeding. We pass that on rather than leave anyone to find it elsewhere.",
     ],
