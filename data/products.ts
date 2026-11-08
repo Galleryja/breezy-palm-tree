@@ -58,7 +58,7 @@ export const CURRENCY = "usd";
 
 /** Shared across all four balms. */
 const TALLOW_BASE =
-  "Grass-fed beef tallow, organic shea butter (Butyrospermum Parkii), organic jojoba oil (Simmondsia Chinensis)";
+  "Grass-fed beef tallow, organic mango butter (Mangifera Indica), organic jojoba oil (Simmondsia Chinensis), squalane";
 
 /** Shared by all four rollers. */
 const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
@@ -69,7 +69,7 @@ const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
  * jojoba on its own, so there is nothing to balance.
  */
 export const BASE_TOGETHER =
-  "Tallow is occlusive, shea emollient, jojoba a wax ester rather than a triglyceride. That balancing base is why the balm moisturises for hours without ever feeling like a layer.";
+  "Tallow is occlusive, mango butter emollient, jojoba a wax ester rather than a triglyceride, squalane the lightest thing in the jar. That balancing base is why the balm moisturises for hours without ever feeling like a layer.";
 
 /**
  * The base every balm shares, and the jojoba the rollers are built on.
@@ -85,12 +85,16 @@ const BALM_BASE_NOTES = [
     note: "Lipids your skin recognizes. Mimicking the skin's natural oils, tallow melts in easily and leaves skin soft and supple. It naturally carries vitamins A, D, E, and K, and has been used as a skin balm for centuries.",
   },
   {
-    name: "Organic shea butter",
-    note: "Naturally rich in vitamin E, shea is velvety and slow to fade, giving the balm its cushioned texture and leaving a soft layer of moisture that lasts well into the day.",
+    name: "Organic mango butter",
+    note: "Pressed from the seed of the mango. Naturally rich in vitamin E, it is velvety and slow to fade, giving the balm its cushioned texture and leaving a soft layer of moisture that lasts well into the day. It carries almost no scent of its own, so it leaves the blend on top to do the talking.",
   },
   {
     name: "Organic jojoba oil",
     note: "Native to the Sonoran Desert. Jojoba is a liquid wax and the closest match to skin's natural oils found in any plant, so it sinks in easily and feels right at home on skin. Lightweight and naturally rich in vitamin E, it lightens the balm and leaves a silky, glowing finish.",
+  },
+  {
+    name: "Squalane",
+    note: "Plant-derived, from olives. Squalane is the stable form of squalene, which skin already makes for itself. It is the lightest thing in the jar, dry to the touch, and it takes the weight out of the butters without thinning what they do.",
   },
 ];
 

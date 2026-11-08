@@ -69,19 +69,21 @@ export const INGREDIENTS: Ingredient[] = [
       "Vitamin content varies considerably with the animal's diet and with how the fat was rendered. Grass-fed tallow carries more than grain-fed, but no batch should be treated as a standardised source of any vitamin.",
   },
   {
-    slug: "shea-butter",
-    name: "Organic shea butter",
-    source: "Butyrospermum parkii",
+    slug: "mango-butter",
+    name: "Organic mango butter",
+    source: "Mangifera indica",
     kind: "base",
     usedIn: [],
     composition:
-      "Fat pressed from the nut of the shea tree, chiefly oleic and stearic acids, with an unusually large unsaponifiable fraction of triterpenes and tocopherols.",
+      "Fat pressed from the kernel inside the mango stone — the part nobody eats. Chiefly oleic and stearic acids, with naturally occurring tocopherols.",
     properties: [
-      "It holds one of the higher unsaponifiable fractions of any plant butter — the portion that does not convert to soap, and where much of its emollient character sits.",
-      "It contains naturally occurring tocopherols, the vitamin E family.",
       "It is solid at room temperature and softens at skin temperature, which is what gives a whipped balm its body.",
-      "It has been prepared and used topically in West Africa for centuries.",
+      "It contains naturally occurring tocopherols, the vitamin E family.",
+      "It carries almost no smell of its own. Unrefined shea has a distinct nutty, faintly smoky scent that competes with a delicate blend; mango butter leaves the essential oils to do the talking.",
+      "It is less waxy on the skin than shea, and it absorbs without the drag that heavier butters can leave.",
     ],
+    caveat:
+      "Mango belongs to the Anacardiaceae family, alongside cashew and pistachio. The butter is pressed from the kernel rather than the skin and reactions to it are rare, but anyone with a known cashew or pistachio allergy should patch test before using it widely.",
   },
   {
     slug: "jojoba",
@@ -96,6 +98,22 @@ export const INGREDIENTS: Ingredient[] = [
       "Being a wax rather than an oil, it is markedly resistant to oxidation, so it keeps far longer than most plant oils before turning.",
       "It is light in feel and is widely used to lighten heavier butters and fats without diluting their occlusive effect.",
     ],
+  },
+  {
+    slug: "squalane",
+    name: "Squalane",
+    source: "Olea europaea, hydrogenated",
+    kind: "base",
+    usedIn: [],
+    composition:
+      "A single saturated hydrocarbon. Ours is made from olives: squalene is isolated from the oil and hydrogenated to squalane, which is the stable form of the same molecule.",
+    properties: [
+      "Squalene — the unsaturated version — is already present in human sebum, where it makes up roughly a tenth of what skin puts out on its own.",
+      "Saturating it removes the double bonds that make squalene go off. Squalane is among the most oxidation-resistant materials in cosmetics and will outlast everything else in the jar.",
+      "It is remarkably light and dry to the touch, which is what lets it take the weight out of butters without diluting what they do.",
+    ],
+    caveat:
+      "Worth saying plainly, because the industry spent decades not saying it: squalane was historically rendered from shark liver, and some still is. Ours is from olives. If a brand does not tell you which, it is worth asking.",
   },
   {
     slug: "jasmine",
@@ -147,7 +165,7 @@ export const INGREDIENTS: Ingredient[] = [
       "That activity is most usefully understood as a formulation property: antioxidants slow the oxidation of the oils around them, which is how an oil-based product stays fresh.",
     ],
     caveat:
-      "Vanilla's long history is as a flavouring and a fragrance. Unlike shea or jojoba it carries no substantial tradition of topical use, and it is in the blend because of how it smells and what it does to the other oils. Worth knowing when comparing suppliers: most vanilla sold for perfumery is an oleoresin, pulled out of the bean with ethanol. This is the CO2 extract, which uses no solvent at all. They are different materials at different prices, and most of what is written about vanilla describes the oleoresin.",
+      "Vanilla's long history is as a flavouring and a fragrance. Unlike the fats it sits in, it carries no substantial tradition of topical use, and it is in the blend because of how it smells and what it does to the other oils. Worth knowing when comparing suppliers: most vanilla sold for perfumery is an oleoresin, pulled out of the bean with ethanol. This is the CO2 extract, which uses no solvent at all. They are different materials at different prices, and most of what is written about vanilla describes the oleoresin.",
   },
   {
     slug: "frankincense",

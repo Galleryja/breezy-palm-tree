@@ -5,7 +5,7 @@ import { productsByFormat } from "@/data/products";
 export const metadata: Metadata = {
   title: "The Range",
   description:
-    "Four organic essential oil blends, each as a whipped tallow balm and as a perfume roller. Grass-fed tallow, organic shea and organic jojoba throughout.",
+    "Four organic essential oil blends, each as a whipped tallow balm and as a perfume roller. Grass-fed tallow, organic mango butter, organic jojoba and squalane throughout.",
 };
 
 export default function ProductsPage() {
@@ -22,7 +22,7 @@ export default function ProductsPage() {
           Four Blends, Two Ways
         </h1>
         <p className="mt-5 text-base leading-relaxed text-ink-soft">
-          Every balm shares the same base — grass-fed tallow, organic shea
+          Every balm shares the same base — grass-fed tallow, organic mango
           butter, organic jojoba — and differs only in the blend on top. Each
           of those four blends comes again as a perfume roller.
         </p>

@@ -203,7 +203,7 @@ def plain(ingredients: str) -> str:
 
     Worth knowing what this costs. 21 CFR 701.3 wants ingredients declared by
     their INCI names, and for a plant material the INCI name IS the Latin
-    binomial — "Butyrospermum Parkii (Shea) Butter", not "shea butter". A
+    binomial — "Mangifera Indica (Mango) Seed Butter", not "mango butter". A
     declaration in common names only is not a compliant one.
 
     The website still carries the full declaration on every product page, so

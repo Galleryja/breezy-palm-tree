@@ -57,13 +57,14 @@ export default function AboutPage() {
         <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
           <p>
             Every balm starts the same way: grass-fed tallow whipped with organic
-            shea butter and organic jojoba. The shea gives it body, the jojoba
-            keeps it from feeling heavy, and the whipping turns something firm
-            into something you can lift with a fingertip.
+            mango butter, organic jojoba and squalane. The mango butter gives it
+            body, the jojoba keeps it from feeling heavy, the squalane takes the
+            last of the weight out, and the whipping turns something firm into
+            something you can lift with a fingertip.
           </p>
           <p>
-            That is three ingredients before anything is added. The blend on top
-            is the only thing that changes between jars, and each of the three
+            That is four ingredients before anything is added. The blend on top
+            is the only thing that changes between jars, and each of the four
             comes again as a perfume roller in organic jojoba — so you can wear a
             scent lightly, or layer it over the balm and have it last.
           </p>

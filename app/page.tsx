@@ -23,8 +23,8 @@ export default function HomePage() {
               given more weight than another. The breaks are hard rather than
               left to wrap, so the rhythm holds at every width. */}
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Grass-fed tallow, whipped with organic shea and jojoba. Blended with
-            essential oils.
+            Grass-fed tallow, whipped with organic mango butter, jojoba and
+            squalane. Blended with essential oils.
             <br />
             Natural ingredients, chosen for what they do.
             <br />
@@ -58,8 +58,8 @@ export default function HomePage() {
         <div className="mb-10">
           <h2 className="font-serif text-2xl text-ink">The Balms</h2>
           <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
-            Same base every time — grass-fed tallow, organic shea butter,
-            organic jojoba. Four blends on top of it.
+            Same base every time — grass-fed tallow, organic mango butter,
+            organic jojoba, squalane. Four blends on top of it.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function HomePage() {
             },
             {
               title: "Organic Botanicals",
-              body: "Shea, jojoba and every essential oil are certified organic. The full ingredient list is on every product page — read it before you buy, not after the carton arrives.",
+              body: "Mango butter, jojoba and every essential oil are certified organic. The full ingredient list is on every product page — read it before you buy, not after the carton arrives.",
             },
             {
               title: "Two Ways to Wear It",
