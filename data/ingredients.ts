@@ -44,6 +44,15 @@ export type Ingredient = {
    */
   properties: string[];
   /**
+   * The owner's disclaimer, where an entry reports traditional or laboratory
+   * activity. Set in small italic under the properties.
+   *
+   * Read the header note before adding one: this is the owner's wording and
+   * their decision, not a safe harbour. Cosmetics have no equivalent of the
+   * supplement disclaimer, and FDA reads intended use from the whole page.
+   */
+  disclaimer?: string;
+  /**
    * An honest correction where the category routinely overstates something.
    * Optional, and more valuable than another bullet when it applies.
    */
@@ -58,12 +67,12 @@ export const INGREDIENTS: Ingredient[] = [
     kind: "base",
     usedIn: [],
     composition:
-      "Rendered beef fat, made up mainly of oleic, palmitic and stearic acids, with smaller amounts of conjugated linoleic acid and palmitoleic acid.",
+      "Dry rendered grass-fed beef suet, made up mainly of oleic, palmitic and stearic acids, with smaller amounts of conjugated linoleic acid and palmitoleic acid.",
     properties: [
       "Its fatty acid profile is close to that of human sebum, which is the usual explanation offered for how readily it absorbs.",
       "It is occlusive: it forms a layer that slows the rate at which water leaves the skin's surface.",
       "Grass-fed tallow carries the fat-soluble vitamins A, D, E and K, which come from the animal's diet.",
-      "It has been used as a topical preparation for centuries across many cultures, long predating modern emulsified lotions.",
+      "It has been used as a topical preparation for centuries across many cultures, long predating modern lotions.",
     ],
     caveat:
       "Vitamin content varies considerably with the animal's diet and with how the fat was rendered. Grass-fed tallow carries more than grain-fed, but no batch should be treated as a standardised source of any vitamin.",
@@ -75,17 +84,20 @@ export const INGREDIENTS: Ingredient[] = [
     kind: "base",
     usedIn: [],
     composition:
-      "Fat pressed from the kernel inside the mango stone — the part nobody eats. Chiefly oleic, stearic and linoleic acids, with naturally occurring tocopherols.",
+      "Oils pressed from the mango stone — the part nobody eats. Chiefly oleic and stearic acids, with naturally occurring tocopherols.",
     properties: [
       "It is solid at room temperature and softens at skin temperature, which is what gives a whipped balm its body.",
       "It contains naturally occurring tocopherols, the vitamin E family.",
       "Published work puts it forward as a substitute for cocoa butter in cosmetic formulation, on the strength of that fatty acid profile.",
+      "It has traditionally been used for its polyphenol and catechin properties, to help neutralise free radicals, support collagen production and diminish fine lines, and it carries compounds reported as anti-inflammatory for irritated skin.",
       "It carries almost no smell of its own. Unrefined shea has a distinct nutty, faintly smoky scent that competes with a delicate blend; mango butter leaves the essential oils to do the talking.",
-      "It is less waxy on the skin than shea, and it absorbs without the drag that heavier butters can leave.",
+      "It is silky, and absorbs without the drag that heavier butters can leave, while still providing rich nourishment.",
       "Mango belongs to the Anacardiaceae family, alongside cashew and pistachio. The butter comes from the kernel rather than the skin and reactions are rare, but patch test first if you have a known cashew or pistachio allergy.",
     ],
+    disclaimer:
+      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
-      "Most of what is written about mango butter is really about the mango. Articles list vitamin C, fibre, beta carotene and potassium, all of which are in the fruit — and none of which survive into a fat pressed from the stone. The butter is a fat: oleic, stearic and linoleic acids, plus tocopherols. That is the honest list. You will also see mango butter credited with sun protection, on the strength of a study that treated wool, not skin. Nothing here is a sunscreen.",
+      "Vitamin C, fibre and beta carotene belong to the mango, not to a fat pressed from its stone, so treat any list of those as being about the fruit. You will also see mango butter credited with sun protection, on the strength of a study that treated wool rather than skin. Nothing here is a sunscreen.",
   },
   {
     slug: "jojoba",
@@ -98,8 +110,11 @@ export const INGREDIENTS: Ingredient[] = [
     properties: [
       "Its wax esters resemble those in human sebum more closely than any other plant material in common use.",
       "Being a wax rather than an oil, it is markedly resistant to oxidation, so it keeps far longer than most plant oils before turning.",
-      "It is light in feel and is widely used to lighten heavier butters and fats without diluting their occlusive effect.",
+      "It is silky and light, absorbing easily and maintaining hydration, and is widely used to lighten heavier butters and fats without diluting their occlusive effect.",
+      "Traditional use has been to provide moisture. It has been reported to carry antioxidants that calm skin and improve skin elasticity, and it contains vitamin E, which helps skin maintain moisture, protects it from damage and softens it.",
     ],
+    disclaimer:
+      "These benefits, and others not listed, are not related to our product. They are taken from general studies or the historical use of jojoba oil.",
   },
   {
     slug: "squalane",
@@ -113,7 +128,10 @@ export const INGREDIENTS: Ingredient[] = [
       "Squalene — the unsaturated version — is already present in human sebum, where it makes up roughly a tenth of what skin puts out on its own.",
       "Saturating it removes the double bonds that make squalene go off. Squalane is among the most oxidation-resistant materials in cosmetics and will outlast everything else in the jar.",
       "It is remarkably light and dry to the touch, which is what lets it take the weight out of butters without diluting what they do.",
+      "Traditionally used for deep hydration, for supporting the skin barrier and for protection against environmental stressors, and it is non-comedogenic. It has also been used to moisturise irritated skin, fight free radicals and improve the look of wrinkles.",
     ],
+    disclaimer:
+      "Our product makes none of these claims. Nothing here says it will heal or help anything that traditional use or laboratory testing has reported for the raw material.",
     caveat:
       "Worth saying plainly, because the industry spent decades not saying it: squalane was historically rendered from shark liver, and some still is. Ours is from olives. If a brand does not tell you which, it is worth asking.",
   },
@@ -131,23 +149,10 @@ export const INGREDIENTS: Ingredient[] = [
       "The flowers are picked before dawn, when their scent is strongest.",
       "Its heavier aromatic molecules evaporate slowly, which is why a jasmine note persists on skin for hours rather than minutes.",
     ],
+    disclaimer:
+      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Jasmine is a fragrance material first. Its documented work is aromatic rather than topical, and it is listed here for what it does to a blend rather than for anything it does to skin. It is also a recognised fragrance sensitiser, which is why its allergen components are published on every product containing it and why we say to patch test.",
-  },
-  {
-    slug: "ylang-ylang",
-    name: "Organic ylang ylang oil",
-    source: "Cananga odorata",
-    kind: "oil",
-    usedIn: ["Floral Jasmine"],
-    composition:
-      "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
-    properties: [
-      "It has traditionally been used in skin preparations across Southeast Asia.",
-      "Small human studies of inhaled ylang ylang have measured lowered blood pressure and heart rate in participants.",
-    ],
-    caveat:
-      "Those measurements come from inhalation studies of the isolated oil, not from wearing a balm that contains it. Ylang ylang is also a recognised fragrance sensitiser, which is why its allergen components are published on every product that contains it.",
   },
   {
     slug: "vanilla",
@@ -165,9 +170,29 @@ export const INGREDIENTS: Ingredient[] = [
       "The CO2 extract is thick and close to solid at room temperature, and has to be warmed before it will blend.",
       "Vanillin exhibits antioxidant activity in laboratory testing.",
       "That activity is most usefully understood as a formulation property: antioxidants slow the oxidation of the oils around them, which is how an oil-based product stays fresh.",
+      "Traditionally used for its antioxidant and stress-soothing character, and for supporting skin against free radicals.",
     ],
+    disclaimer:
+      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
-      "Vanilla's long history is as a flavouring and a fragrance. Unlike the fats it sits in, it carries no substantial tradition of topical use, and it is in the blend because of how it smells and what it does to the other oils. Worth knowing when comparing suppliers: most vanilla sold for perfumery is an oleoresin, pulled out of the bean with ethanol. This is the CO2 extract, which uses no solvent at all. They are different materials at different prices, and most of what is written about vanilla describes the oleoresin.",
+      "Vanilla's long history is as a fragrance. Worth knowing when comparing suppliers: most vanilla sold for perfumery is an oleoresin, pulled out of the bean with ethanol. This is the CO2 extract, which uses no solvent at all. They are different materials at different prices, and most of what is written about vanilla describes the oleoresin.",
+  },
+  {
+    slug: "ylang-ylang",
+    name: "Organic ylang ylang oil",
+    source: "Cananga odorata",
+    kind: "oil",
+    usedIn: ["Floral Jasmine"],
+    composition:
+      "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
+    properties: [
+      "It has traditionally been used in skin preparations across Southeast Asia.",
+      "Small human studies of inhaled ylang ylang have measured lowered blood pressure and heart rate in participants.",
+    ],
+    disclaimer:
+      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
+    caveat:
+      "Those measurements come from inhalation studies of the isolated oil, not from wearing a balm that contains it. Ylang ylang is also a recognised fragrance sensitiser, which is why its allergen components are published on every product that contains it.",
   },
   {
     slug: "frankincense",
@@ -180,10 +205,12 @@ export const INGREDIENTS: Ingredient[] = [
     properties: [
       "It has been used on skin for at least four thousand years, ground into the perfumed unguents and salves that Egyptian and Arabian cosmetic practice was built on.",
       "It smells rich, warm and woody, with citrus at the top and something faintly spicy under it.",
-      "It has long been used in traditional skincare for smooth, radiant-looking skin.",
+      "It has long been used in traditional skincare for smooth, radiant-looking skin. Traditional use and modern study have both reported potential skin benefits: improved collagen production, improved elasticity and reduced fine lines, along with anti-inflammatory character and, in aromatherapy, stress support and grounding.",
       "Being rich in monoterpenes, it oxidises over time, and oxidised monoterpenes are more sensitising than fresh ones. This is the reason for the storage advice on the jar rather than a formality.",
       "Like any essential oil it can disagree with some people. Patch test first, and stop using anything that leaves skin uncomfortable.",
     ],
+    disclaimer:
+      "Beneficial activity traditionally noted is not a claim about skin benefits. It is reported here as a property of the material we selected and how it has been seen in past circumstances.",
     caveat:
       "Worth knowing, because the category gets this wrong constantly: boswellic acids, the compounds behind almost all published frankincense research, are non-volatile. They stay in the resin and do not carry over into the steam-distilled essential oil in meaningful amounts. Any claim that rests on boswellic acids does not apply to frankincense oil.",
   },
@@ -196,12 +223,14 @@ export const INGREDIENTS: Ingredient[] = [
     composition:
       "Steam-distilled from the resin. Rich in sesquiterpenes, chiefly furanoeudesma-1,3-diene and curzerene.",
     properties: [
-      "It was among the most valued materials of ancient Egyptian and Middle Eastern skin preparation, and was blended into salves and perfumed oils alongside frankincense.",
+      "It was among the most valued materials of ancient Egyptian and Middle Eastern skincare, and was blended into salves and perfumed oils alongside frankincense.",
       "Laboratory studies report antimicrobial activity for its sesquiterpene fraction.",
       "Its heavy sesquiterpenes evaporate slowly, which is why myrrh gives a blend weight and a long finish.",
       "The oil is thick, dark and nearly solid at room temperature. It has to be warmed before it will pour, let alone blend.",
       "It is conventionally classed as an emmenagogue, and aromatherapy practice is to avoid it during pregnancy and breastfeeding. We pass that on rather than leave anyone to find it elsewhere.",
     ],
+    disclaimer:
+      "Any traditional use or laboratory study is not a claim about our product or its use. It is reported here as a property of the material, not of the product.",
     caveat:
       "Antimicrobial activity measured in a dish is not a preservative system, and it is not a claim about skin. It is reported here as a property of the material.",
   },

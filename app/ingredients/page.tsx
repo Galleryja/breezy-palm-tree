@@ -32,6 +32,12 @@ function Entry({ ingredient }: { ingredient: Ingredient }) {
         ))}
       </ul>
 
+      {ingredient.disclaimer ? (
+        <p className="mt-3 text-sm italic leading-relaxed text-ink-faint">
+          {ingredient.disclaimer}
+        </p>
+      ) : null}
+
       {ingredient.caveat ? (
         <p className="mt-4 border-l-2 border-line pl-4 text-sm leading-relaxed text-ink-faint">
           {ingredient.caveat}
@@ -58,15 +64,13 @@ export default function IngredientsPage() {
           Reference
         </p>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
-          What Is in These, and What It Does
+          What&apos;s In It?
         </h1>
 
         <p className="mt-6 text-base leading-relaxed text-ink-soft">
           Every material we use, what it is made of, and what is documented
           about it. Some of these have centuries of traditional use behind
-          them; some have been studied in a laboratory; and one or two are here
-          purely because of how they smell, which we say plainly rather than
-          dress up.
+          them; many have been studied in laboratories.
         </p>
 
         {/* The single most important paragraph on the page. It is what makes
@@ -78,7 +82,7 @@ export default function IngredientsPage() {
           Everything below is about the raw material — what it is, how it has
           been used, what published work reports about it. None of it is a
           claim about what a Six balm or roller will do for your skin. Our
-          products are cosmetics: they moisturise, they soften, and they smell
+          products are cosmetics: they moisturize, they soften, and they smell
           good. They are not intended to diagnose, treat, cure or prevent
           anything.
         </p>
@@ -87,7 +91,7 @@ export default function IngredientsPage() {
           The Base
         </h2>
         <p className="mt-3 text-base leading-relaxed text-ink-soft">
-          Three materials, in every balm. The rollers are jojoba alone.
+          In every whipped tallow balm. The rollers are jojoba alone.
         </p>
         <div className="mt-6 space-y-7">
           {base.map((i) => (
