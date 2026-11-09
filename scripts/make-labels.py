@@ -88,12 +88,12 @@ DIRECTIONS = (
     "Allow a few minutes for absorption."
 )
 
-# Owner's wording. "Replenish skin" is the one phrase here that sits near the
-# cosmetic/drug line; "replenish moisture" would be plainly cosmetic. Raised
-# and kept as written.
+# Three beats, no paragraph. Says what it is, what it does differently, and
+# how long it lasts — all in appearance-and-feel language, which is the only
+# register a cosmetic gets.
 BENEFITS = (
-    "Clean tallow moisturizer, rich in vitamins A, D, E and K, enhanced with "
-    "natural ingredients to replenish skin, leaving it soft."
+    "Grass-fed tallow, whipped light. Melts in, doesn't sit on top. "
+    "Soft for hours, not minutes."
 )
 
 NET_PLACEHOLDER = "NET WT ______ OZ (______ g)"
