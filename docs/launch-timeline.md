@@ -34,9 +34,9 @@ jar. Everything on the production track queues behind that one purchase order.
 
 | | |
 | --- | --- |
-| Lock the jar sizes | The catalogue says `6 oz`, the Eris Jar holds 120 ml (~4 oz), the reference label says 2 oz. Three different numbers. Pick, then the site, the labels and the pricing all follow. |
+| ~~Lock the jar sizes~~ | Settled: a 50 ml jar, 25 g net, measured on a scale. The whipped density is 0.5 g/ml, so any future jar's net weight is its millilitres halved. |
 | Order jars and lids | Longest lead time in the project. Ask the supplier for the lid's flat-top diameter while ordering — the lid label die depends on it. |
-| Fill one jar and weigh it | Whipped tallow has air beaten into it; the net weight cannot be calculated, only measured. Blocks label printing. |
+| ~~Fill one jar and weigh it~~ | Done. 25 g in a 50 ml jar. |
 | Settle the label's address | Name and place of business is required. A street address is required unless the LLC is listed in a current city or telephone directory. |
 | Register the social handle | `@yoursocialhandle` is printed on the label. Whatever goes on the jar has to exist and stay yours. |
 

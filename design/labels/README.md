@@ -105,12 +105,6 @@ already vector outlines, so Cloister Black is not needed to render it. If your
 printer would rather have everything as paths, say so and the script can
 outline the rest too.
 
-## The size on the website does not match this jar
-
-`data/products.ts` lists every balm as `6 oz`. This jar holds 120 ml — about
-4 fl oz of volume, and less than that by weight once it is whipped. One of the
-two has to change before launch.
-
 ## The printed batch, and what the next one needs
 
 The first run of labels was printed before this artwork existed: white type

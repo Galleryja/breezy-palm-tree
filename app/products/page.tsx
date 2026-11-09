@@ -29,7 +29,9 @@ export default function ProductsPage() {
       </header>
 
       <div className="mt-14">
-        <h2 className="font-serif text-2xl text-ink">Whipped Tallow Balm · 6 oz</h2>
+        <h2 className="font-serif text-2xl text-ink">
+          Whipped Tallow Balm · {balms[0].size}
+        </h2>
         <div className="mt-8 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {balms.map((product) => (
             <ProductCard key={product.slug} product={product} />

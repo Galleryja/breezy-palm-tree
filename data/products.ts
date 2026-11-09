@@ -113,8 +113,8 @@ export const PRODUCTS: Product[] = [
     format: "balm",
     name: "Floral",
     tagline: "Jasmine, Vanilla & Ylang Ylang",
-    priceCents: 3000,
-    size: "25 g",
+    priceCents: 2400,
+    size: ".88 oz (25 g)",
     description:
       "A beautiful floral blend of jasmine, natural vanilla and ylang ylang, whipped into a light, airy tallow balm. The scent feels uplifting, and the balm melts into skin to moisturize deeply and leave it soft, balanced and nourished.",
     notes: [
@@ -145,8 +145,8 @@ export const PRODUCTS: Product[] = [
     format: "balm",
     name: "Suede",
     tagline: "Frankincense & Myrrh",
-    priceCents: 3000,
-    size: "25 g",
+    priceCents: 2400,
+    size: ".88 oz (25 g)",
     description:
       "Suede. Frankincense and myrrh, dry and softly resinous, with just enough lift to stay easy. It is the most grounding thing in the range and the one that reads properly unisex. If florals feel cloying to you, start here.",
     notes: [
@@ -173,8 +173,8 @@ export const PRODUCTS: Product[] = [
     format: "balm",
     name: "Balanced Light",
     tagline: "Neroli & Petitgrain",
-    priceCents: 3000,
-    size: "25 g",
+    priceCents: 2400,
+    size: ".88 oz (25 g)",
     description:
       "Balanced Light. Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the bright option in a range that otherwise leans rich.",
     notes: [
@@ -201,8 +201,8 @@ export const PRODUCTS: Product[] = [
     format: "balm",
     name: "Dry Cedar",
     tagline: "Cedarwood & Vetiver",
-    priceCents: 3000,
-    size: "25 g",
+    priceCents: 2400,
+    size: ".88 oz (25 g)",
     description:
       "Dry Cedar. Cedarwood and vetiver — dry wood over earth. It reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and sits comfortably on a tallow base.",
     notes: [
