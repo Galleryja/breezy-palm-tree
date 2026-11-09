@@ -88,12 +88,12 @@ DIRECTIONS = (
     "Allow a few minutes for absorption."
 )
 
-# Three beats, no paragraph. Says what it is, what it does differently, and
-# how long it lasts — all in appearance-and-feel language, which is the only
-# register a cosmetic gets.
+# Owner's wording.
 BENEFITS = (
-    "Grass-fed tallow, whipped light. Melts in, doesn't sit on top. "
-    "Soft for hours, not minutes."
+    "A nourishing moisturizer rich in antioxidants and vitamins A, D, E, and K. "
+    "Mimicking the skin's natural oils, it replenishes and provides deep natural "
+    "hydration, leaving skin soft and renewed. Gentle ingredients suited for all "
+    "complexions."
 )
 
 NET_PLACEHOLDER = "NET WT ______ OZ (______ g)"
