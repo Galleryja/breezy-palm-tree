@@ -125,7 +125,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic jasmine absolute",
     source: "Jasminum grandiflorum",
     kind: "oil",
-    usedIn: ["Floral Jasmine"],
+    usedIn: ["Floral"],
     composition:
       "An absolute rather than a distilled oil, rich in benzyl acetate, benzyl benzoate, linalool and indole.",
     properties: [
@@ -142,7 +142,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic vanilla CO2 extract",
     source: "Vanilla planifolia",
     kind: "oil",
-    usedIn: ["Floral Jasmine"],
+    usedIn: ["Floral"],
     composition:
       "Vanilla is an orchid, native to Mexico and Central America. Extracted from cured beans with supercritical carbon dioxide, a solvent-free method that leaves no residue. Its principal aromatic compound is vanillin, with eugenol and piperonal underneath it.",
     properties: [
@@ -163,7 +163,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic ylang ylang oil",
     source: "Cananga odorata",
     kind: "oil",
-    usedIn: ["Floral Jasmine"],
+    usedIn: ["Floral"],
     composition:
       "Steam-distilled from the flowers. Contains linalool, geranyl acetate, benzyl benzoate and caryophyllene.",
     properties: [

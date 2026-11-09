@@ -132,14 +132,6 @@ Four blend descriptions and the eight ingredient notes are the owner's copy.
 The four **roller** descriptions are still placeholder text written during the
 build and should be replaced before launch.
 
-## Parked: rename Floral Jasmine to Floral
-
-Owner's decision, for a later run — not now, because the current batch of
-labels is already printed as Floral Jasmine. When it happens it is the same
-job as the Sheer Suede to Suede rename: the name on both products, the first
-word of both descriptions, the slugs, the ingredients page's "In:" lines and
-the label artwork.
-
 ## Parked: the six-step routine
 
 An idea worth keeping, not currently built. The range today is four blends in

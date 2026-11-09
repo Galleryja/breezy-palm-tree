@@ -108,10 +108,10 @@ const ROLLER_BASE_NOTES = [
 
 export const PRODUCTS: Product[] = [
   {
-    slug: "floral-jasmine-balm",
+    slug: "floral-balm",
     order: 1,
     format: "balm",
-    name: "Floral Jasmine",
+    name: "Floral",
     tagline: "Jasmine, Vanilla & Ylang Ylang",
     priceCents: 3000,
     size: "25 g",
@@ -224,15 +224,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "All skin and anyone who likes wood and earth",
   },
   {
-    slug: "floral-jasmine-roller",
+    slug: "floral-roller",
     order: 5,
     format: "roller",
-    name: "Floral Jasmine",
+    name: "Floral",
     tagline: "Jasmine, Vanilla & Ylang Ylang",
     priceCents: 2200,
     size: "10 ml",
     description:
-      "Floral Jasmine. Jasmine, ylang ylang and vanilla in organic jojoba. Oil-based fragrance sits closer to the skin than an alcohol perfume and unfolds over the first twenty minutes instead of arriving all at once. Jojoba is the carrier because it is closest to what skin makes itself, so it sinks in rather than sitting on top.",
+      "Floral. Jasmine, ylang ylang and vanilla in organic jojoba. Oil-based fragrance sits closer to the skin than an alcohol perfume and unfolds over the first twenty minutes instead of arriving all at once. Jojoba is the carrier because it is closest to what skin makes itself, so it sinks in rather than sitting on top.",
     notes: [
       {
         name: "Organic jasmine absolute",
