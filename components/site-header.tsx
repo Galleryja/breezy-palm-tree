@@ -16,12 +16,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur">
-      <div className="wrap flex h-20 items-center justify-between gap-6">
+      <div className="wrap flex h-16 items-center justify-between gap-4 sm:h-20 sm:gap-6">
         <Link href="/" aria-label="Six, home" className="text-ink">
-          <Wordmark className="h-16 w-auto" title="Six" />
+          <Wordmark className="h-10 w-auto sm:h-16" title="Six" />
         </Link>
 
-        <nav className="flex items-center gap-6 text-sm">
+        <nav className="flex items-center gap-5 text-sm sm:gap-6">
           {NAV.map((item) => {
             const active = pathname.startsWith(item.href);
             return (

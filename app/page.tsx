@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
 import { ProductArt } from "@/components/product-art";
 import { PRODUCTS, productsByFormat } from "@/data/products";
+import { MobileHero } from "@/components/mobile-hero";
 
 export default function HomePage() {
   const hero = PRODUCTS[0];
@@ -10,7 +11,9 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="wrap grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+      <MobileHero />
+
+      <section className="hidden wrap items-center gap-12 py-16 md:grid md:grid-cols-2 md:py-24">
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-ink-faint">
             Whipped tallow &amp; perfume oil
