@@ -81,9 +81,8 @@ export function MobileHero() {
         <p className="mt-5 text-base leading-relaxed text-ink-soft">
           Natural ingredients, chosen for what they do.
           <br />
-          No fillers. No synthetic bulk. No cutting corners.
-          <br />
-          Clean. Made properly.
+          No fillers. No synthetic bulk. No cutting corners. Clean. Made
+          properly.
         </p>
         <Link
           href="/about"
