@@ -23,8 +23,8 @@ const HERO_IMAGE: string | null = null; // e.g. "/hero.jpg"
 export function MobileHero() {
   return (
     <section className="md:hidden">
-      <div className="wrap pb-5 pt-7 text-center">
-        <p className="text-[0.56rem] uppercase tracking-[0.3em] text-ink-faint">
+      <div className="wrap pb-4 pt-5 text-center">
+        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink-faint">
           Whipped tallow &amp; perfume oil
         </p>
       </div>
