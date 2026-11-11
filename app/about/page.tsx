@@ -64,7 +64,7 @@ export default function AboutPage() {
           </p>
           <p>
             That is four ingredients before anything is added. The blend on top
-            is the only thing that changes between jars, and each of the four
+            is the only thing that changes between jars, and each of the three
             comes again as a perfume roller in organic jojoba — so you can wear a
             scent lightly, or layer it over the balm and have it last.
           </p>
@@ -73,7 +73,7 @@ export default function AboutPage() {
         <h2 className="rule mt-14 pt-12 font-serif text-2xl text-ink">Why the Range Stays Small</h2>
         <div className="mt-5 space-y-5 text-base leading-relaxed text-ink-soft">
           <p>
-            Four blends is the range, not a step on the way to twenty. Small
+            Three blends is the range, not a step on the way to twenty. Small
             batches mean nothing sits in a warehouse losing its scent, and every
             jar gets made properly. If we ever add to it, it will be because
             something is genuinely missing — not because we wanted something new

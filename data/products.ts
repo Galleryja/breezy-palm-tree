@@ -5,7 +5,7 @@
  * price. The checkout route reads prices from here on the server, so a browser
  * can never talk Six into charging less than the listed amount.
  *
- * Four blends, each as a whipped tallow balm and as a perfume roller. To
+ * Three blends, each as a whipped tallow balm and as a perfume roller. To
  * change the range, edit this array — the homepage, listing, product pages
  * and cart all follow. "Six" is the brand, not a count.
  */
@@ -168,15 +168,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "All skin and anyone who likes incense and resin",
   },
   {
-    slug: "balanced-light-balm",
+    slug: "balanced-balm",
     order: 3,
     format: "balm",
-    name: "Balanced Light",
+    name: "Balanced",
     tagline: "Neroli & Petitgrain",
     priceCents: 2800,
     size: ".88 oz (25 g)",
     description:
-      "Balanced Light. Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the bright option in a range that otherwise leans rich.",
+      "Balanced. Neroli comes from the blossom and petitgrain from the leaves and twigs of the same tree. Together they read light and green-edged — citrus without the sharpness of peel oils. This is the bright option in a range that otherwise leans rich.",
     notes: [
       {
         name: "Organic neroli oil",
@@ -196,36 +196,8 @@ export const PRODUCTS: Product[] = [
     bestFor: "All skin and anyone who wants scent kept light",
   },
   {
-    slug: "dry-cedar-balm",
-    order: 4,
-    format: "balm",
-    name: "Dry Cedar",
-    tagline: "Cedarwood & Vetiver",
-    priceCents: 2800,
-    size: ".88 oz (25 g)",
-    description:
-      "Dry Cedar. Cedarwood and vetiver — dry wood over earth. It reads most masculine, though it suits anyone who would rather smell like a place than a flower. It wears close and sits comfortably on a tallow base.",
-    notes: [
-      {
-        name: "Organic cedarwood oil",
-        note: "Steam-distilled from the wood of Cedrus atlantica, cedarwood has been used in perfumery and preservation since antiquity. Dry and softly resinous, it gives the blend its backbone.",
-      },
-      {
-        name: "Organic vetiver oil",
-        note: "Distilled from the roots of Chrysopogon zizanioides, a grass grown as much for the way its roots hold soil together as for its oil. Deep, earthy and faintly smoky, vetiver grounds the cedar and gives the blend its long finish.",
-      },
-    ],
-    ingredients: `${TALLOW_BASE}, organic cedarwood oil (Cedrus Atlantica), organic vetiver oil (Chrysopogon Zizanioides).`,
-    allergens:
-      "Contains limonene, occurring naturally in the essential oils.",
-    howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. Vetiver opens up slowly, so give it half an hour before deciding what you think of it. Patch test on a small area before first use.",
-    swatch: ["#f1efe9", "#7a705f"],
-    bestFor: "All skin and anyone who likes wood and earth",
-  },
-  {
     slug: "floral-roller",
-    order: 5,
+    order: 4,
     format: "roller",
     name: "Floral",
     tagline: "Jasmine, Vanilla & Ylang Ylang",
@@ -257,7 +229,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "suede-roller",
-    order: 6,
+    order: 5,
     format: "roller",
     name: "Suede",
     tagline: "Frankincense & Myrrh",
@@ -283,15 +255,15 @@ export const PRODUCTS: Product[] = [
     bestFor: "Quiet, grounded and worn close",
   },
   {
-    slug: "balanced-light-roller",
-    order: 7,
+    slug: "balanced-roller",
+    order: 6,
     format: "roller",
-    name: "Balanced Light",
+    name: "Balanced",
     tagline: "Neroli & Petitgrain",
     priceCents: 2200,
     size: "10 ml",
     description:
-      "Balanced Light. Neroli and petitgrain in organic jojoba — blossom and leaf from the same bitter orange tree. The lightest thing we make, and the one that wears best in warm weather. Neither oil is phototoxic, unlike the peel oils a citrus scent usually reaches for, so it is safe to wear in daylight.",
+      "Balanced. Neroli and petitgrain in organic jojoba — blossom and leaf from the same bitter orange tree. The lightest thing we make, and the one that wears best in warm weather. Neither oil is phototoxic, unlike the peel oils a citrus scent usually reaches for, so it is safe to wear in daylight.",
     notes: [
       {
         name: "Organic neroli oil",
@@ -309,34 +281,6 @@ export const PRODUCTS: Product[] = [
       "Roll onto pulse points — wrists, throat, behind the ears. Lighter than the other two, so it suits daytime and reapplying without it building up. Safe to wear in sun.",
     swatch: ["#f7f4e6", "#a89a5e"],
     bestFor: "Clear-headed and uncomplicated",
-  },
-  {
-    slug: "dry-cedar-roller",
-    order: 8,
-    format: "roller",
-    name: "Dry Cedar",
-    tagline: "Cedarwood & Vetiver",
-    priceCents: 2200,
-    size: "10 ml",
-    description:
-      "Dry Cedar. The same cedar and vetiver in organic jojoba. It sits very close to the skin — this is the one people notice when they are already standing next to you, not across a room. Two oils and nothing to soften them.",
-    notes: [
-      {
-        name: "Organic cedarwood oil",
-        note: "Steam-distilled from the wood of Cedrus atlantica, cedarwood has been used in perfumery and preservation since antiquity. Dry and softly resinous, it gives the blend its backbone.",
-      },
-      {
-        name: "Organic vetiver oil",
-        note: "Distilled from the roots of Chrysopogon zizanioides, a grass grown as much for the way its roots hold soil together as for its oil. Deep, earthy and faintly smoky, vetiver grounds the cedar and gives the blend its long finish.",
-      },
-    ],
-    ingredients: `${ROLLER_BASE}, organic cedarwood oil (Cedrus Atlantica), organic vetiver oil (Chrysopogon Zizanioides).`,
-    allergens:
-      "Contains limonene, occurring naturally in the essential oils.",
-    howToUse:
-      "Roll onto pulse points — wrists, throat, behind the ears. Warm it in with a fingertip; vetiver needs skin heat to open. Wears well in cold weather and layers over any of the balms.",
-    swatch: ["#efece4", "#6f6857"],
-    bestFor: "Steady, composed and dry",
   },
 ];
 

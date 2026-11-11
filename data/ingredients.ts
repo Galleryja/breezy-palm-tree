@@ -215,7 +215,7 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic neroli oil",
     source: "Citrus aurantium amara, flower",
     kind: "oil",
-    usedIn: ["Balanced Light"],
+    usedIn: ["Balanced"],
     composition:
       "Steam-distilled from bitter orange blossom. Contains linalool, linalyl acetate, limonene and nerolidol.",
     properties: [
@@ -229,40 +229,13 @@ export const INGREDIENTS: Ingredient[] = [
     name: "Organic petitgrain oil",
     source: "Citrus aurantium amara, leaf",
     kind: "oil",
-    usedIn: ["Balanced Light"],
+    usedIn: ["Balanced"],
     composition:
       "Steam-distilled from the leaves and twigs of the same tree that gives neroli. Chiefly linalyl acetate and linalool.",
     properties: [
       "It has traditionally been used for clear, balanced-looking skin.",
       "Like neroli, it is free of furocoumarins and is not phototoxic.",
       "It is a fraction of the cost of neroli and shares much of its character, which is why the two are so often distilled and blended together.",
-    ],
-  },
-  {
-    slug: "cedarwood",
-    name: "Organic cedarwood oil",
-    source: "Cedrus atlantica",
-    kind: "oil",
-    usedIn: ["Dry Cedar"],
-    composition:
-      "Steam-distilled from the wood. Composed largely of sesquiterpenes including himachalenes and atlantones.",
-    properties: [
-      "It has been used in perfumery since antiquity.",
-      "Its sesquiterpenes are heavy and slow to evaporate, which is what makes cedarwood read as dry and persistent rather than bright.",
-      "Cedrol, the compound most associated with the smell of cedar, is the one usually named when cedarwood is studied.",
-    ],
-  },
-  {
-    slug: "vetiver",
-    name: "Organic vetiver oil",
-    source: "Chrysopogon zizanioides",
-    kind: "oil",
-    usedIn: ["Dry Cedar"],
-    composition:
-      "Distilled from the roots of a grass grown as much for the way its roots bind soil as for its oil. One of the most sesquiterpene-rich essential oils there is.",
-    properties: [
-      "Its very high sesquiterpene content slows the evaporation of the lighter materials blended with it, so the whole blend lasts longer.",
-      "It has been used in traditional preparation across India and Southeast Asia for centuries, and is known in aromatherapy as the oil of tranquillity.",
     ],
   },
 ];

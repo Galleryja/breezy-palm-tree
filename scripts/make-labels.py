@@ -145,8 +145,10 @@ def read_products() -> list[dict]:
             }
         )
 
-    if len(products) != 4:
-        sys.exit(f"expected 4 balms, parsed {len(products)}")
+    # No magic number: the range changes, and a label script that insists on
+    # a particular size of it is a trap for the next person who edits it.
+    if not products:
+        sys.exit("parsed no balms — has the PRODUCTS array moved?")
     return products
 
 

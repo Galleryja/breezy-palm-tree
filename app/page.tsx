@@ -59,7 +59,7 @@ export default function HomePage() {
           <h2 className="font-serif text-2xl text-ink">The Balms</h2>
           <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
             Same base every time — grass-fed tallow, organic mango butter,
-            organic jojoba, squalane. Four blends on top of it.
+            organic jojoba, squalane. Three blends on top of it.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="mb-10">
           <h2 className="font-serif text-2xl text-ink">The Rollers</h2>
           <p className="measure mt-2 text-sm leading-relaxed text-ink-soft">
-            The same four blends in organic jojoba, to carry. They wear longest
+            The same three blends in organic jojoba, to carry. They wear longest
             layered over their matching balm.
           </p>
         </div>
