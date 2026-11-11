@@ -80,10 +80,11 @@ export function MobileHero() {
         <h1 className="font-serif text-3xl leading-[1.15] text-ink">
           Elevated Skincare.
         </h1>
+        {/* The tallow line is dropped on mobile: it wraps to three lines on a
+            phone, which breaks the rhythm of the three that follow. Those
+            three each fit on one line, so the hard breaks still read as
+            deliberate. Desktop keeps all four. */}
         <p className="mt-5 text-base leading-relaxed text-ink-soft">
-          Grass-fed tallow, whipped with organic mango butter, jojoba and
-          squalane. Blended with essential oils.
-          <br />
           Natural ingredients, chosen for what they do.
           <br />
           No fillers. No synthetic bulk. No cutting corners.
