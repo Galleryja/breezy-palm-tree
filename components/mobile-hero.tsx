@@ -30,7 +30,7 @@ export function MobileHero() {
       </div>
 
       {/* Full-bleed: breaks out of the page gutter to meet both edges. */}
-      <div className="relative h-[34vh] min-h-[220px] w-full overflow-hidden bg-ink">
+      <div className="relative h-[38vh] min-h-[250px] w-full overflow-hidden bg-ink">
         {HERO_VIDEO ? (
           <video
             className="absolute inset-0 h-full w-full object-cover"
