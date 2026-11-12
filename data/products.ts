@@ -135,7 +135,7 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains benzyl benzoate, benzyl salicylate, linalool, farnesol, geraniol and isoeugenol, occurring naturally in the essential oils.",
     howToUse:
-      "A little goes a long way. Warm a pea-sized amount between your fingers until it melts, then press into damp skin — straight out of the shower is best, while there is still water to seal in. Face, hands, elbows, anywhere dry. Patch test on a small area before first use.",
+      "A little goes a long way. Warm a small amount between your fingers, then press into damp skin — straight out of the shower is best, while there is still water to seal in. Face, hands, elbows, anywhere dry. Patch test on a small area before first use.",
     swatch: ["#f7f3ec", "#b9a07f"],
     bestFor: "All skin and anyone drawn to florals",
   },
@@ -163,7 +163,7 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains limonene, occurring naturally in the essential oils.",
     howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Best straight after a shower. The scent settles and deepens over the first half hour rather than announcing itself. Patch test on a small area before first use.",
+      "A little goes a long way. Warm a small amount between your fingers, then press into damp skin. Best straight after a shower. The scent settles and deepens over the first half hour rather than announcing itself. Patch test on a small area before first use.",
     swatch: ["#f2eee7", "#8a7358"],
     bestFor: "All skin and anyone who likes incense and resin",
   },
@@ -191,7 +191,7 @@ export const PRODUCTS: Product[] = [
     allergens:
       "Contains linalool, limonene, geraniol and citral, occurring naturally in the essential oils.",
     howToUse:
-      "Warm a pea-sized amount between your fingers until it melts, then press into damp skin. Neither oil in this blend is phototoxic, so unlike lemon or bergamot it is fine to wear in daylight. Patch test on a small area before first use.",
+      "A little goes a long way. Warm a small amount between your fingers, then press into damp skin. Neither oil in this blend is phototoxic, so unlike lemon or bergamot it is fine to wear in daylight. Patch test on a small area before first use.",
     swatch: ["#f6f4e9", "#a8a56d"],
     bestFor: "All skin and anyone who wants scent kept light",
   },
