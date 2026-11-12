@@ -68,6 +68,11 @@ const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
  * listed individually. Balms only — it says "the balm", and the rollers are
  * jojoba on its own, so there is nothing to balance.
  */
+/**
+ * Not currently shown anywhere. The product pages used to close "The Base"
+ * with this; it was taken out. Left here so it can go back without being
+ * rewritten.
+ */
 export const BASE_TOGETHER =
   "Tallow is occlusive, mango butter emollient, jojoba a wax ester rather than a triglyceride, squalane the lightest thing in the jar. That balancing base is why the balm moisturises for hours without ever feeling like a layer.";
 
