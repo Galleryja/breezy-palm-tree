@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/add-to-cart";
 import { ProductArt } from "@/components/product-art";
 import {
+  BASE_TOGETHER,
   PRODUCTS,
   getProduct,
   baseNotesFor,
@@ -139,6 +140,11 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               ))}
             </dl>
+            {product.format === "balm" ? (
+              <p className="mt-5 text-sm leading-relaxed text-ink-soft">
+                {BASE_TOGETHER}
+              </p>
+            ) : null}
           </section>
 
           {product.notes.length > 0 ? (

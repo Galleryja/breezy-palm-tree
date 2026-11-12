@@ -60,21 +60,16 @@ export const CURRENCY = "usd";
 const TALLOW_BASE =
   "Grass-fed beef tallow, organic mango butter (Mangifera Indica), organic jojoba oil (Simmondsia Chinensis), squalane";
 
-/** Shared by all four rollers. */
+/** Shared by all three rollers. */
 const ROLLER_BASE = "Organic jojoba oil (Simmondsia Chinensis)";
 
 /**
- * Closes the base section on a balm page, after the three materials have been
+ * Closes the base section on a balm page, after the four materials have been
  * listed individually. Balms only — it says "the balm", and the rollers are
  * jojoba on its own, so there is nothing to balance.
  */
-/**
- * Not currently shown anywhere. The product pages used to close "The Base"
- * with this; it was taken out. Left here so it can go back without being
- * rewritten.
- */
 export const BASE_TOGETHER =
-  "Tallow is occlusive, mango butter emollient, jojoba a wax ester rather than a triglyceride, squalane the lightest thing in the jar. That balancing base is why the balm moisturises for hours without ever feeling like a layer.";
+  "The balancing base is why the balm moisturizes for hours without ever feeling like a layer.";
 
 /**
  * The base every balm shares, and the jojoba the rollers are built on.
