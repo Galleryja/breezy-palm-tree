@@ -34,7 +34,13 @@ TEXT = "SIX"
 
 CAP_HEIGHT = 34.0   # rendered height of the capitals
 SAGITTA = 0.0       # how far the middle rides above the ends. 0 = flat.
-TRACKING = 1.06     # >1 opens the letterspacing slightly
+TRACKING = 1.06     # >1 opens the letterspacing slightly (arc mode only)
+
+# Flat mode spaces by ink rather than by advance width. Blackletter side
+# bearings differ wildly per letter, so metric spacing leaves visibly uneven
+# gaps — S to I came out a third wider than I to X. This is the gap between
+# the ink of one letter and the next, in the same units as CAP_HEIGHT.
+OPTICAL_GAP = 5.4
 PAD = 2.0           # breathing room around the traced bounds
 
 
@@ -66,17 +72,29 @@ def place(glyphs, names, widths, radius, cx, cy, scale):
         angle += width / radius
 
 
-def place_flat(glyphs, names, widths, scale):
-    """Lay the glyphs on a straight baseline, same letterspacing as the arc."""
-    x = 0.0
-    for name, width in zip(names, widths):
-        yield name, (
-            Transform()
-            .translate(x + width / 2.0, 0.0)
-            .scale(scale, -scale)
-            .translate(-(width / scale) / 2.0, 0)
-        )
-        x += width
+def ink_span(glyphs, name, scale):
+    """Horizontal extent of a glyph's actual ink, in output units."""
+    pen = BoundsPen(glyphs)
+    glyphs[name].draw(pen)
+    if pen.bounds is None:
+        return 0.0, 0.0
+    x_min, _, x_max, _ = pen.bounds
+    return x_min * scale, x_max * scale
+
+
+def place_flat(glyphs, names, scale):
+    """Lay the glyphs on a straight baseline, spaced by ink.
+
+    Each letter is placed so the gap between its ink and the previous
+    letter's ink is the same. That is what the eye reads as even spacing;
+    equal advance widths are not, because a glyph's advance includes side
+    bearings that differ from letter to letter.
+    """
+    pen_x = 0.0
+    for name in names:
+        x_min, x_max = ink_span(glyphs, name, scale)
+        yield name, Transform().translate(pen_x - x_min, 0.0).scale(scale, -scale)
+        pen_x += (x_max - x_min) + OPTICAL_GAP
 
 
 COMPONENT = pathlib.Path(__file__).resolve().parent.parent / "components" / "wordmark.tsx"
@@ -144,8 +162,8 @@ def main():
 
     if SAGITTA == 0:
         radius, sweep = 0.0, 0.0
-        layout = place_flat(glyphs, names, widths, scale)
-        geometry = "Set flat."
+        layout = place_flat(glyphs, names, scale)
+        geometry = f"Set flat, optically spaced at a {OPTICAL_GAP:g} unit gap."
     else:
         radius = (chord**2 / 4.0 + SAGITTA**2) / (2.0 * SAGITTA)
         sweep = math.degrees(chord / radius)

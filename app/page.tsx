@@ -1,61 +1,15 @@
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
-import { ProductArt } from "@/components/product-art";
-import { PRODUCTS, productsByFormat } from "@/data/products";
-import { MobileHero } from "@/components/mobile-hero";
+import { productsByFormat } from "@/data/products";
+import { Hero } from "@/components/hero";
 
 export default function HomePage() {
-  const hero = PRODUCTS[0];
   const balms = productsByFormat("balm");
   const rollers = productsByFormat("roller");
 
   return (
     <>
-      <MobileHero />
-
-      <section className="hidden wrap items-center gap-12 py-16 md:grid md:grid-cols-2 md:py-24">
-        <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-ink-faint">
-            Whipped tallow &amp; perfume oil
-          </p>
-          <h1 className="mt-4 font-serif text-4xl leading-[1.12] text-ink sm:text-5xl">
-            Elevated Skincare.
-          </h1>
-          {/* Client-written, set exactly as written: four lines broken where
-              they were broken, no paragraph gaps between them, and no line
-              given more weight than another. The breaks are hard rather than
-              left to wrap, so the rhythm holds at every width. */}
-          <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Grass-fed tallow, whipped with organic mango butter, jojoba and
-            squalane. Blended with essential oils.
-            <br />
-            Natural ingredients, chosen for what they do.
-            <br />
-            No fillers. No synthetic bulk. No cutting corners.
-            <br />
-            Clean. Made properly.
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              href="/products"
-              className="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-accent"
-            >
-              Shop the Range
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm text-ink-soft underline underline-offset-4 transition-colors hover:text-ink"
-            >
-              Why tallow?
-            </Link>
-          </div>
-        </div>
-
-        <div className="overflow-hidden rounded-xl border border-line bg-paper-deep">
-          <ProductArt product={hero} className="h-auto w-full" priority />
-        </div>
-      </section>
+      <Hero />
 
       <section className="wrap rule py-16">
         <div className="mb-10">
